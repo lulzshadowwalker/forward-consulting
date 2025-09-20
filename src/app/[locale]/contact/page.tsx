@@ -1,6 +1,7 @@
 "use client";
 
 import { SharedCTA } from "@/components/shared/SharedCTA";
+import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
   AccordionContent,
@@ -17,6 +18,8 @@ import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { toast } from "sonner";
+import Image from "next/image";
+import heroImage from "@/assets/images/hero.png";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -72,13 +75,33 @@ export default function ContactPage(props: Props) {
     <>
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="py-20 lg:py-28 bg-gradient-to-br from-muted/20 to-primary/5">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+        <section className="relative min-h-[60vh] lg:min-h-[65vh] flex items-center py-20 overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src={heroImage}
+              alt="Hero background"
+              fill
+              className="object-cover brightness-50 contrast-75"
+              priority
+            />
+          </div>
+
+          {/* Overlay for better text readability */}
+          <div className="absolute inset-0 bg-background/20 z-10"></div>
+
+          <div className="container mx-auto px-4 flex-1 flex items-center relative z-20">
+            <div className="text-center max-w-4xl mx-auto w-full">
+              <Badge
+                variant="secondary"
+                className="mb-6 bg-primary/90 text-white backdrop-blur-sm border-primary shadow-lg"
+              >
+                {t("hero.badge")}
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
                 {t("hero.title")}
               </h1>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xl text-white/90 max-w-2xl mx-auto drop-shadow-md">
                 {t("hero.subtitle")}
               </p>
             </div>

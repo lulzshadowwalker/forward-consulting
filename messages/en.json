@@ -286,7 +286,8 @@
   "ServicesPage": {
     "hero": {
       "title": "Comprehensive HR Solutions",
-      "subtitle": "Strategic consulting services designed to transform your organization and drive sustainable growth across the GCC region"
+      "subtitle": "Strategic consulting services designed to transform your organization and drive sustainable growth across the GCC region",
+      "badge": "Our Services"
     },
     "introduction": {
       "title": "What We Perfectly Deliver",
@@ -387,7 +388,8 @@
   "ContactPage": {
     "hero": {
       "title": "Let's Build Your Success Together",
-      "subtitle": "Get in touch with our expert consultants to discuss your organizational challenges and opportunities"
+      "subtitle": "Get in touch with our expert consultants to discuss your organizational challenges and opportunities",
+      "badge": "Contact Us"
     },
     "form": {
       "title": "Send us a message",

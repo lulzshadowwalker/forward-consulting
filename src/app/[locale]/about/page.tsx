@@ -1,3 +1,4 @@
+import heroImage from "@/assets/images/hero.png";
 import { SharedCTA } from "@/components/shared/SharedCTA";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -12,6 +13,7 @@ import {
   Users,
 } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 
 export default async function AboutPage({
   params,
@@ -25,22 +27,36 @@ export default async function AboutPage({
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/5 via-background to-muted/10 pt-24 pb-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+      <section className="relative min-h-[70vh] lg:min-h-[75vh] flex items-center pt-24 pb-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={heroImage}
+            alt="Hero background"
+            fill
+            className="object-cover brightness-50 contrast-75"
+            priority
+          />
+        </div>
+
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-background/20 z-10"></div>
+
+        <div className="container mx-auto px-4 flex-1 flex items-center relative z-20">
+          <div className="max-w-4xl mx-auto text-center w-full">
             <Badge
               variant="outline"
-              className="mb-4 text-primary border-primary/20"
+              className="mb-6 bg-primary/90 text-white backdrop-blur-sm border-primary shadow-lg"
             >
               {t("hero.badge")}
             </Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-lg">
               {t("hero.title")}
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto drop-shadow-md">
               {t("hero.subtitle")}
             </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-white/80">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4 text-primary" />
                 <span>{t("hero.infoItems.founded")}</span>
@@ -209,7 +225,7 @@ export default async function AboutPage({
                     </div>
                   </div>
                 </div>
-                <div className="w-full md:w-2/3 md:text-right">
+                <div className="w-full md:w-2/3">
                   <h3 className="text-xl font-semibold mb-3 text-foreground">
                     {t("ourStory.expansion.title")}
                   </h3>
@@ -253,7 +269,7 @@ export default async function AboutPage({
                     </div>
                   </div>
                 </div>
-                <div className="w-full md:w-2/3 md:text-right">
+                <div className="w-full md:w-2/3">
                   <h3 className="text-xl font-semibold mb-3 text-foreground">
                     {t("ourStory.today.title")}
                   </h3>

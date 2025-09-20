@@ -1,3 +1,4 @@
+import heroImage from "@/assets/images/hero.png";
 import { SharedCTA } from "@/components/shared/SharedCTA";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -18,6 +19,7 @@ import {
   Users,
 } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -33,23 +35,40 @@ export default async function HomePage({ params }: Props) {
     <>
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-background to-muted py-20 lg:py-32">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="secondary" className="mb-6">
+        <section className="relative min-h-[80vh] lg:min-h-[85vh] flex items-center py-20 overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src={heroImage}
+              alt="Hero background"
+              fill
+              className="object-cover brightness-50 contrast-75"
+              priority
+            />
+          </div>
+
+          {/* Overlay for better text readability */}
+          <div className="absolute inset-0 bg-background/20 z-10"></div>
+
+          <div className="container mx-auto px-4 flex-1 flex items-center">
+            <div className="max-w-4xl mx-auto text-center w-full">
+              <Badge
+                variant="secondary"
+                className="mb-6 bg-primary/90 text-white backdrop-blur-sm border-primary shadow-lg"
+              >
                 {t("expertise.years")} {t("expertise.yearsLabel")}
               </Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
                 {t("hero.title")}
               </h1>
-              <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto drop-shadow-md">
                 {t("hero.subtitle")}
               </p>{" "}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   asChild
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                  className="bg-primary hover:bg-primary/90 text-white shadow-lg backdrop-blur-sm font-semibold"
                 >
                   <Link href="/services">
                     {t("hero.cta")}
@@ -57,17 +76,22 @@ export default async function HomePage({ params }: Props) {
                   </Link>
                 </Button>
 
-                <Button asChild variant="outline" size="lg">
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="bg-transparent backdrop-blur-sm border-primary/80 text-primary hover:bg-primary/10 hover:text-primary"
+                >
                   <Link href="/contact">{t("hero.contact")}</Link>
                 </Button>
               </div>
             </div>
           </div>
 
-          {/* Background decoration */}
+          {/* Background decoration - kept for additional visual depth */}
           <div className="absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute -top-40 -right-32 w-80 h-80 bg-teal-400/10 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-40 -left-32 w-80 h-80 bg-indigo-400/10 rounded-full blur-3xl"></div>
+            <div className="absolute -top-40 -right-32 w-80 h-80 bg-primary/20 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-40 -left-32 w-80 h-80 bg-primary/15 rounded-full blur-3xl"></div>
           </div>
         </section>
 
