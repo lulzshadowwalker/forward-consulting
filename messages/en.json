@@ -1,5 +1,83 @@
 {
+  "LocaleLayout": {
+    "title": "TODO"
+  },
   "HomePage": {
-    "title": "Hello world!"
+    "hero": {
+      "title": "Empowering Organizations for Tomorrow's Success",
+      "subtitle": "Strategic HR consulting and organizational development with over 20 years of regional expertise",
+      "cta": "Discover Our Services",
+      "contact": "Get In Touch"
+    },
+    "services": {
+      "title": "Our Core Services",
+      "subtitle": "Comprehensive HR solutions tailored to your organizational needs",
+      "organizationDesign": {
+        "title": "Organization Design & Workforce Planning",
+        "description": "Strategic organizational structures and workforce optimization for sustainable growth"
+      },
+      "talentManagement": {
+        "title": "Talent & Leadership Management",
+        "description": "Comprehensive talent strategies and leadership development programs"
+      },
+      "talentAssessment": {
+        "title": "Talent Assessment",
+        "description": "Data-driven assessment solutions for informed talent decisions"
+      },
+      "specialized": {
+        "title": "Specialized Services",
+        "description": "PMO services and government excellence consulting for enhanced performance"
+      }
+    },
+    "expertise": {
+      "title": "Two Decades of Regional Excellence",
+      "description": "Based in Jordan with over 20 years of proven expertise serving the Gulf region, with strategic focus on the Saudi market",
+      "years": "20+",
+      "yearsLabel": "Years Experience",
+      "region": "GCC Focus",
+      "clients": "100+",
+      "clientsLabel": "Organizations Served"
+    },
+    "values": {
+      "title": "Our Values Drive Lasting Impact",
+      "subtitle": "Built on trusted partnerships, we support organizations across sectors to achieve excellence",
+      "partnership": {
+        "title": "Partnership",
+        "description": "Building long-term, trust-based relationships"
+      },
+      "integrity": {
+        "title": "Integrity",
+        "description": "Acting with honesty, fairness, and accountability"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Driving forward-thinking solutions for sustainable growth"
+      },
+      "respect": {
+        "title": "Respect",
+        "description": "Valuing people, diversity, and collaboration"
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "Delivering the highest standards in every solution"
+      }
+    },
+    "approach": {
+      "title": "Design → Execute Methodology",
+      "subtitle": "We partner with clients to design and deliver impactful HR solutions",
+      "design": {
+        "title": "Design",
+        "description": "Understanding each client's unique needs to create customized HR solutions that align with strategy and drive meaningful outcomes"
+      },
+      "execute": {
+        "title": "Execute",
+        "description": "Providing practical implementation support while transferring knowledge to empower client teams for sustainable results"
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Organization?",
+      "description": "Let's discuss how our proven expertise can help you achieve your strategic objectives",
+      "button": "Start Your Journey"
+    }
   }
 }

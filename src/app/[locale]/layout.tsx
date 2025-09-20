@@ -2,11 +2,12 @@ import { routing } from "@/i18n/routing";
 import { clsx } from "clsx";
 import { hasLocale, Locale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Inter } from "next/font/google";
+import { Inter, Noto_Sans_Arabic } from "next/font/google";
 import { notFound } from "next/navigation";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const notoSansArabic = Noto_Sans_Arabic({ subsets: ["arabic"] });
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -48,7 +49,12 @@ export default async function LocaleLayout({
       lang={locale}
       dir={locale === "ar" ? "rtl" : "ltr"}
     >
-      <body className={clsx(inter.className, "flex h-full flex-col")}>
+      <body
+        className={clsx(
+          locale === "ar" ? notoSansArabic.className : inter.className,
+          "flex h-full flex-col"
+        )}
+      >
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
