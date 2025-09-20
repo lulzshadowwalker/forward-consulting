@@ -1,5 +1,6 @@
 "use client";
 
+import { Navigation } from "@/components/navigation/Navigation";
 import { SharedCTA } from "@/components/shared/SharedCTA";
 import {
   Accordion,
@@ -69,231 +70,234 @@ export default function ContactPage(props: Props) {
   };
 
   return (
-    <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6">
-              {t("hero.title")}
-            </h1>
-            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-              {t("hero.subtitle")}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form and Info Section */}
-      <section className="py-20 bg-white dark:bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
-            {/* Contact Form */}
-            <div>
-              <div className="mb-8">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
-                  {t("form.title")}
-                </h2>
-                <p className="text-lg text-slate-600 dark:text-slate-300">
-                  {t("form.subtitle")}
-                </p>
-              </div>
-
-              <Card className="border-slate-200 dark:border-slate-700">
-                <CardContent className="p-8">
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="space-y-2">
-                      <Label
-                        htmlFor="email"
-                        className="text-slate-900 dark:text-white"
-                      >
-                        {t("form.email.label")}
-                      </Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder={t("form.email.placeholder")}
-                        required
-                        className="h-12"
-                        disabled={isSubmitting}
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label
-                        htmlFor="message"
-                        className="text-slate-900 dark:text-white"
-                      >
-                        {t("form.message.label")}
-                      </Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        placeholder={t("form.message.placeholder")}
-                        required
-                        rows={6}
-                        className="resize-none"
-                        disabled={isSubmitting}
-                      />
-                    </div>
-
-                    <Button
-                      type="submit"
-                      disabled={
-                        isSubmitting || !formData.email || !formData.message
-                      }
-                      className="w-full h-12 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white font-semibold"
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
-                          {t("form.sending")}
-                        </>
-                      ) : (
-                        <>
-                          <Send className="w-4 h-4 mr-2" />
-                          {t("form.submit")}
-                        </>
-                      )}
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Contact Information */}
-            <div>
-              <div className="mb-8">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
-                  {t("contact.title")}
-                </h2>
-                <p className="text-lg text-slate-600 dark:text-slate-300">
-                  {t("contact.subtitle")}
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                {/* Email */}
-                <Card className="group hover:shadow-lg transition-shadow border-slate-200 dark:border-slate-700">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center group-hover:bg-blue-200 dark:group-hover:bg-blue-800/50 transition-colors">
-                        <Mail className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-slate-900 dark:text-white mb-1">
-                          {t("contact.email.title")}
-                        </h3>
-                        <p className="text-sm text-slate-600 dark:text-slate-300 mb-2">
-                          {t("contact.email.description")}
-                        </p>
-                        <Link
-                          href={`mailto:${t("contact.email.value")}`}
-                          className="text-blue-600 dark:text-blue-400 hover:underline"
-                        >
-                          {t("contact.email.value")}
-                        </Link>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Phone */}
-                <Card className="group hover:shadow-lg transition-shadow border-slate-200 dark:border-slate-700">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center group-hover:bg-green-200 dark:group-hover:bg-green-800/50 transition-colors">
-                        <Phone className="w-6 h-6 text-green-600 dark:text-green-400" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-slate-900 dark:text-white mb-1">
-                          {t("contact.phone.title")}
-                        </h3>
-                        <p className="text-sm text-slate-600 dark:text-slate-300 mb-2">
-                          {t("contact.phone.description")}
-                        </p>
-                        <Link
-                          href={`tel:${t("contact.phone.value")}`}
-                          className="text-green-600 dark:text-green-400 hover:underline"
-                        >
-                          {t("contact.phone.value")}
-                        </Link>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Office */}
-                <Card className="group hover:shadow-lg transition-shadow border-slate-200 dark:border-slate-700">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center group-hover:bg-purple-200 dark:group-hover:bg-purple-800/50 transition-colors">
-                        <MapPin className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-slate-900 dark:text-white mb-1">
-                          {t("contact.office.title")}
-                        </h3>
-                        <p className="text-sm text-slate-600 dark:text-slate-300 mb-2">
-                          {t("contact.office.description")}
-                        </p>
-                        <p className="text-purple-600 dark:text-purple-400">
-                          {t("contact.office.value")}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+    <>
+      <Navigation />
+      <main className="min-h-screen">
+        {/* Hero Section */}
+        <section className="py-20 lg:py-28 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6">
+                {t("hero.title")}
+              </h1>
+              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+                {t("hero.subtitle")}
+              </p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-slate-50 dark:bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-              {t("faq.title")}
-            </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              {t("faq.subtitle")}
-            </p>
+        {/* Contact Form and Info Section */}
+        <section className="py-20 bg-white dark:bg-slate-900">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+              {/* Contact Form */}
+              <div>
+                <div className="mb-8">
+                  <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
+                    {t("form.title")}
+                  </h2>
+                  <p className="text-lg text-slate-600 dark:text-slate-300">
+                    {t("form.subtitle")}
+                  </p>
+                </div>
+
+                <Card className="border-slate-200 dark:border-slate-700">
+                  <CardContent className="p-8">
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div className="space-y-2">
+                        <Label
+                          htmlFor="email"
+                          className="text-slate-900 dark:text-white"
+                        >
+                          {t("form.email.label")}
+                        </Label>
+                        <Input
+                          id="email"
+                          name="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          placeholder={t("form.email.placeholder")}
+                          required
+                          className="h-12"
+                          disabled={isSubmitting}
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label
+                          htmlFor="message"
+                          className="text-slate-900 dark:text-white"
+                        >
+                          {t("form.message.label")}
+                        </Label>
+                        <Textarea
+                          id="message"
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
+                          placeholder={t("form.message.placeholder")}
+                          required
+                          rows={6}
+                          className="resize-none"
+                          disabled={isSubmitting}
+                        />
+                      </div>
+
+                      <Button
+                        type="submit"
+                        disabled={
+                          isSubmitting || !formData.email || !formData.message
+                        }
+                        className="w-full h-12 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white font-semibold"
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
+                            {t("form.sending")}
+                          </>
+                        ) : (
+                          <>
+                            <Send className="w-4 h-4 mr-2" />
+                            {t("form.submit")}
+                          </>
+                        )}
+                      </Button>
+                    </form>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Contact Information */}
+              <div>
+                <div className="mb-8">
+                  <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
+                    {t("contact.title")}
+                  </h2>
+                  <p className="text-lg text-slate-600 dark:text-slate-300">
+                    {t("contact.subtitle")}
+                  </p>
+                </div>
+
+                <div className="space-y-6">
+                  {/* Email */}
+                  <Card className="group hover:shadow-lg transition-shadow border-slate-200 dark:border-slate-700">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center group-hover:bg-blue-200 dark:group-hover:bg-blue-800/50 transition-colors">
+                          <Mail className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-slate-900 dark:text-white mb-1">
+                            {t("contact.email.title")}
+                          </h3>
+                          <p className="text-sm text-slate-600 dark:text-slate-300 mb-2">
+                            {t("contact.email.description")}
+                          </p>
+                          <Link
+                            href={`mailto:${t("contact.email.value")}`}
+                            className="text-blue-600 dark:text-blue-400 hover:underline"
+                          >
+                            {t("contact.email.value")}
+                          </Link>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Phone */}
+                  <Card className="group hover:shadow-lg transition-shadow border-slate-200 dark:border-slate-700">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center group-hover:bg-green-200 dark:group-hover:bg-green-800/50 transition-colors">
+                          <Phone className="w-6 h-6 text-green-600 dark:text-green-400" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-slate-900 dark:text-white mb-1">
+                            {t("contact.phone.title")}
+                          </h3>
+                          <p className="text-sm text-slate-600 dark:text-slate-300 mb-2">
+                            {t("contact.phone.description")}
+                          </p>
+                          <Link
+                            href={`tel:${t("contact.phone.value")}`}
+                            className="text-green-600 dark:text-green-400 hover:underline"
+                          >
+                            {t("contact.phone.value")}
+                          </Link>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Office */}
+                  <Card className="group hover:shadow-lg transition-shadow border-slate-200 dark:border-slate-700">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center group-hover:bg-purple-200 dark:group-hover:bg-purple-800/50 transition-colors">
+                          <MapPin className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-slate-900 dark:text-white mb-1">
+                            {t("contact.office.title")}
+                          </h3>
+                          <p className="text-sm text-slate-600 dark:text-slate-300 mb-2">
+                            {t("contact.office.description")}
+                          </p>
+                          <p className="text-purple-600 dark:text-purple-400">
+                            {t("contact.office.value")}
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
-              {t.raw("faq.items").map((item: any, index: number) => (
-                <AccordionItem
-                  key={index}
-                  value={`item-${index}`}
-                  className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-6"
-                >
-                  <AccordionTrigger className="text-left hover:no-underline py-6">
-                    <span className="font-semibold text-slate-900 dark:text-white">
-                      {item.question}
-                    </span>
-                  </AccordionTrigger>
-                  <AccordionContent className="pb-6">
-                    <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-                      {item.answer}
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+        {/* FAQ Section */}
+        <section className="py-20 bg-slate-50 dark:bg-slate-800">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+                {t("faq.title")}
+              </h2>
+              <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+                {t("faq.subtitle")}
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {t.raw("faq.items").map((item: any, index: number) => (
+                  <AccordionItem
+                    key={index}
+                    value={`item-${index}`}
+                    className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-6"
+                  >
+                    <AccordionTrigger className="text-left hover:no-underline py-6">
+                      <span className="font-semibold text-slate-900 dark:text-white">
+                        {item.question}
+                      </span>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-6">
+                      <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                        {item.answer}
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <SharedCTA variant="contact" />
-    </main>
+        {/* CTA Section */}
+        <SharedCTA variant="contact" />
+      </main>
+    </>
   );
 }

@@ -1,6 +1,15 @@
 {
   "LocaleLayout": {
-    "title": "TODO"
+    "title": "فورورد كونسلتنج - الموارد البشرية والتطوير التنظيمي"
+  },
+  "Navigation": {
+    "brand": "فورورد كونسلتنج",
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "services": "خدماتنا",
+    "contact": "تواصل معنا",
+    "language": "اللغة",
+    "menu": "القائمة"
   },
   "HomePage": {
     "hero": {

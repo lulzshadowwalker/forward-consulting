@@ -1,6 +1,15 @@
 {
   "LocaleLayout": {
-    "title": "TODO"
+    "title": "Forward Consulting - HR & Organizational Development"
+  },
+  "Navigation": {
+    "brand": "Forward Consulting",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "language": "Language",
+    "menu": "Menu"
   },
   "HomePage": {
     "hero": {
