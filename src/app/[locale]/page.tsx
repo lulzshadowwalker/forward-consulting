@@ -1,4 +1,3 @@
-import { Navigation } from "@/components/navigation/Navigation";
 import { SharedCTA } from "@/components/shared/SharedCTA";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -32,7 +31,6 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <>
-      <Navigation />
       <main className="min-h-screen">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 py-20 lg:py-32">

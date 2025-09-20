@@ -1,3 +1,5 @@
+import { Footer } from "@/components/footer/Footer";
+import { Navigation } from "@/components/navigation/Navigation";
 import { Toaster } from "@/components/ui/sonner";
 import { routing } from "@/i18n/routing";
 import { clsx } from "clsx";
@@ -46,17 +48,21 @@ export default async function LocaleLayout({
 
   return (
     <html
-      className="h-full"
+      className="min-h-full"
       lang={locale}
       dir={locale === "ar" ? "rtl" : "ltr"}
     >
       <body
         className={clsx(
           locale === "ar" ? notoSansArabic.className : inter.className,
-          "flex h-full flex-col"
+          "flex min-h-full flex-col"
         )}
       >
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <Navigation />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
         <Toaster />
       </body>
     </html>

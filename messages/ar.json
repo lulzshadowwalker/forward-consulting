@@ -11,6 +11,43 @@
     "language": "اللغة",
     "menu": "القائمة"
   },
+  "Footer": {
+    "brand": {
+      "name": "فورورد كونسلتنج",
+      "tagline": "تمكين المؤسسات لنجاح الغد"
+    },
+    "quickLinks": {
+      "title": "روابط سريعة",
+      "home": "الرئيسية",
+      "about": "من نحن",
+      "services": "خدماتنا",
+      "contact": "تواصل معنا"
+    },
+    "services": {
+      "title": "خدماتنا",
+      "organizationDesign": "التصميم التنظيمي",
+      "talentManagement": "إدارة المواهب",
+      "talentAssessment": "تقييم المواهب",
+      "specializedServices": "الخدمات المتخصصة"
+    },
+    "contact": {
+      "title": "تواصل معنا",
+      "email": "info@forwardconsulting.ae",
+      "phone": "+971 4 123 4567",
+      "address": "خليج الأعمال دبي، الإمارات"
+    },
+    "social": {
+      "title": "تابعنا",
+      "linkedin": "لينكد إن",
+      "twitter": "تويتر",
+      "facebook": "فيسبوك"
+    },
+    "legal": {
+      "copyright": "© 2025 فورورد كونسلتنج. جميع الحقوق محفوظة.",
+      "privacy": "سياسة الخصوصية",
+      "terms": "شروط الخدمة"
+    }
+  },
   "HomePage": {
     "hero": {
       "title": "تمكين المؤسسات لنجاح الغد",

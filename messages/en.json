@@ -11,6 +11,43 @@
     "language": "Language",
     "menu": "Menu"
   },
+  "Footer": {
+    "brand": {
+      "name": "Forward Consulting",
+      "tagline": "Empowering Organizations for Tomorrow's Success"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "home": "Home",
+      "about": "About Us",
+      "services": "Our Services",
+      "contact": "Contact"
+    },
+    "services": {
+      "title": "Our Services",
+      "organizationDesign": "Organization Design",
+      "talentManagement": "Talent Management",
+      "talentAssessment": "Talent Assessment",
+      "specializedServices": "Specialized Services"
+    },
+    "contact": {
+      "title": "Get In Touch",
+      "email": "info@forwardconsulting.ae",
+      "phone": "+971 4 123 4567",
+      "address": "Dubai Business Bay, UAE"
+    },
+    "social": {
+      "title": "Follow Us",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "facebook": "Facebook"
+    },
+    "legal": {
+      "copyright": "© 2025 Forward Consulting. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
   "HomePage": {
     "hero": {
       "title": "Empowering Organizations for Tomorrow's Success",

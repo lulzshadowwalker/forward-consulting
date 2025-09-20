@@ -1,6 +1,5 @@
 "use client";
 
-import { Navigation } from "@/components/navigation/Navigation";
 import { SharedCTA } from "@/components/shared/SharedCTA";
 import {
   Accordion,
@@ -71,7 +70,6 @@ export default function ContactPage(props: Props) {
 
   return (
     <>
-      <Navigation />
       <main className="min-h-screen">
         {/* Hero Section */}
         <section className="py-20 lg:py-28 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
