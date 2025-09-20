@@ -226,5 +226,102 @@
       "description": "Discover how our comprehensive HR solutions can drive your organization's success",
       "button": "View Services"
     }
+  },
+  "ServicesPage": {
+    "hero": {
+      "title": "Comprehensive HR Solutions",
+      "subtitle": "Strategic consulting services designed to transform your organization and drive sustainable growth across the GCC region"
+    },
+    "introduction": {
+      "title": "What We Perfectly Deliver",
+      "subtitle": "HR and more... Tailored solutions that align with your organizational strategy and deliver measurable results",
+      "description": "Our comprehensive suite of services spans across organizational design, talent management, assessment solutions, and specialized consulting. Each service is carefully crafted to meet the unique needs of organizations in the Gulf region."
+    },
+    "organizationDesign": {
+      "title": "Organization Design & Workforce Planning",
+      "shortDescription": "Strategic organizational structures and workforce optimization for sustainable growth",
+      "description": "Transform your organizational structure with our comprehensive design and planning services. We help you build efficient, scalable structures that support your business objectives.",
+      "services": [
+        "HR strategy development",
+        "Succession planning", 
+        "Behavioral & technical competency frameworks",
+        "Designing required organizational strategy & programs"
+      ]
+    },
+    "talentManagement": {
+      "title": "Talent & Leadership Management",
+      "shortDescription": "Comprehensive talent strategies and leadership development programs",
+      "description": "Develop your most valuable asset - your people. Our talent management solutions ensure you attract, develop, and retain the right talent for sustainable success.",
+      "services": [
+        "Establishment and setup",
+        "Performance management",
+        "Career path design", 
+        "Learning & development strategy & programs"
+      ]
+    },
+    "talentAssessment": {
+      "title": "Talent Assessment",
+      "shortDescription": "Data-driven assessment solutions for informed talent decisions",
+      "description": "Make confident talent decisions with our scientifically-backed assessment solutions. We provide comprehensive evaluation tools for all organizational levels.",
+      "services": [
+        "Behavioral & competency assessments",
+        "Employee potential assessments",
+        "Designing required assessment solutions"
+      ]
+    },
+    "pmoServices": {
+      "title": "Project Management Office (PMO) Services", 
+      "shortDescription": "Professional PMO establishment and management solutions",
+      "description": "Enhance your project delivery capabilities with our comprehensive PMO services. From setup to full operational management, we ensure your projects succeed.",
+      "services": [
+        "Establishment and setup of Project Management Offices (PMOs)",
+        "PMO outsourcing models to lead and operate client PMOs",
+        "Resource secondment for project management roles within client organizations",
+        "Leadership and advisory support for PMO governance & operations"
+      ]
+    },
+    "governmentExcellence": {
+      "title": "Government Excellence Services",
+      "shortDescription": "Specialized consulting for government entities and public sector excellence",
+      "description": "Support your journey toward government excellence with our specialized consulting services designed specifically for public sector organizations.",
+      "services": [
+        "Managing government excellence programs & frameworks",
+        "Evaluating government entities' performance & compliance with excellence requirements",
+        "Developing & updating government excellence models",
+        "Advisory support to help institutions achieve excellence recognition"
+      ]
+    },
+    "approachSection": {
+      "title": "Our Service Delivery Approach",
+      "subtitle": "A proven methodology that ensures sustainable impact and lasting results",
+      "design": {
+        "title": "Design Phase",
+        "description": "We begin by thoroughly understanding your unique organizational context, challenges, and objectives. Our design phase involves stakeholder engagement, comprehensive analysis, and the development of tailored solutions that align with your strategic goals."
+      },
+      "execute": {
+        "title": "Execute Phase", 
+        "description": "Our execution phase focuses on practical implementation with hands-on support. We work alongside your teams to ensure smooth deployment while transferring knowledge and building internal capabilities for long-term sustainability."
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Forward Consulting",
+      "subtitle": "Our unique combination of expertise, experience, and regional focus sets us apart",
+      "regionalExpertise": {
+        "title": "Regional Expertise",
+        "description": "20+ years of deep GCC market knowledge and cultural understanding"
+      },
+      "provenMethodology": {
+        "title": "Proven Methodology",
+        "description": "Our Design → Execute approach ensures sustainable results and knowledge transfer"
+      },
+      "clientCentric": {
+        "title": "Client-Centric Approach",
+        "description": "Tailored solutions that address your specific organizational needs and challenges"
+      },
+      "sustainableImpact": {
+        "title": "Sustainable Impact",
+        "description": "Focus on building internal capabilities and long-term organizational resilience"
+      }
+    }
   }
 }
