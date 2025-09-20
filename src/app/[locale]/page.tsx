@@ -1,3 +1,4 @@
+import { SharedCTA } from "@/components/shared/SharedCTA";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -382,30 +383,8 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-teal-600 to-indigo-700">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              {t("cta.title")}
-            </h2>
-
-            <p className="text-xl text-teal-100 mb-8">{t("cta.description")}</p>
-
-            <Button
-              asChild
-              size="lg"
-              variant="secondary"
-              className="bg-white text-teal-700 hover:bg-slate-100 font-semibold"
-            >
-              <Link href="/contact">
-                {t("cta.button")}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* CTA Section */}
+      <SharedCTA variant="contact" href="/contact" />
     </main>
   );
 }

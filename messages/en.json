@@ -79,5 +79,152 @@
       "description": "Let's discuss how our proven expertise can help you achieve your strategic objectives",
       "button": "Start Your Journey"
     }
+  },
+  "AboutPage": {
+    "hero": {
+      "title": "About Forward Consulting",
+      "subtitle": "Trusted partners in organizational excellence, driving transformation across the Gulf region for over two decades"
+    },
+    "vision": {
+      "title": "Our Vision",
+      "content": "To be the trusted partner that helps businesses unlock their potential and stay ahead in an ever-evolving world"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "Empower organizations to move confidently into the future through strategic consulting, innovation, and tailored solutions"
+    },
+    "coreValues": {
+      "title": "Our Core Values",
+      "subtitle": "These fundamental principles guide everything we do and shape how we serve our clients",
+      "clientFirst": {
+        "title": "Client First",
+        "description": "Putting clients at the heart of everything we do"
+      },
+      "professionalExcellence": {
+        "title": "Professional Excellence",
+        "description": "Delivering high-quality and practical solutions"
+      },
+      "insightDriven": {
+        "title": "Insight-Driven",
+        "description": "Leveraging deep understanding of local, regional, and global HR and management practices"
+      },
+      "experiencedTeam": {
+        "title": "Experienced Team",
+        "description": "A strong group with accumulated local, regional, and international expertise"
+      },
+      "trustedNetwork": {
+        "title": "Trusted Network",
+        "description": "Building partnerships with data providers and industry players to enrich our capabilities"
+      },
+      "regionalFocus": {
+        "title": "Regional Focus",
+        "description": "Proven track record in supporting organizations across the GCC and the Middle East"
+      }
+    },
+    "whatWeDeliver": {
+      "title": "What We Deliver",
+      "subtitle": "Our comprehensive approach ensures sustainable impact and lasting results",
+      "tailoredSolutions": {
+        "title": "Tailored HR Solutions",
+        "description": "Designing programs based on each client's unique needs"
+      },
+      "knowledgeTransfer": {
+        "title": "Knowledge Transfer",
+        "description": "Equipping client teams with the know-how to sustain impact"
+      },
+      "agileApproach": {
+        "title": "Agile & Future-Oriented",
+        "description": "A flexible approach that adapts quickly to evolving client challenges"
+      }
+    },
+    "marketInsight": {
+      "title": "Our Market Insight",
+      "subtitle": "Deep understanding of regional dynamics and business environments",
+      "gccExpertise": {
+        "title": "GCC Expertise",
+        "description": "Strong understanding of the GCC and Middle East context"
+      },
+      "organizationalSupport": {
+        "title": "Organizational Support",
+        "description": "Ability to support organizations in establishment, growth, and transformation phases"
+      }
+    },
+    "howWeWork": {
+      "title": "How We Work",
+      "subtitle": "Our collaborative methodology ensures alignment and sustainable outcomes",
+      "collaborative": {
+        "title": "Collaborative Approach",
+        "description": "Engaging key stakeholders early to ensure ownership and alignment"
+      },
+      "partnership": {
+        "title": "Partnership Mindset",
+        "description": "Working side by side with clients to deliver lasting results"
+      },
+      "sustainable": {
+        "title": "Sustainable Impact",
+        "description": "Focusing on outcomes that continue beyond project delivery"
+      }
+    },
+    "ourStory": {
+      "title": "Our Story",
+      "subtitle": "Two decades of excellence in HR consulting and organizational development",
+      "founded": {
+        "title": "Founded in Jordan",
+        "description": "Established as a regional HR consulting firm with a vision to transform organizations across the Middle East"
+      },
+      "expansion": {
+        "title": "Gulf Region Expansion",
+        "description": "Extended our services throughout the GCC, developing deep expertise in regional business practices and cultural nuances"
+      },
+      "saudiPartnership": {
+        "title": "Strategic Saudi Partnership",
+        "description": "Partnered with the Ministry of Human Resources and Social Development in Saudi Arabia to co-design the National Leadership Succession Program"
+      },
+      "today": {
+        "title": "Forward Consulting Today",
+        "description": "A trusted advisor to 100+ organizations, continuing to drive innovation in HR consulting and organizational excellence"
+      }
+    },
+    "leadership": {
+      "title": "Leadership Excellence",
+      "subtitle": "Our proven track record in designing and implementing succession planning and leadership development programs",
+      "expertise": {
+        "title": "Deep Expertise",
+        "description": "Proven track record in designing and implementing succession planning and leadership development programs with deep expertise in tailoring succession frameworks to fit public-sector requirements"
+      },
+      "collaboration": {
+        "title": "Strategic Collaboration",
+        "description": "Partnered with the Ministry of Human Resources and Social Development (MHRSD) in Saudi Arabia to co-design and pilot the National Leadership Succession Program, supporting leadership pipeline development in the public sector"
+      },
+      "impact": {
+        "title": "Lasting Impact",
+        "description": "Our work strengthens institutional resilience through sustainable leadership pipelines and builds future-ready leaders across organizations"
+      }
+    },
+    "achievements": {
+      "title": "Our Achievements",
+      "subtitle": "A strong record of helping organizations strengthen and advance their human capital capabilities",
+      "publicSector": "Supporting public sector transformation initiatives",
+      "privateSector": "Enhancing private sector organizational capabilities",
+      "leadershipDevelopment": "Developing next-generation leaders",
+      "institutionalResilience": "Building sustainable organizational frameworks"
+    }
+  },
+  "SharedCTA": {
+    "contact": {
+      "title": "Ready to Transform Your Organization?",
+      "description": "Let's discuss how our proven expertise can help you achieve your strategic objectives",
+      "button": "Start Your Journey"
+    },
+    "partner": {
+      "title": "Ready to Partner with Us?",
+      "description": "Let's discuss how our proven expertise can help transform your organization",
+      "button": "Get In Touch"
+    },
+    "services": {
+      "title": "Explore Our Services",
+      "description": "Discover how our comprehensive HR solutions can drive your organization's success",
+      "button": "View Services"
+    }
   }
 }
