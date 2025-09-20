@@ -243,7 +243,7 @@
       "description": "Transform your organizational structure with our comprehensive design and planning services. We help you build efficient, scalable structures that support your business objectives.",
       "services": [
         "HR strategy development",
-        "Succession planning", 
+        "Succession planning",
         "Behavioral & technical competency frameworks",
         "Designing required organizational strategy & programs"
       ]
@@ -255,7 +255,7 @@
       "services": [
         "Establishment and setup",
         "Performance management",
-        "Career path design", 
+        "Career path design",
         "Learning & development strategy & programs"
       ]
     },
@@ -270,7 +270,7 @@
       ]
     },
     "pmoServices": {
-      "title": "Project Management Office (PMO) Services", 
+      "title": "Project Management Office (PMO) Services",
       "shortDescription": "Professional PMO establishment and management solutions",
       "description": "Enhance your project delivery capabilities with our comprehensive PMO services. From setup to full operational management, we ensure your projects succeed.",
       "services": [
@@ -299,7 +299,7 @@
         "description": "We begin by thoroughly understanding your unique organizational context, challenges, and objectives. Our design phase involves stakeholder engagement, comprehensive analysis, and the development of tailored solutions that align with your strategic goals."
       },
       "execute": {
-        "title": "Execute Phase", 
+        "title": "Execute Phase",
         "description": "Our execution phase focuses on practical implementation with hands-on support. We work alongside your teams to ensure smooth deployment while transferring knowledge and building internal capabilities for long-term sustainability."
       }
     },
@@ -322,6 +322,77 @@
         "title": "Sustainable Impact",
         "description": "Focus on building internal capabilities and long-term organizational resilience"
       }
+    }
+  },
+  "ContactPage": {
+    "hero": {
+      "title": "Let's Build Your Success Together",
+      "subtitle": "Get in touch with our expert consultants to discuss your organizational challenges and opportunities"
+    },
+    "form": {
+      "title": "Send us a message",
+      "subtitle": "We'll get back to you within 24 hours",
+      "email": {
+        "label": "Your Email",
+        "placeholder": "Enter your email address"
+      },
+      "message": {
+        "label": "Your Message",
+        "placeholder": "Tell us about your project or how we can help..."
+      },
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! We'll get back to you soon.",
+      "error": "Failed to send message. Please try again or contact us directly."
+    },
+    "contact": {
+      "title": "Contact Information",
+      "subtitle": "Reach out to us through any of these channels",
+      "email": {
+        "title": "Email Us",
+        "description": "Send us an email anytime",
+        "value": "info@forwardconsulting.ae"
+      },
+      "phone": {
+        "title": "Call Us",
+        "description": "Speak directly with our team",
+        "value": "+971 4 123 4567"
+      },
+      "office": {
+        "title": "Visit Our Office",
+        "description": "Meet us in person",
+        "value": "Dubai Business Bay, UAE"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to common questions about our services",
+      "items": [
+        {
+          "question": "What industries do you specialize in?",
+          "answer": "We work across various industries including government, healthcare, finance, technology, and manufacturing. Our expertise spans both public and private sectors throughout the MENA region."
+        },
+        {
+          "question": "How long does a typical project take?",
+          "answer": "Project duration varies based on scope and complexity. Organizational assessments typically take 4-6 weeks, while comprehensive transformation projects can span 6-18 months. We provide detailed timelines during our initial consultation."
+        },
+        {
+          "question": "Do you provide ongoing support after project completion?",
+          "answer": "Yes, we offer continuous support and maintenance services. This includes progress monitoring, additional training, and adaptation strategies to ensure sustainable implementation of our recommendations."
+        },
+        {
+          "question": "Can you work with remote or hybrid teams?",
+          "answer": "Absolutely. We've adapted our methodologies to work effectively with distributed teams. We use digital collaboration tools and virtual workshops to deliver the same quality of service regardless of location."
+        },
+        {
+          "question": "What makes Forward Consulting different?",
+          "answer": "Our deep regional expertise, evidence-based approach, and commitment to sustainable change set us apart. We focus on building internal capabilities rather than creating dependency, ensuring long-term success for our clients."
+        },
+        {
+          "question": "How do you measure project success?",
+          "answer": "We establish clear KPIs and success metrics at the project start. These typically include employee engagement scores, operational efficiency improvements, and specific business outcomes aligned with your strategic objectives."
+        }
+      ]
     }
   }
 }

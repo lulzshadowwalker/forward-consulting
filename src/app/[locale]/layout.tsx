@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/sonner";
 import { routing } from "@/i18n/routing";
 import { clsx } from "clsx";
 import { hasLocale, Locale, NextIntlClientProvider } from "next-intl";
@@ -56,6 +57,7 @@ export default async function LocaleLayout({
         )}
       >
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <Toaster />
       </body>
     </html>
   );
