@@ -1,3 +1,4 @@
+import heroImage from "@/assets/images/hero.png";
 import { SharedCTA } from "@/components/shared/SharedCTA";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,7 +18,6 @@ import {
 } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
-import heroImage from "@/assets/images/hero.png";
 
 type Props = {
   params: Promise<{ locale: string }>;

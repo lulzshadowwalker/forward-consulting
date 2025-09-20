@@ -1,13 +1,14 @@
 "use client";
 
+import heroImage from "@/assets/images/hero.png";
 import { SharedCTA } from "@/components/shared/SharedCTA";
-import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -16,10 +17,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Link } from "@/i18n/navigation";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { useState } from "react";
 import { toast } from "sonner";
-import Image from "next/image";
-import heroImage from "@/assets/images/hero.png";
 
 type Props = {
   params: Promise<{ locale: string }>;
