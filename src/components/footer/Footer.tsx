@@ -24,25 +24,27 @@ export function Footer() {
   const t = useTranslations("Footer");
 
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-card text-card-foreground">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-blue-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">FC</span>
+              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-sm">
+                  FC
+                </span>
               </div>
               <span className="text-xl font-bold">{t("brand.name")}</span>
             </div>
-            <p className="text-slate-300 text-sm leading-relaxed mb-6 max-w-sm">
+            <p className="text-muted-foreground text-sm leading-relaxed mb-6 max-w-sm">
               {t("brand.tagline")}
             </p>
 
             {/* Social Media Links */}
             <div>
-              <h4 className="font-semibold mb-3 text-white">
+              <h4 className="font-semibold mb-3 text-foreground">
                 {t("social.title")}
               </h4>
               <div className="flex space-x-3">
@@ -50,7 +52,7 @@ export function Footer() {
                   variant="ghost"
                   size="sm"
                   asChild
-                  className="text-slate-400 hover:text-white hover:bg-slate-800"
+                  className="text-muted-foreground hover:text-foreground hover:bg-accent"
                 >
                   <Link
                     href="https://linkedin.com/company/forward-consulting"
@@ -65,7 +67,7 @@ export function Footer() {
                   variant="ghost"
                   size="sm"
                   asChild
-                  className="text-slate-400 hover:text-white hover:bg-slate-800"
+                  className="text-muted-foreground hover:text-foreground hover:bg-accent"
                 >
                   <Link
                     href="https://twitter.com/forward_consult"
@@ -80,7 +82,7 @@ export function Footer() {
                   variant="ghost"
                   size="sm"
                   asChild
-                  className="text-slate-400 hover:text-white hover:bg-slate-800"
+                  className="text-muted-foreground hover:text-foreground hover:bg-accent"
                 >
                   <Link
                     href="https://facebook.com/forward.consulting"
@@ -97,7 +99,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold mb-4 text-white">
+            <h3 className="font-semibold mb-4 text-foreground">
               {t("quickLinks.title")}
             </h3>
             <ul className="space-y-3">
@@ -105,7 +107,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-slate-300 hover:text-white transition-colors text-sm"
+                    className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                   >
                     {t(`quickLinks.${link.name}`)}
                   </Link>
@@ -116,7 +118,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold mb-4 text-white">
+            <h3 className="font-semibold mb-4 text-foreground">
               {t("services.title")}
             </h3>
             <ul className="space-y-3">
@@ -124,7 +126,7 @@ export function Footer() {
                 <li key={service.name}>
                   <Link
                     href={service.href}
-                    className="text-slate-300 hover:text-white transition-colors text-sm"
+                    className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                   >
                     {t(`services.${service.name}`)}
                   </Link>
@@ -135,31 +137,31 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold mb-4 text-white">
+            <h3 className="font-semibold mb-4 text-foreground">
               {t("contact.title")}
             </h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <Mail className="w-4 h-4 text-teal-400 mt-1 flex-shrink-0" />
+                <Mail className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                 <Link
                   href={`mailto:${t("contact.email")}`}
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
                   {t("contact.email")}
                 </Link>
               </div>
               <div className="flex items-start space-x-3">
-                <Phone className="w-4 h-4 text-teal-400 mt-1 flex-shrink-0" />
+                <Phone className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                 <Link
                   href={`tel:${t("contact.phone")}`}
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
                   {t("contact.phone")}
                 </Link>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 text-teal-400 mt-1 flex-shrink-0" />
-                <span className="text-slate-300 text-sm">
+                <MapPin className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                <span className="text-muted-foreground text-sm">
                   {t("contact.address")}
                 </span>
               </div>
@@ -168,22 +170,24 @@ export function Footer() {
         </div>
       </div>
 
-      <Separator className="bg-slate-800" />
+      <Separator className="bg-border" />
 
       {/* Footer Bottom */}
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-slate-400 text-sm">{t("legal.copyright")}</p>
+          <p className="text-muted-foreground text-sm">
+            {t("legal.copyright")}
+          </p>
           <div className="flex space-x-6">
             <Link
               href="/privacy"
-              className="text-slate-400 hover:text-white transition-colors text-sm"
+              className="text-muted-foreground hover:text-foreground transition-colors text-sm"
             >
               {t("legal.privacy")}
             </Link>
             <Link
               href="/terms"
-              className="text-slate-400 hover:text-white transition-colors text-sm"
+              className="text-muted-foreground hover:text-foreground transition-colors text-sm"
             >
               {t("legal.terms")}
             </Link>

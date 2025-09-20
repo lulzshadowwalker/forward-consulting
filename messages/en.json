@@ -129,7 +129,13 @@
   "AboutPage": {
     "hero": {
       "title": "About Forward Consulting",
-      "subtitle": "Trusted partners in organizational excellence, driving transformation across the Gulf region for over two decades"
+      "subtitle": "Trusted partners in organizational excellence, driving transformation across the Gulf region for over two decades",
+      "badge": "About Us",
+      "infoItems": {
+        "founded": "Founded 2020",
+        "location": "Jordan & GCC",
+        "team": "Expert Team"
+      }
     },
     "vision": {
       "title": "Our Vision",
@@ -216,19 +222,23 @@
       "subtitle": "Two decades of excellence in HR consulting and organizational development",
       "founded": {
         "title": "Founded in Jordan",
-        "description": "Established as a regional HR consulting firm with a vision to transform organizations across the Middle East"
+        "description": "Established as a regional HR consulting firm with a vision to transform organizations across the Middle East",
+        "label": "Founded"
       },
       "expansion": {
         "title": "Gulf Region Expansion",
-        "description": "Extended our services throughout the GCC, developing deep expertise in regional business practices and cultural nuances"
+        "description": "Extended our services throughout the GCC, developing deep expertise in regional business practices and cultural nuances",
+        "label": "Expansion"
       },
       "saudiPartnership": {
         "title": "Strategic Saudi Partnership",
-        "description": "Partnered with the Ministry of Human Resources and Social Development in Saudi Arabia to co-design the National Leadership Succession Program"
+        "description": "Partnered with the Ministry of Human Resources and Social Development in Saudi Arabia to co-design the National Leadership Succession Program",
+        "label": "Partnership"
       },
       "today": {
         "title": "Forward Consulting Today",
-        "description": "A trusted advisor to 100+ organizations, continuing to drive innovation in HR consulting and organizational excellence"
+        "description": "A trusted advisor to 100+ organizations, continuing to drive innovation in HR consulting and organizational excellence",
+        "label": "Today"
       }
     },
     "leadership": {
@@ -336,6 +346,10 @@
         "Developing & updating government excellence models",
         "Advisory support to help institutions achieve excellence recognition"
       ]
+    },
+    "specializedServices": {
+      "title": "Specialized Services",
+      "description": "Advanced consulting services including PMO management and government excellence programs"
     },
     "approachSection": {
       "title": "Our Service Delivery Approach",

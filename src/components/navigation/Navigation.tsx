@@ -42,17 +42,19 @@ export function Navigation() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-sm dark:bg-slate-900/80 dark:border-slate-800">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm border-border">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
             <Link
               href="/"
-              className="flex items-center space-x-2 text-xl font-bold text-slate-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+              className="flex items-center space-x-2 text-xl font-bold text-foreground hover:text-primary transition-colors"
             >
-              <div className="w-8 h-8 bg-gradient-to-br from-teal-600 to-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">FC</span>
+              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-sm">
+                  FC
+                </span>
               </div>
               <span className="hidden sm:block">{t("brand")}</span>
             </Link>
@@ -64,10 +66,8 @@ export function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors hover:text-teal-600 dark:hover:text-teal-400 ${
-                  isActive(item.href)
-                    ? "text-teal-600 dark:text-teal-400"
-                    : "text-slate-600 dark:text-slate-300"
+                className={`text-sm font-medium transition-colors hover:text-primary ${
+                  isActive(item.href) ? "text-primary" : "text-muted-foreground"
                 }`}
               >
                 {t(item.name)}
@@ -82,7 +82,7 @@ export function Navigation() {
               variant="ghost"
               size="sm"
               onClick={toggleLocale}
-              className="flex items-center space-x-2 text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400"
+              className="flex items-center space-x-2 text-muted-foreground hover:text-primary"
               aria-label={t("language")}
             >
               <Globe className="w-4 h-4" />
@@ -97,7 +97,7 @@ export function Navigation() {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="md:hidden text-slate-600 dark:text-slate-300"
+                  className="md:hidden text-muted-foreground"
                   aria-label={t("menu")}
                 >
                   <Menu className="w-5 h-5" />
@@ -113,10 +113,10 @@ export function Navigation() {
                       key={item.name}
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className={`text-lg font-medium transition-colors hover:text-teal-600 dark:hover:text-teal-400 ${
+                      className={`text-lg font-medium transition-colors hover:text-primary ${
                         isActive(item.href)
-                          ? "text-teal-600 dark:text-teal-400"
-                          : "text-slate-600 dark:text-slate-300"
+                          ? "text-primary"
+                          : "text-muted-foreground"
                       }`}
                     >
                       {t(item.name)}
@@ -124,14 +124,14 @@ export function Navigation() {
                   ))}
 
                   {/* Mobile Language Switcher */}
-                  <div className="pt-4 border-t border-slate-200 dark:border-slate-700">
+                  <div className="pt-4 border-t border-border">
                     <Button
                       variant="ghost"
                       onClick={() => {
                         toggleLocale();
                         setIsOpen(false);
                       }}
-                      className="flex items-center space-x-2 text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400"
+                      className="flex items-center space-x-2 text-muted-foreground hover:text-primary"
                     >
                       <Globe className="w-4 h-4" />
                       <span>

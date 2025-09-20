@@ -1,580 +1,318 @@
 import { SharedCTA } from "@/components/shared/SharedCTA";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
 import {
   Award,
-  BookOpen,
-  Briefcase,
   Building,
+  Calendar,
   CheckCircle,
-  Compass,
-  Eye,
-  Globe,
-  Handshake,
   MapPin,
-  Network,
-  Shield,
   Target,
   TrendingUp,
-  Trophy,
-  UserCheck,
   Users,
-  Zap,
 } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-type Props = {
+export default async function AboutPage({
+  params,
+}: {
   params: Promise<{ locale: string }>;
-};
-
-export default async function AboutPage({ params }: Props) {
+}) {
   const { locale } = await params;
   setRequestLocale(locale);
-
   const t = await getTranslations("AboutPage");
 
   return (
-    <>
-      <main className="min-h-screen">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 py-20 lg:py-32">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
-                {t("hero.title")}
-              </h1>
-
-              <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-3xl mx-auto">
-                {t("hero.subtitle")}
-              </p>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-primary/5 via-background to-muted/10 pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge
+              variant="outline"
+              className="mb-4 text-primary border-primary/20"
+            >
+              {t("hero.badge")}
+            </Badge>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
+              {t("hero.title")}
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-3xl mx-auto">
+              {t("hero.subtitle")}
+            </p>
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <Calendar className="w-4 h-4 text-primary" />
+                <span>{t("hero.infoItems.founded")}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-primary" />
+                <span>{t("hero.infoItems.location")}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4 text-primary" />
+                <span>{t("hero.infoItems.team")}</span>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Background decoration */}
-          <div className="absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute -top-40 -right-32 w-80 h-80 bg-teal-400/10 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-40 -left-32 w-80 h-80 bg-indigo-400/10 rounded-full blur-3xl"></div>
+      {/* Vision & Mission */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Vision */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <div className="p-8">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto lg:mx-0">
+                  <Target className="w-8 h-8 text-primary" />
+                </div>
+                <h2 className="text-3xl font-bold mb-4 text-foreground text-center lg:text-left">
+                  {t("vision.title")}
+                </h2>
+                <p className="text-muted-foreground leading-relaxed text-center lg:text-left">
+                  {t("vision.content")}
+                </p>
+              </div>
+            </Card>
+
+            {/* Mission */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <div className="p-8">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto lg:mx-0">
+                  <Award className="w-8 h-8 text-primary" />
+                </div>
+                <h2 className="text-3xl font-bold mb-4 text-foreground text-center lg:text-left">
+                  {t("mission.title")}
+                </h2>
+                <p className="text-muted-foreground leading-relaxed text-center lg:text-left">
+                  {t("mission.content")}
+                </p>
+              </div>
+            </Card>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Vision & Mission */}
-        <section className="py-20 bg-white dark:bg-slate-900">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-              {/* Vision */}
-              <Card className="border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
-                <CardHeader className="text-center pb-6">
-                  <div className="mx-auto w-16 h-16 bg-teal-100 dark:bg-teal-900/30 rounded-full flex items-center justify-center mb-4">
-                    <Eye className="w-8 h-8 text-teal-600 dark:text-teal-400" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-slate-900 dark:text-white">
-                    {t("vision.title")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-                    {t("vision.content")}
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Mission */}
-              <Card className="border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
-                <CardHeader className="text-center pb-6">
-                  <div className="mx-auto w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mb-4">
-                    <Compass className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-slate-900 dark:text-white">
-                    {t("mission.title")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-                    {t("mission.content")}
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+      {/* Values */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              {t("coreValues.title")}
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {t("coreValues.subtitle")}
+            </p>
           </div>
-        </section>
 
-        {/* Core Values */}
-        <section className="py-20 bg-slate-50 dark:bg-slate-800/50">
-          <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                icon: <Users className="w-8 h-8" />,
+                title: t("coreValues.clientFirst.title"),
+                description: t("coreValues.clientFirst.description"),
+              },
+              {
+                icon: <Target className="w-8 h-8" />,
+                title: t("coreValues.professionalExcellence.title"),
+                description: t("coreValues.professionalExcellence.description"),
+              },
+              {
+                icon: <Award className="w-8 h-8" />,
+                title: t("coreValues.insightDriven.title"),
+                description: t("coreValues.insightDriven.description"),
+              },
+              {
+                icon: <TrendingUp className="w-8 h-8" />,
+                title: t("coreValues.experiencedTeam.title"),
+                description: t("coreValues.experiencedTeam.description"),
+              },
+              {
+                icon: <CheckCircle className="w-8 h-8" />,
+                title: t("coreValues.trustedNetwork.title"),
+                description: t("coreValues.trustedNetwork.description"),
+              },
+              {
+                icon: <Building className="w-8 h-8" />,
+                title: t("coreValues.regionalFocus.title"),
+                description: t("coreValues.regionalFocus.description"),
+              },
+            ].map((value, index) => (
+              <Card
+                key={index}
+                className="text-center hover:shadow-lg transition-shadow"
+              >
+                <div className="p-6">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="text-primary">{value.icon}</div>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-foreground">
+                    {value.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {value.description}
+                  </p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Story */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-                {t("coreValues.title")}
-              </h2>
-              <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-                {t("coreValues.subtitle")}
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Client First */}
-              <Card className="text-center border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
-                    <UserCheck className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                  </div>
-                  <CardTitle className="text-lg font-semibold text-slate-900 dark:text-white">
-                    {t("coreValues.clientFirst.title")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm">
-                    {t("coreValues.clientFirst.description")}
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Professional Excellence */}
-              <Card className="text-center border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-4">
-                    <Award className="w-6 h-6 text-green-600 dark:text-green-400" />
-                  </div>
-                  <CardTitle className="text-lg font-semibold text-slate-900 dark:text-white">
-                    {t("coreValues.professionalExcellence.title")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm">
-                    {t("coreValues.professionalExcellence.description")}
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Insight-Driven */}
-              <Card className="text-center border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-4">
-                    <Target className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                  </div>
-                  <CardTitle className="text-lg font-semibold text-slate-900 dark:text-white">
-                    {t("coreValues.insightDriven.title")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm">
-                    {t("coreValues.insightDriven.description")}
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Experienced Team */}
-              <Card className="text-center border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center mb-4">
-                    <Users className="w-6 h-6 text-orange-600 dark:text-orange-400" />
-                  </div>
-                  <CardTitle className="text-lg font-semibold text-slate-900 dark:text-white">
-                    {t("coreValues.experiencedTeam.title")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm">
-                    {t("coreValues.experiencedTeam.description")}
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Trusted Network */}
-              <Card className="text-center border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto w-12 h-12 bg-teal-100 dark:bg-teal-900/30 rounded-lg flex items-center justify-center mb-4">
-                    <Network className="w-6 h-6 text-teal-600 dark:text-teal-400" />
-                  </div>
-                  <CardTitle className="text-lg font-semibold text-slate-900 dark:text-white">
-                    {t("coreValues.trustedNetwork.title")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm">
-                    {t("coreValues.trustedNetwork.description")}
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Regional Focus */}
-              <Card className="text-center border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 rounded-lg flex items-center justify-center mb-4">
-                    <MapPin className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
-                  </div>
-                  <CardTitle className="text-lg font-semibold text-slate-900 dark:text-white">
-                    {t("coreValues.regionalFocus.title")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm">
-                    {t("coreValues.regionalFocus.description")}
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* What We Deliver + Market Insight + How We Work - Combined Section */}
-        <section className="py-20 bg-white dark:bg-slate-900">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-3 gap-16">
-              {/* What We Deliver */}
-              <div>
-                <div className="text-center mb-12">
-                  <div className="mx-auto w-16 h-16 bg-teal-100 dark:bg-teal-900/30 rounded-full flex items-center justify-center mb-4">
-                    <Briefcase className="w-8 h-8 text-teal-600 dark:text-teal-400" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-                    {t("whatWeDeliver.title")}
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-300">
-                    {t("whatWeDeliver.subtitle")}
-                  </p>
-                </div>
-
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <CheckCircle className="w-6 h-6 text-teal-600 dark:text-teal-400 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-                        {t("whatWeDeliver.tailoredSolutions.title")}
-                      </h4>
-                      <p className="text-slate-600 dark:text-slate-300 text-sm">
-                        {t("whatWeDeliver.tailoredSolutions.description")}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <CheckCircle className="w-6 h-6 text-teal-600 dark:text-teal-400 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-                        {t("whatWeDeliver.knowledgeTransfer.title")}
-                      </h4>
-                      <p className="text-slate-600 dark:text-slate-300 text-sm">
-                        {t("whatWeDeliver.knowledgeTransfer.description")}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <CheckCircle className="w-6 h-6 text-teal-600 dark:text-teal-400 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-                        {t("whatWeDeliver.agileApproach.title")}
-                      </h4>
-                      <p className="text-slate-600 dark:text-slate-300 text-sm">
-                        {t("whatWeDeliver.agileApproach.description")}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Market Insight */}
-              <div>
-                <div className="text-center mb-12">
-                  <div className="mx-auto w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mb-4">
-                    <TrendingUp className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-                    {t("marketInsight.title")}
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-300">
-                    {t("marketInsight.subtitle")}
-                  </p>
-                </div>
-
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <Globe className="w-6 h-6 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-                        {t("marketInsight.gccExpertise.title")}
-                      </h4>
-                      <p className="text-slate-600 dark:text-slate-300 text-sm">
-                        {t("marketInsight.gccExpertise.description")}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <Building className="w-6 h-6 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-                        {t("marketInsight.organizationalSupport.title")}
-                      </h4>
-                      <p className="text-slate-600 dark:text-slate-300 text-sm">
-                        {t("marketInsight.organizationalSupport.description")}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* How We Work */}
-              <div>
-                <div className="text-center mb-12">
-                  <div className="mx-auto w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-4">
-                    <Handshake className="w-8 h-8 text-purple-600 dark:text-purple-400" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-                    {t("howWeWork.title")}
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-300">
-                    {t("howWeWork.subtitle")}
-                  </p>
-                </div>
-
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <Users className="w-6 h-6 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-                        {t("howWeWork.collaborative.title")}
-                      </h4>
-                      <p className="text-slate-600 dark:text-slate-300 text-sm">
-                        {t("howWeWork.collaborative.description")}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <Handshake className="w-6 h-6 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-                        {t("howWeWork.partnership.title")}
-                      </h4>
-                      <p className="text-slate-600 dark:text-slate-300 text-sm">
-                        {t("howWeWork.partnership.description")}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <Zap className="w-6 h-6 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-                        {t("howWeWork.sustainable.title")}
-                      </h4>
-                      <p className="text-slate-600 dark:text-slate-300 text-sm">
-                        {t("howWeWork.sustainable.description")}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Our Story Timeline */}
-        <section className="py-20 bg-slate-50 dark:bg-slate-800/50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
                 {t("ourStory.title")}
               </h2>
-              <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+              <p className="text-lg text-muted-foreground">
                 {t("ourStory.subtitle")}
               </p>
             </div>
 
-            <div className="max-w-4xl mx-auto">
-              <div className="relative">
-                {/* Timeline line */}
-                <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-teal-200 dark:bg-teal-800"></div>
-
-                {/* Timeline items */}
-                <div className="space-y-12">
-                  {/* Founded */}
-                  <div className="relative flex items-start">
-                    <div className="flex-shrink-0 w-16 h-16 bg-teal-100 dark:bg-teal-900/30 rounded-full flex items-center justify-center border-4 border-white dark:border-slate-800">
-                      <Building className="w-6 h-6 text-teal-600 dark:text-teal-400" />
+            <div className="space-y-12">
+              {/* Timeline Item 1 */}
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="w-full md:w-1/3">
+                  <div className="bg-primary/10 rounded-lg p-6 text-center">
+                    <div className="text-2xl font-bold text-primary mb-2">
+                      2020
                     </div>
-                    <div className="ml-6 flex-1">
-                      <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
-                        {t("ourStory.founded.title")}
-                      </h3>
-                      <p className="text-slate-600 dark:text-slate-300">
-                        {t("ourStory.founded.description")}
-                      </p>
+                    <div className="text-sm text-muted-foreground">
+                      {t("ourStory.founded.label")}
                     </div>
                   </div>
+                </div>
+                <div className="w-full md:w-2/3">
+                  <h3 className="text-xl font-semibold mb-3 text-foreground">
+                    {t("ourStory.founded.title")}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {t("ourStory.founded.description")}
+                  </p>
+                </div>
+              </div>
 
-                  {/* Expansion */}
-                  <div className="relative flex items-start">
-                    <div className="flex-shrink-0 w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center border-4 border-white dark:border-slate-800">
-                      <Globe className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
+              {/* Timeline Item 2 */}
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="w-full md:w-1/3">
+                  <div className="bg-primary/10 rounded-lg p-6 text-center">
+                    <div className="text-2xl font-bold text-primary mb-2">
+                      2021
                     </div>
-                    <div className="ml-6 flex-1">
-                      <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
-                        {t("ourStory.expansion.title")}
-                      </h3>
-                      <p className="text-slate-600 dark:text-slate-300">
-                        {t("ourStory.expansion.description")}
-                      </p>
+                    <div className="text-sm text-muted-foreground">
+                      {t("ourStory.expansion.label")}
                     </div>
                   </div>
+                </div>
+                <div className="w-full md:w-2/3 md:text-right">
+                  <h3 className="text-xl font-semibold mb-3 text-foreground">
+                    {t("ourStory.expansion.title")}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {t("ourStory.expansion.description")}
+                  </p>
+                </div>
+              </div>
 
-                  {/* Saudi Partnership */}
-                  <div className="relative flex items-start">
-                    <div className="flex-shrink-0 w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center border-4 border-white dark:border-slate-800">
-                      <Handshake className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+              {/* Timeline Item 3 */}
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="w-full md:w-1/3">
+                  <div className="bg-primary/10 rounded-lg p-6 text-center">
+                    <div className="text-2xl font-bold text-primary mb-2">
+                      2023
                     </div>
-                    <div className="ml-6 flex-1">
-                      <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
-                        {t("ourStory.saudiPartnership.title")}
-                      </h3>
-                      <p className="text-slate-600 dark:text-slate-300">
-                        {t("ourStory.saudiPartnership.description")}
-                      </p>
+                    <div className="text-sm text-muted-foreground">
+                      {t("ourStory.saudiPartnership.label")}
                     </div>
                   </div>
+                </div>
+                <div className="w-full md:w-2/3">
+                  <h3 className="text-xl font-semibold mb-3 text-foreground">
+                    {t("ourStory.saudiPartnership.title")}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {t("ourStory.saudiPartnership.description")}
+                  </p>
+                </div>
+              </div>
 
-                  {/* Today */}
-                  <div className="relative flex items-start">
-                    <div className="flex-shrink-0 w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center border-4 border-white dark:border-slate-800">
-                      <Trophy className="w-6 h-6 text-green-600 dark:text-green-400" />
+              {/* Timeline Item 4 */}
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="w-full md:w-1/3">
+                  <div className="bg-primary/10 rounded-lg p-6 text-center">
+                    <div className="text-2xl font-bold text-primary mb-2">
+                      2024
                     </div>
-                    <div className="ml-6 flex-1">
-                      <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
-                        {t("ourStory.today.title")}
-                      </h3>
-                      <p className="text-slate-600 dark:text-slate-300">
-                        {t("ourStory.today.description")}
-                      </p>
+                    <div className="text-sm text-muted-foreground">
+                      {t("ourStory.today.label")}
                     </div>
                   </div>
+                </div>
+                <div className="w-full md:w-2/3 md:text-right">
+                  <h3 className="text-xl font-semibold mb-3 text-foreground">
+                    {t("ourStory.today.title")}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {t("ourStory.today.description")}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Leadership Excellence */}
-        <section className="py-20 bg-white dark:bg-slate-900">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-                {t("leadership.title")}
-              </h2>
-              <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-                {t("leadership.subtitle")}
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {/* Deep Expertise */}
-              <Card className="border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
-                <CardHeader className="text-center pb-4">
-                  <div className="mx-auto w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
-                    <BookOpen className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                  </div>
-                  <CardTitle className="text-lg font-semibold text-slate-900 dark:text-white">
-                    {t("leadership.expertise.title")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm">
-                    {t("leadership.expertise.description")}
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Strategic Collaboration */}
-              <Card className="border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
-                <CardHeader className="text-center pb-4">
-                  <div className="mx-auto w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-4">
-                    <Handshake className="w-6 h-6 text-green-600 dark:text-green-400" />
-                  </div>
-                  <CardTitle className="text-lg font-semibold text-slate-900 dark:text-white">
-                    {t("leadership.collaboration.title")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm">
-                    {t("leadership.collaboration.description")}
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Lasting Impact */}
-              <Card className="border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
-                <CardHeader className="text-center pb-4">
-                  <div className="mx-auto w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-4">
-                    <Zap className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                  </div>
-                  <CardTitle className="text-lg font-semibold text-slate-900 dark:text-white">
-                    {t("leadership.impact.title")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm">
-                    {t("leadership.impact.description")}
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+      {/* Stats Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              {t("achievements.title")}
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {t("achievements.subtitle")}
+            </p>
           </div>
-        </section>
 
-        {/* Achievements */}
-        <section className="py-20 bg-slate-50 dark:bg-slate-800/50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-                {t("achievements.title")}
-              </h2>
-              <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-                {t("achievements.subtitle")}
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              <div className="text-center">
-                <div className="mx-auto w-16 h-16 bg-teal-100 dark:bg-teal-900/30 rounded-full flex items-center justify-center mb-4">
-                  <Building className="w-8 h-8 text-teal-600 dark:text-teal-400" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            {[
+              {
+                number: "100+",
+                label: t("achievements.publicSector"),
+              },
+              {
+                number: "50+",
+                label: t("achievements.privateSector"),
+              },
+              {
+                number: "20+",
+                label: t("achievements.leadershipDevelopment"),
+              },
+              {
+                number: "25+",
+                label: t("achievements.institutionalResilience"),
+              },
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                  {stat.number}
                 </div>
-                <p className="text-slate-600 dark:text-slate-300 font-medium">
-                  {t("achievements.publicSector")}
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="mx-auto w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mb-4">
-                  <Briefcase className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
+                <div className="text-muted-foreground font-medium">
+                  {stat.label}
                 </div>
-                <p className="text-slate-600 dark:text-slate-300 font-medium">
-                  {t("achievements.privateSector")}
-                </p>
               </div>
-
-              <div className="text-center">
-                <div className="mx-auto w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-4">
-                  <Users className="w-8 h-8 text-purple-600 dark:text-purple-400" />
-                </div>
-                <p className="text-slate-600 dark:text-slate-300 font-medium">
-                  {t("achievements.leadershipDevelopment")}
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="mx-auto w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-4">
-                  <Shield className="w-8 h-8 text-green-600 dark:text-green-400" />
-                </div>
-                <p className="text-slate-600 dark:text-slate-300 font-medium">
-                  {t("achievements.institutionalResilience")}
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <SharedCTA variant="partner" href="/contact" />
-      </main>
-    </>
+      {/* CTA Section */}
+      <SharedCTA />
+    </div>
   );
 }

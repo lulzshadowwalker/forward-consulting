@@ -30,14 +30,14 @@ export default async function ServicesPage({ params }: Props) {
     <>
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 py-20 lg:py-32">
+        <section className="relative bg-gradient-to-br from-muted/20 to-muted/40 py-20 lg:py-32">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
                 {t("hero.title")}
               </h1>
 
-              <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
                 {t("hero.subtitle")}
               </p>
             </div>
@@ -45,22 +45,22 @@ export default async function ServicesPage({ params }: Props) {
 
           {/* Background decoration */}
           <div className="absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute -top-40 -right-32 w-80 h-80 bg-teal-400/10 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-40 -left-32 w-80 h-80 bg-indigo-400/10 rounded-full blur-3xl"></div>
+            <div className="absolute -top-40 -right-32 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-40 -left-32 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
           </div>
         </section>
 
         {/* Introduction */}
-        <section className="py-20 bg-white dark:bg-slate-900">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 {t("introduction.title")}
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 mb-8">
+              <p className="text-xl text-muted-foreground mb-8">
                 {t("introduction.subtitle")}
               </p>
-              <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 {t("introduction.description")}
               </p>
             </div>
@@ -68,23 +68,23 @@ export default async function ServicesPage({ params }: Props) {
         </section>
 
         {/* Core Services Grid */}
-        <section className="py-20 bg-slate-50 dark:bg-slate-800/50">
+        <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Organization Design & Workforce Planning */}
-              <Card className="group hover:shadow-xl transition-all duration-300 border-slate-200 dark:border-slate-700">
+              <Card className="group hover:shadow-xl transition-all duration-300">
                 <CardHeader className="pb-6">
                   <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-16 h-16 bg-teal-100 dark:bg-teal-900/30 rounded-xl flex items-center justify-center group-hover:bg-teal-200 dark:group-hover:bg-teal-800/50 transition-colors">
-                      <Building className="w-8 h-8 text-teal-600 dark:text-teal-400" />
+                    <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <Building className="w-8 h-8 text-primary" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl font-bold text-slate-900 dark:text-white">
+                      <CardTitle className="text-2xl font-bold text-foreground">
                         {t("organizationDesign.title")}
                       </CardTitle>
                     </div>
                   </div>
-                  <p className="text-slate-600 dark:text-slate-300">
+                  <p className="text-muted-foreground">
                     {t("organizationDesign.description")}
                   </p>
                 </CardHeader>
@@ -94,8 +94,8 @@ export default async function ServicesPage({ params }: Props) {
                       .raw("organizationDesign.services")
                       .map((service: string, index: number) => (
                         <div key={index} className="flex items-start space-x-3">
-                          <CheckCircle className="w-5 h-5 text-teal-600 dark:text-teal-400 flex-shrink-0 mt-0.5" />
-                          <span className="text-slate-600 dark:text-slate-300 text-sm">
+                          <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground text-sm">
                             {service}
                           </span>
                         </div>
@@ -105,19 +105,19 @@ export default async function ServicesPage({ params }: Props) {
               </Card>
 
               {/* Talent & Leadership Management */}
-              <Card className="group hover:shadow-xl transition-all duration-300 border-slate-200 dark:border-slate-700">
+              <Card className="group hover:shadow-xl transition-all duration-300">
                 <CardHeader className="pb-6">
                   <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center group-hover:bg-indigo-200 dark:group-hover:bg-indigo-800/50 transition-colors">
-                      <Users className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
+                    <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <Users className="w-8 h-8 text-primary" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl font-bold text-slate-900 dark:text-white">
+                      <CardTitle className="text-2xl font-bold text-foreground">
                         {t("talentManagement.title")}
                       </CardTitle>
                     </div>
                   </div>
-                  <p className="text-slate-600 dark:text-slate-300">
+                  <p className="text-muted-foreground">
                     {t("talentManagement.description")}
                   </p>
                 </CardHeader>
@@ -127,8 +127,8 @@ export default async function ServicesPage({ params }: Props) {
                       .raw("talentManagement.services")
                       .map((service: string, index: number) => (
                         <div key={index} className="flex items-start space-x-3">
-                          <CheckCircle className="w-5 h-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
-                          <span className="text-slate-600 dark:text-slate-300 text-sm">
+                          <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground text-sm">
                             {service}
                           </span>
                         </div>
@@ -179,13 +179,12 @@ export default async function ServicesPage({ params }: Props) {
                     </div>
                     <div>
                       <CardTitle className="text-2xl font-bold text-slate-900 dark:text-white">
-                        Specialized Services
+                        {t("specializedServices.title")}
                       </CardTitle>
                     </div>
                   </div>
                   <p className="text-slate-600 dark:text-slate-300">
-                    Advanced consulting services including PMO management and
-                    government excellence programs
+                    {t("specializedServices.description")}
                   </p>
                 </CardHeader>
                 <CardContent className="pt-0">

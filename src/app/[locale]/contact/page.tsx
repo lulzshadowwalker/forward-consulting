@@ -72,13 +72,13 @@ export default function ContactPage(props: Props) {
     <>
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="py-20 lg:py-28 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
+        <section className="py-20 lg:py-28 bg-gradient-to-br from-muted/20 to-primary/5">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
                 {t("hero.title")}
               </h1>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 {t("hero.subtitle")}
               </p>
             </div>
@@ -86,16 +86,16 @@ export default function ContactPage(props: Props) {
         </section>
 
         {/* Contact Form and Info Section */}
-        <section className="py-20 bg-white dark:bg-slate-900">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
               {/* Contact Form */}
               <div>
                 <div className="mb-8">
-                  <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
+                  <h2 className="text-3xl font-bold text-foreground mb-4">
                     {t("form.title")}
                   </h2>
-                  <p className="text-lg text-slate-600 dark:text-slate-300">
+                  <p className="text-lg text-muted-foreground">
                     {t("form.subtitle")}
                   </p>
                 </div>
