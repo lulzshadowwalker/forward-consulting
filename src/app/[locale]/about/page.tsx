@@ -40,7 +40,7 @@ export default async function AboutPage({
         </div>
 
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-background/20 z-10"></div>
+        <div className="absolute inset-0 bg-black/10 z-10"></div>
 
         <div className="container mx-auto px-4 flex-1 flex items-center relative z-20">
           <div className="max-w-4xl mx-auto text-center w-full">

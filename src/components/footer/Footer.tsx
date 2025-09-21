@@ -1,10 +1,12 @@
 "use client";
 
+import logo from "@/assets/images/logo.png";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "@/i18n/navigation";
 import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const quickLinks = [
   { name: "home", href: "/" },
@@ -14,10 +16,13 @@ const quickLinks = [
 ] as const;
 
 const serviceLinks = [
-  { name: "organizationDesign", href: "/services" },
-  { name: "talentManagement", href: "/services" },
-  { name: "talentAssessment", href: "/services" },
-  { name: "specializedServices", href: "/services" },
+  { name: "organizationDesign", href: "/services#organization-design" },
+  { name: "talentManagement", href: "/services#talent-leadership-management" },
+  { name: "talentAssessment", href: "/services#talent-assessment" },
+  {
+    name: "specializedServices",
+    href: "/services#specialized-services-combined",
+  },
 ] as const;
 
 export function Footer() {
@@ -30,14 +35,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">
-                  FC
-                </span>
-              </div>
-              <span className="text-xl font-bold">{t("brand.name")}</span>
-            </div>
+            <Image
+              src={logo}
+              alt={t("brand.name")}
+              width={128}
+              className="-translate-x-3 rtl:translate-x-3"
+            />
             <p className="text-muted-foreground text-sm leading-relaxed mb-6 max-w-sm">
               {t("brand.tagline")}
             </p>
@@ -178,18 +181,17 @@ export function Footer() {
           <p className="text-muted-foreground text-sm">
             {t("legal.copyright")}
           </p>
-          <div className="flex space-x-6">
+          <div className="flex items-center space-x-1">
+            <span className="text-muted-foreground text-sm">
+              {t("legal.poweredBy")}
+            </span>
             <Link
-              href="/privacy"
-              className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+              href="https://bayanata.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 transition-colors text-sm font-medium"
             >
-              {t("legal.privacy")}
-            </Link>
-            <Link
-              href="/terms"
-              className="text-muted-foreground hover:text-foreground transition-colors text-sm"
-            >
-              {t("legal.terms")}
+              {t("legal.bayanata")}
             </Link>
           </div>
         </div>

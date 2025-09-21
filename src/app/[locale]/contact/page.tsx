@@ -88,7 +88,7 @@ export default function ContactPage(props: Props) {
           </div>
 
           {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-background/20 z-10"></div>
+          <div className="absolute inset-0 bg-black/10 z-10"></div>
 
           <div className="container mx-auto px-4 flex-1 flex items-center relative z-20">
             <div className="text-center max-w-4xl mx-auto w-full">
@@ -141,7 +141,7 @@ export default function ContactPage(props: Props) {
                           onChange={handleChange}
                           placeholder={t("form.email.placeholder")}
                           required
-                          className="h-12"
+                          className="h-12 border-input-900 bg-background"
                           disabled={isSubmitting}
                         />
                       </div>
@@ -161,7 +161,7 @@ export default function ContactPage(props: Props) {
                           placeholder={t("form.message.placeholder")}
                           required
                           rows={6}
-                          className="resize-none"
+                          className="resize-none border-input-900 bg-background"
                           disabled={isSubmitting}
                         />
                       </div>
@@ -171,17 +171,17 @@ export default function ContactPage(props: Props) {
                         disabled={
                           isSubmitting || !formData.email || !formData.message
                         }
-                        className="w-full h-12 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white font-semibold"
+                        className="group w-full h-12 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white font-semibold"
                       >
                         {isSubmitting ? (
                           <>
-                            <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
                             {t("form.sending")}
+                            <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                           </>
                         ) : (
                           <>
-                            <Send className="w-4 h-4 mr-2" />
                             {t("form.submit")}
+                            <Send className="w-4 h-4 rtl:rotate-270 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:rotate-20 rtl:group-hover:rotate-250 rtl:group-hover:-translate-x-1 ease-in-out duration-300 transition-transform" />
                           </>
                         )}
                       </Button>
@@ -204,7 +204,7 @@ export default function ContactPage(props: Props) {
                 <div className="space-y-6">
                   {/* Email */}
                   <Card className="group hover:shadow-lg transition-shadow border-slate-200 dark:border-slate-700">
-                    <CardContent className="p-6">
+                    <CardContent className="px-6">
                       <div className="flex items-start space-x-4">
                         <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center group-hover:bg-blue-200 dark:group-hover:bg-blue-800/50 transition-colors">
                           <Mail className="w-6 h-6 text-blue-600 dark:text-blue-400" />
@@ -229,7 +229,7 @@ export default function ContactPage(props: Props) {
 
                   {/* Phone */}
                   <Card className="group hover:shadow-lg transition-shadow border-slate-200 dark:border-slate-700">
-                    <CardContent className="p-6">
+                    <CardContent className="px-6">
                       <div className="flex items-start space-x-4">
                         <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center group-hover:bg-green-200 dark:group-hover:bg-green-800/50 transition-colors">
                           <Phone className="w-6 h-6 text-green-600 dark:text-green-400" />
@@ -254,7 +254,7 @@ export default function ContactPage(props: Props) {
 
                   {/* Office */}
                   <Card className="group hover:shadow-lg transition-shadow border-slate-200 dark:border-slate-700">
-                    <CardContent className="p-6">
+                    <CardContent className="px-6">
                       <div className="flex items-start space-x-4">
                         <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center group-hover:bg-purple-200 dark:group-hover:bg-purple-800/50 transition-colors">
                           <MapPin className="w-6 h-6 text-purple-600 dark:text-purple-400" />

@@ -46,7 +46,7 @@ export default async function ServicesPage({ params }: Props) {
           </div>
 
           {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-background/20 z-10"></div>
+          <div className="absolute inset-0 bg-black/10 z-10"></div>
 
           <div className="container mx-auto px-4 flex-1 flex items-center relative z-20">
             <div className="max-w-4xl mx-auto text-center w-full">
@@ -95,7 +95,10 @@ export default async function ServicesPage({ params }: Props) {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Organization Design & Workforce Planning */}
-              <Card className="group hover:shadow-xl transition-all duration-300">
+              <Card
+                id="organization-design"
+                className="group hover:shadow-xl transition-all duration-300"
+              >
                 <CardHeader className="pb-6">
                   <div className="flex items-center space-x-4 mb-4">
                     <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -128,7 +131,10 @@ export default async function ServicesPage({ params }: Props) {
               </Card>
 
               {/* Talent & Leadership Management */}
-              <Card className="group hover:shadow-xl transition-all duration-300">
+              <Card
+                id="talent-leadership-management"
+                className="group hover:shadow-xl transition-all duration-300"
+              >
                 <CardHeader className="pb-6">
                   <div className="flex items-center space-x-4 mb-4">
                     <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -161,7 +167,10 @@ export default async function ServicesPage({ params }: Props) {
               </Card>
 
               {/* Talent Assessment */}
-              <Card className="group hover:shadow-xl transition-all duration-300 border-slate-200 dark:border-slate-700">
+              <Card
+                id="talent-assessment"
+                className="group hover:shadow-xl transition-all duration-300 border-slate-200 dark:border-slate-700"
+              >
                 <CardHeader className="pb-6">
                   <div className="flex items-center space-x-4 mb-4">
                     <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center group-hover:bg-purple-200 dark:group-hover:bg-purple-800/50 transition-colors">
@@ -194,7 +203,10 @@ export default async function ServicesPage({ params }: Props) {
               </Card>
 
               {/* Specialized Services Combined */}
-              <Card className="group hover:shadow-xl transition-all duration-300 border-slate-200 dark:border-slate-700">
+              <Card
+                id="specialized-services-combined"
+                className="group hover:shadow-xl transition-all duration-300 border-slate-200 dark:border-slate-700"
+              >
                 <CardHeader className="pb-6">
                   <div className="flex items-center space-x-4 mb-4">
                     <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center group-hover:bg-green-200 dark:group-hover:bg-green-800/50 transition-colors">
@@ -299,7 +311,7 @@ export default async function ServicesPage({ params }: Props) {
             {/* Arrow connecting the phases */}
             <div className="flex justify-center mt-8">
               <div className="hidden md:block">
-                <ArrowRight className="w-8 h-8 text-teal-600 dark:text-teal-400" />
+                <ArrowRight className="w-8 h-8 text-teal-600 dark:text-teal-400 rtl:rotate-180" />
               </div>
             </div>
           </div>

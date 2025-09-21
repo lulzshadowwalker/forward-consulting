@@ -44,8 +44,8 @@
     },
     "legal": {
       "copyright": "© 2025 Forward Consulting. All rights reserved.",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service"
+      "poweredBy": "Powered by",
+      "bayanata": "Bayanata"
     }
   },
   "HomePage": {
@@ -82,7 +82,8 @@
       "yearsLabel": "Years Experience",
       "region": "GCC Focus",
       "clients": "100+",
-      "clientsLabel": "Organizations Served"
+      "clientsLabel": "Organizations Served",
+      "imageAlt": "Middle East Gulf region expertise map infographic showing Saudi Arabia highlighted with 20+ years experience, client network connections across UAE, Qatar, Kuwait, Bahrain, and Oman, and icons representing 100+ clients in a professional corporate design"
     },
     "values": {
       "title": "Our Values Drive Lasting Impact",

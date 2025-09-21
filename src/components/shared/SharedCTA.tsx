@@ -40,7 +40,7 @@ export function SharedCTA({
           >
             <Link href={href}>
               {t(`${variant}.button`)}
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className="h-4 w-4 rtl:rotate-180" />
             </Link>
           </Button>
         </div>

@@ -1,4 +1,5 @@
 import heroImage from "@/assets/images/hero.png";
+import regionalExpertise from "@/assets/images/regional-expertise.png";
 import { SharedCTA } from "@/components/shared/SharedCTA";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -9,7 +10,6 @@ import {
   Award,
   Building,
   CheckCircle,
-  Globe,
   Handshake,
   Heart,
   Lightbulb,
@@ -35,7 +35,7 @@ export default async function HomePage({ params }: Props) {
     <>
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative min-h-[80vh] lg:min-h-[85vh] flex items-center py-20 overflow-hidden">
+        <section className="relative min-h-[70vh] lg:min-h-[75vh] flex items-center py-20 overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -48,7 +48,7 @@ export default async function HomePage({ params }: Props) {
           </div>
 
           {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-background/20 z-10"></div>
+          <div className="absolute inset-0 bg-black/10 z-10"></div>
 
           <div className="container mx-auto px-4 flex-1 flex items-center">
             <div className="max-w-4xl mx-auto text-center w-full">
@@ -72,7 +72,7 @@ export default async function HomePage({ params }: Props) {
                 >
                   <Link href="/services">
                     {t("hero.cta")}
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4 rtl:rotate-180" />
                   </Link>
                 </Button>
 
@@ -109,7 +109,7 @@ export default async function HomePage({ params }: Props) {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <CardHeader className="text-center pb-4">
+                <CardHeader className="text-center">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                     <Building className="w-6 h-6 text-primary" />
                   </div>
@@ -125,7 +125,7 @@ export default async function HomePage({ params }: Props) {
               </Card>
 
               <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <CardHeader className="text-center pb-4">
+                <CardHeader className="text-center">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                     <Users className="w-6 h-6 text-primary" />
                   </div>
@@ -141,7 +141,7 @@ export default async function HomePage({ params }: Props) {
               </Card>
 
               <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <CardHeader className="text-center pb-4">
+                <CardHeader className="text-center">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                     <Target className="w-6 h-6 text-primary" />
                   </div>
@@ -157,7 +157,7 @@ export default async function HomePage({ params }: Props) {
               </Card>
 
               <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <CardHeader className="text-center pb-4">
+                <CardHeader className="text-center">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                     <Award className="w-6 h-6 text-primary" />
                   </div>
@@ -217,18 +217,14 @@ export default async function HomePage({ params }: Props) {
               </div>
 
               <div className="relative">
-                {/* Placeholder for regional map/image */}
-                <div className="bg-gradient-to-br from-primary/10 to-muted/20 rounded-2xl p-8 h-80 flex items-center justify-center">
-                  <div className="text-center">
-                    <Globe className="w-16 h-16 text-primary mx-auto mb-4" />
-                    <p className="text-muted-foreground font-medium">
-                      Regional Expertise Map
-                      <br />
-                      <span className="text-sm opacity-75">
-                        [Image placeholder]
-                      </span>
-                    </p>
-                  </div>
+                <div className="bg-gradient-to-br from-primary/10 to-muted/20 rounded-2xl p-8 h-80 flex items-center justify-center overflow-hidden">
+                  <Image
+                    src={regionalExpertise}
+                    alt={t("expertise.imageAlt")}
+                    fill
+                    className="object-cover rounded-2xl"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
               </div>
             </div>
@@ -250,8 +246,8 @@ export default async function HomePage({ params }: Props) {
             <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
               {/* Partnership */}
               <Card className="text-center hover:shadow-lg transition-shadow">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <CardHeader>
+                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Handshake className="w-6 h-6 text-primary" />
                   </div>
                   <CardTitle className="text-lg font-semibold text-foreground">
@@ -267,8 +263,8 @@ export default async function HomePage({ params }: Props) {
 
               {/* Integrity */}
               <Card className="text-center hover:shadow-lg transition-shadow">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <CardHeader>
+                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Shield className="w-6 h-6 text-primary" />
                   </div>
                   <CardTitle className="text-lg font-semibold text-foreground">
@@ -284,8 +280,8 @@ export default async function HomePage({ params }: Props) {
 
               {/* Innovation */}
               <Card className="text-center hover:shadow-lg transition-shadow">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <CardHeader>
+                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Lightbulb className="w-6 h-6 text-primary" />
                   </div>
                   <CardTitle className="text-lg font-semibold text-foreground">
@@ -301,8 +297,8 @@ export default async function HomePage({ params }: Props) {
 
               {/* Respect */}
               <Card className="text-center hover:shadow-lg transition-shadow">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <CardHeader>
+                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Heart className="w-6 h-6 text-primary" />
                   </div>
                   <CardTitle className="text-lg font-semibold text-foreground">
@@ -318,8 +314,8 @@ export default async function HomePage({ params }: Props) {
 
               {/* Excellence */}
               <Card className="text-center hover:shadow-lg transition-shadow">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <CardHeader>
+                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Star className="w-6 h-6 text-primary" />
                   </div>
                   <CardTitle className="text-lg font-semibold text-foreground">
@@ -391,7 +387,7 @@ export default async function HomePage({ params }: Props) {
             {/* Connecting Arrow */}
             <div className="flex justify-center mt-8 mb-8">
               <div className="hidden md:block">
-                <ArrowRight className="w-8 h-8 text-teal-600 dark:text-teal-400" />
+                <ArrowRight className="w-8 h-8 text-teal-600 dark:text-teal-400 rtl:rotate-180" />
               </div>
             </div>
           </div>
