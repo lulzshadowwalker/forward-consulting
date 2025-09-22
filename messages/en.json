@@ -125,6 +125,10 @@
       "title": "Ready to Transform Your Organization?",
       "description": "Let's discuss how our proven expertise can help you achieve your strategic objectives",
       "button": "Start Your Journey"
+    },
+    "clients": {
+      "title": "Our Clients",
+      "subtitle": "We have worked with a wide range of clients, from small startups to large corporations. Here are some of the companies we have had the pleasure of working with."
     }
   },
   "AboutPage": {

@@ -1,6 +1,7 @@
 import heroImage from "@/assets/images/hero.png";
 import regionalExpertise from "@/assets/images/regional-expertise.png";
 import { AnimatedApproach } from "@/components/animations/AnimatedApproach";
+import { AnimatedClientsMarquee } from "@/components/animations/AnimatedClientsMarquee";
 import { AnimatedHero } from "@/components/animations/AnimatedHero";
 import { AnimatedRegionalExpertise } from "@/components/animations/AnimatedRegionalExpertise";
 import { AnimatedServicesGrid } from "@/components/animations/AnimatedServicesGrid";
@@ -71,6 +72,11 @@ export default async function HomePage({ params }: Props) {
               description: t("services.specialized.description"),
             },
           ]}
+        />
+
+        <AnimatedClientsMarquee
+          title={t("clients.title")}
+          subtitle={t("clients.subtitle")}
         />
 
         {/* Regional Expertise */}
