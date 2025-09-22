@@ -124,7 +124,6 @@ export default async function ServicesPage({ params }: Props) {
           ]}
         />
         {/* Why Choose Us */}
-        {/* Why Choose Us */}
         <AnimatedFeatureGrid
           title={t("whyChooseUs.title")}
           subtitle={t("whyChooseUs.subtitle")}

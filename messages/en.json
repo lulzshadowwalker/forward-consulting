@@ -353,36 +353,44 @@
       "title": "Specialized Services",
       "description": "Advanced consulting services including PMO management and government excellence programs"
     },
-    "approachSection": {
+    "approach": {
       "title": "Our Service Delivery Approach",
       "subtitle": "A proven methodology that ensures sustainable impact and lasting results",
-      "design": {
-        "title": "Design Phase",
-        "description": "We begin by thoroughly understanding your unique organizational context, challenges, and objectives. Our design phase involves stakeholder engagement, comprehensive analysis, and the development of tailored solutions that align with your strategic goals."
+      "assessment": {
+        "title": "Assessment & Analysis",
+        "description": "We begin by thoroughly understanding your unique organizational context, challenges, and objectives through comprehensive stakeholder engagement and analysis."
       },
-      "execute": {
-        "title": "Execute Phase",
-        "description": "Our execution phase focuses on practical implementation with hands-on support. We work alongside your teams to ensure smooth deployment while transferring knowledge and building internal capabilities for long-term sustainability."
+      "strategy": {
+        "title": "Strategy Development",
+        "description": "Based on our assessment, we develop tailored strategic solutions that align with your organizational goals and industry best practices."
+      },
+      "implementation": {
+        "title": "Implementation & Execution",
+        "description": "We work alongside your teams to ensure smooth deployment of solutions while transferring knowledge and building internal capabilities."
+      },
+      "optimization": {
+        "title": "Optimization & Sustainability",
+        "description": "Continuous monitoring and refinement to ensure lasting impact and long-term organizational resilience and success."
       }
     },
     "whyChooseUs": {
       "title": "Why Choose Forward Consulting",
       "subtitle": "Our unique combination of expertise, experience, and regional focus sets us apart",
-      "regionalExpertise": {
-        "title": "Regional Expertise",
-        "description": "20+ years of deep GCC market knowledge and cultural understanding"
+      "expertise": {
+        "title": "Deep Regional Expertise",
+        "description": "20+ years of proven experience serving organizations across the GCC with deep market knowledge and cultural understanding"
       },
-      "provenMethodology": {
-        "title": "Proven Methodology",
-        "description": "Our Design → Execute approach ensures sustainable results and knowledge transfer"
+      "proven": {
+        "title": "Proven Track Record",
+        "description": "Successfully delivered 100+ projects across diverse industries with measurable results and sustainable impact"
       },
-      "clientCentric": {
-        "title": "Client-Centric Approach",
-        "description": "Tailored solutions that address your specific organizational needs and challenges"
+      "trust": {
+        "title": "Trust & Confidentiality",
+        "description": "Built on integrity and confidentiality, we maintain the highest ethical standards in all client relationships"
       },
-      "sustainableImpact": {
-        "title": "Sustainable Impact",
-        "description": "Focus on building internal capabilities and long-term organizational resilience"
+      "results": {
+        "title": "Measurable Results",
+        "description": "Our data-driven approach ensures transparent metrics and measurable outcomes that align with your strategic objectives"
       }
     }
   },

@@ -158,6 +158,7 @@ export function Footer() {
                 <Link
                   href={`tel:${t("contact.phone")}`}
                   className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  dir="ltr"
                 >
                   {t("contact.phone")}
                 </Link>
