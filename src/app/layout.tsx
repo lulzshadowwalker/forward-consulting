@@ -12,7 +12,7 @@ export default function RootLayout({ children }: Props) {
     <>
       {children}
       <GoogleAnalytics
-        gaId="G-W6XV7DGTXF"
+        gaId="G-6KR0BLFJ0B"
         debugMode={process.env.NODE_ENV !== "production"}
       />
     </>
