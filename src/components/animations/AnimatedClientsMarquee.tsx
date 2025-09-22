@@ -49,7 +49,7 @@ export function AnimatedClientsMarquee({
   };
 
   return (
-    <section className="relative my-20">
+    <section className="relative mb-20">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-16"
