@@ -1,3 +1,4 @@
+import { AnimatedEasterEgg } from "@/components/animations/AnimatedEasterEgg";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { ReactNode } from "react";
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: Props) {
         gaId="G-6KR0BLFJ0B"
         debugMode={process.env.NODE_ENV !== "production"}
       />
+      <AnimatedEasterEgg />
     </>
   );
 }
