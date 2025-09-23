@@ -110,7 +110,7 @@
       }
     },
     "approach": {
-      "title": "Design → Execute Methodology",
+      "title": "Design Execute Methodology",
       "subtitle": "We partner with clients to design and deliver impactful HR solutions",
       "design": {
         "title": "Design",
@@ -118,7 +118,11 @@
       },
       "execute": {
         "title": "Execute",
-        "description": "Providing practical implementation support while transferring knowledge to empower client teams for sustainable results"
+        "description": "Implementing solutions with precision and care, ensuring smooth deployment while building internal capabilities for long-term success"
+      },
+      "sustain": {
+        "title": "Sustain",
+        "description": "We transfer knowledge, measure results, and refine solutions so your organization continues to thrive long after our engagement."
       }
     },
     "cta": {

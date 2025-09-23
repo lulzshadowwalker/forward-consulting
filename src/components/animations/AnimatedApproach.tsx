@@ -1,8 +1,10 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
+import { useLocale } from "next-intl";
 import { ReactNode } from "react";
 
 interface ApproachItem {
@@ -24,6 +26,9 @@ export function AnimatedApproach({
   approaches,
   className = "",
 }: AnimatedApproachProps) {
+  const locale = useLocale();
+  const isRtl = locale === "ar";
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -69,12 +74,28 @@ export function AnimatedApproach({
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4"
+          <motion.div
+            className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-4"
             variants={titleVariants}
           >
-            {title}
-          </motion.h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white flex flex-wrap items-center justify-center gap-2 md:gap-4">
+              <span>{title.split(" ").slice(0, isRtl ? 2 : 1)}</span>
+              <div className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center shrink-0">
+                <DotLottieReact
+                  src="https://lottie.host/f7c26559-c6b8-4842-944f-dbe7e28d2cfa/Qs0P2Egxpt.lottie"
+                  loop
+                  autoplay
+                  className="w-6 h-6 md:w-12 md:h-12 ltr:scale-x-[-1]"
+                />
+              </div>
+              <span>
+                {title
+                  .split(" ")
+                  .slice(isRtl ? 2 : 1)
+                  .join(" ")}
+              </span>
+            </h2>
+          </motion.div>
           <motion.p
             className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto"
             variants={titleVariants}
@@ -84,7 +105,7 @@ export function AnimatedApproach({
         </motion.div>
 
         <motion.div
-          className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

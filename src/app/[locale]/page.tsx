@@ -14,6 +14,7 @@ import {
   Handshake,
   Heart,
   Lightbulb,
+  RefreshCw,
   Shield,
   Star,
   Target,
@@ -149,6 +150,13 @@ export default async function HomePage({ params }: Props) {
               ),
               title: t("approach.execute.title"),
               description: t("approach.execute.description"),
+            },
+            {
+              icon: (
+                <RefreshCw className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />
+              ),
+              title: t("approach.sustain.title"),
+              description: t("approach.sustain.description"),
             },
           ]}
         />
