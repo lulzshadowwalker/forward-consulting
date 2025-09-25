@@ -85,7 +85,7 @@ export function AnimatedApproach({
                   src="https://lottie.host/f7c26559-c6b8-4842-944f-dbe7e28d2cfa/Qs0P2Egxpt.lottie"
                   loop
                   autoplay
-                  className="w-6 h-6 md:w-12 md:h-12 ltr:scale-x-[-1]"
+                  className="w-6 h-6 md:w-12 md:h-12 ltr:scale-x-[-1] ltr:max-[502px]:scale-y-[-1] rtl:max-[372px]:scale-y-[-1]"
                 />
               </div>
               <span>
