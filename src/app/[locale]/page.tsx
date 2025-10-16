@@ -1,4 +1,4 @@
-import heroImage from "@/assets/images/hero.png";
+import heroImage from "@/assets/images/home-hero.jpg";
 import regionalExpertise from "@/assets/images/regional-expertise.png";
 import { AnimatedApproach } from "@/components/animations/AnimatedApproach";
 import { AnimatedClientsMarquee } from "@/components/animations/AnimatedClientsMarquee";

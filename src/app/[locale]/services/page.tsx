@@ -1,4 +1,4 @@
-import heroImage from "@/assets/images/hero.png";
+import heroImage from "@/assets/images/services-hero.jpg";
 import { AnimatedApproach } from "@/components/animations/AnimatedApproach";
 import { AnimatedFeatureGrid } from "@/components/animations/AnimatedFeatureGrid";
 import { AnimatedHero } from "@/components/animations/AnimatedHero";

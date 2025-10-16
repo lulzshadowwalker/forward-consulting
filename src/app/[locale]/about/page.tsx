@@ -1,4 +1,4 @@
-import heroImage from "@/assets/images/hero.png";
+import heroImage from "@/assets/images/hero-3.png";
 import { AnimatedCards } from "@/components/animations/AnimatedCards";
 import { AnimatedHero } from "@/components/animations/AnimatedHero";
 import { AnimatedStats } from "@/components/animations/AnimatedStats";
