@@ -1,4 +1,8 @@
 import heroImage from "@/assets/images/services-hero.jpg";
+import services1Image from "@/assets/images/services-1.png";
+import services2Image from "@/assets/images/services-2.png";
+import services3Image from "@/assets/images/services-3.png";
+import services4Image from "@/assets/images/services-4.jpg";
 import { AnimatedApproach } from "@/components/animations/AnimatedApproach";
 import { AnimatedFeatureGrid } from "@/components/animations/AnimatedFeatureGrid";
 import { AnimatedHero } from "@/components/animations/AnimatedHero";
@@ -55,12 +59,14 @@ export default async function ServicesPage({ params }: Props) {
               title: t("organizationDesign.title"),
               description: t("organizationDesign.description"),
               services: t.raw("organizationDesign.services"),
+              image: services1Image,
             },
             {
               icon: <Users className="w-8 h-8 text-primary" />,
               title: t("talentManagement.title"),
               description: t("talentManagement.description"),
               services: t.raw("talentManagement.services"),
+              image: services2Image,
             },
             {
               icon: (
@@ -69,6 +75,7 @@ export default async function ServicesPage({ params }: Props) {
               title: t("talentAssessment.title"),
               description: t("talentAssessment.description"),
               services: t.raw("talentAssessment.services"),
+              image: services3Image,
             },
             {
               icon: (
@@ -84,6 +91,7 @@ export default async function ServicesPage({ params }: Props) {
                   ": " +
                   t("governmentExcellence.shortDescription"),
               ],
+              image: services4Image,
             },
           ]}
         />

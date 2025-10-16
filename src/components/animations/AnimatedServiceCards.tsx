@@ -4,12 +4,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 import { motion } from "motion/react";
 import { ReactNode } from "react";
+import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 interface ServiceItem {
   icon: ReactNode;
   title: string;
   description: string;
   services: string[];
+  image?: StaticImageData;
 }
 
 interface AnimatedServiceCardsProps {
@@ -72,6 +75,23 @@ export function AnimatedServiceCards({
                     </div>
                   </div>
                   <p className="text-muted-foreground">{service.description}</p>
+                  {service.image && (
+                    <motion.div
+                      className="mt-6 mb-4"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.3 }}
+                      viewport={{ once: true }}
+                    >
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        width={400}
+                        height={250}
+                        className="w-full h-48 object-cover rounded-lg shadow-md"
+                      />
+                    </motion.div>
+                  )}
                 </CardHeader>
                 <CardContent className="pt-0">
                   <div className="space-y-3 mb-6">
