@@ -85,32 +85,35 @@ export function AnimatedValues({
         >
           {values.map((value, index) => (
             <motion.div key={index} variants={cardVariants}>
-              <Card className="text-center hover:shadow-lg transition-shadow h-full">
+              <Card className="text-center hover:shadow-lg transition-shadow h-full overflow-hidden pt-0">
+                {value.image && (
+                  <div className="w-full h-32 overflow-hidden">
+                    <Image
+                      src={value.image}
+                      alt={value.title}
+                      width={300}
+                      height={128}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
                 <CardHeader>
-                  <motion.div
-                    className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center overflow-hidden"
-                    whileHover={{
-                      rotate: value.image ? 0 : 360,
-                      scale: 1.1,
-                    }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 200,
-                      duration: 0.6,
-                    }}
-                  >
-                    {value.image ? (
-                      <Image
-                        src={value.image}
-                        alt={value.title}
-                        width={48}
-                        height={48}
-                        className="w-full h-full object-cover rounded-lg"
-                      />
-                    ) : (
-                      value.icon
-                    )}
-                  </motion.div>
+                  {!value.image && (
+                    <motion.div
+                      className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center"
+                      whileHover={{
+                        rotate: 360,
+                        scale: 1.1,
+                      }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 200,
+                        duration: 0.6,
+                      }}
+                    >
+                      {value.icon}
+                    </motion.div>
+                  )}
                   <CardTitle className="text-lg font-semibold text-foreground">
                     {value.title}
                   </CardTitle>

@@ -119,33 +119,36 @@ export function AnimatedApproach({
               className="relative"
               variants={cardVariants}
             >
-              <Card className="h-full border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
-                <CardHeader className="text-center pb-6">
-                  <motion.div
-                    className="mx-auto w-16 h-16 bg-teal-100 dark:bg-teal-900/30 rounded-full flex items-center justify-center mb-4 overflow-hidden"
-                    whileHover={{
-                      rotateY: approach.image ? 0 : 180,
-                      scale: 1.1,
-                    }}
-                    transition={{ type: "spring", stiffness: 200 }}
-                  >
-                    {approach.image ? (
-                      <Image
-                        src={approach.image}
-                        alt={approach.title}
-                        width={64}
-                        height={64}
-                        className="w-full h-full object-cover rounded-full"
-                      />
-                    ) : (
-                      approach.icon
-                    )}
-                  </motion.div>
+              <Card className="h-full border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow overflow-hidden pt-0">
+                {approach.image && (
+                  <div className="w-full h-40 overflow-hidden">
+                    <Image
+                      src={approach.image}
+                      alt={approach.title}
+                      width={400}
+                      height={160}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
+                <CardHeader className="text-center pb-4">
+                  {!approach.image && (
+                    <motion.div
+                      className="mx-auto w-16 h-16 bg-teal-100 dark:bg-teal-900/30 rounded-full flex items-center justify-center mb-4"
+                      whileHover={{
+                        rotateY: 180,
+                        scale: 1.1,
+                      }}
+                      transition={{ type: "spring", stiffness: 200 }}
+                    >
+                      {approach.icon}
+                    </motion.div>
+                  )}
                   <CardTitle className="text-2xl font-bold text-slate-900 dark:text-white">
                     {approach.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="pt-0">
                   <p className="text-slate-600 dark:text-slate-300">
                     {approach.description}
                   </p>
