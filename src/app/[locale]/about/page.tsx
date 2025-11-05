@@ -1,4 +1,10 @@
 import heroImage from "@/assets/images/hero-3.png";
+import clientFirstImage from "@/assets/images/client-first.jpg";
+import professionalExcellenceImage from "@/assets/images/professional-excellence.jpg";
+import insightDrivenImage from "@/assets/images/insight-driven.jpg";
+import experiencedTeamImage from "@/assets/images/experienced-team.jpg";
+import trustedNetworkImage from "@/assets/images/trusted-network.jpg";
+import regionalFocusImage from "@/assets/images/regional-focus.jpg";
 import { AnimatedCards } from "@/components/animations/AnimatedCards";
 import { AnimatedHero } from "@/components/animations/AnimatedHero";
 import { AnimatedStats } from "@/components/animations/AnimatedStats";
@@ -61,31 +67,37 @@ export default async function AboutPage({
             icon: <Users className="w-6 h-6 text-primary" />,
             title: t("coreValues.clientFirst.title"),
             description: t("coreValues.clientFirst.description"),
+            image: clientFirstImage,
           },
           {
             icon: <Target className="w-6 h-6 text-primary" />,
             title: t("coreValues.professionalExcellence.title"),
             description: t("coreValues.professionalExcellence.description"),
+            image: professionalExcellenceImage,
           },
           {
             icon: <Award className="w-6 h-6 text-primary" />,
             title: t("coreValues.insightDriven.title"),
             description: t("coreValues.insightDriven.description"),
+            image: insightDrivenImage,
           },
           {
             icon: <TrendingUp className="w-6 h-6 text-primary" />,
             title: t("coreValues.experiencedTeam.title"),
             description: t("coreValues.experiencedTeam.description"),
+            image: experiencedTeamImage,
           },
           {
             icon: <CheckCircle className="w-6 h-6 text-primary" />,
             title: t("coreValues.trustedNetwork.title"),
             description: t("coreValues.trustedNetwork.description"),
+            image: trustedNetworkImage,
           },
           {
             icon: <Building className="w-6 h-6 text-primary" />,
             title: t("coreValues.regionalFocus.title"),
             description: t("coreValues.regionalFocus.description"),
+            image: regionalFocusImage,
           },
         ]}
         className="bg-muted/30"

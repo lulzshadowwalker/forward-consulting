@@ -6,11 +6,13 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import { useLocale } from "next-intl";
 import { ReactNode } from "react";
+import Image, { StaticImageData } from "next/image";
 
 interface ApproachItem {
   icon: ReactNode;
   title: string;
   description: string;
+  image?: StaticImageData;
 }
 
 interface AnimatedApproachProps {
@@ -120,14 +122,24 @@ export function AnimatedApproach({
               <Card className="h-full border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
                 <CardHeader className="text-center pb-6">
                   <motion.div
-                    className="mx-auto w-16 h-16 bg-teal-100 dark:bg-teal-900/30 rounded-full flex items-center justify-center mb-4"
+                    className="mx-auto w-16 h-16 bg-teal-100 dark:bg-teal-900/30 rounded-full flex items-center justify-center mb-4 overflow-hidden"
                     whileHover={{
-                      rotateY: 180,
+                      rotateY: approach.image ? 0 : 180,
                       scale: 1.1,
                     }}
                     transition={{ type: "spring", stiffness: 200 }}
                   >
-                    {approach.icon}
+                    {approach.image ? (
+                      <Image
+                        src={approach.image}
+                        alt={approach.title}
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-cover rounded-full"
+                      />
+                    ) : (
+                      approach.icon
+                    )}
                   </motion.div>
                   <CardTitle className="text-2xl font-bold text-slate-900 dark:text-white">
                     {approach.title}

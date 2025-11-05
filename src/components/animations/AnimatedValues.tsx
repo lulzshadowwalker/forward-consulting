@@ -3,11 +3,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "motion/react";
 import { ReactNode } from "react";
+import Image, { StaticImageData } from "next/image";
 
 interface ValueItem {
   icon: ReactNode;
   title: string;
   description: string;
+  image?: StaticImageData;
 }
 
 interface AnimatedValuesProps {
@@ -86,9 +88,9 @@ export function AnimatedValues({
               <Card className="text-center hover:shadow-lg transition-shadow h-full">
                 <CardHeader>
                   <motion.div
-                    className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center"
+                    className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center overflow-hidden"
                     whileHover={{
-                      rotate: 360,
+                      rotate: value.image ? 0 : 360,
                       scale: 1.1,
                     }}
                     transition={{
@@ -97,7 +99,17 @@ export function AnimatedValues({
                       duration: 0.6,
                     }}
                   >
-                    {value.icon}
+                    {value.image ? (
+                      <Image
+                        src={value.image}
+                        alt={value.title}
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                    ) : (
+                      value.icon
+                    )}
                   </motion.div>
                   <CardTitle className="text-lg font-semibold text-foreground">
                     {value.title}

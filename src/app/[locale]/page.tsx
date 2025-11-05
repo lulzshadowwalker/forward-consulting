@@ -1,5 +1,13 @@
 import heroImage from "@/assets/images/home-hero.jpg";
 import regionalExpertise from "@/assets/images/regional-expertise.png";
+import partnershipImage from "@/assets/images/partnership.jpg";
+import integrityImage from "@/assets/images/integrity.jpg";
+import innovationImage from "@/assets/images/innovation.jpg";
+import respectImage from "@/assets/images/respect.jpg";
+import excellenceImage from "@/assets/images/excellence.jpg";
+import designImage from "@/assets/images/design.jpg";
+import executeImage from "@/assets/images/execute.jpg";
+import sustainImage from "@/assets/images/sustain.jpg";
 import { AnimatedApproach } from "@/components/animations/AnimatedApproach";
 import { AnimatedClientsMarquee } from "@/components/animations/AnimatedClientsMarquee";
 import { AnimatedHero } from "@/components/animations/AnimatedHero";
@@ -108,26 +116,31 @@ export default async function HomePage({ params }: Props) {
               icon: <Handshake className="w-6 h-6 text-primary" />,
               title: t("values.partnership.title"),
               description: t("values.partnership.description"),
+              image: partnershipImage,
             },
             {
               icon: <Shield className="w-6 h-6 text-primary" />,
               title: t("values.integrity.title"),
               description: t("values.integrity.description"),
+              image: integrityImage,
             },
             {
               icon: <Lightbulb className="w-6 h-6 text-primary" />,
               title: t("values.innovation.title"),
               description: t("values.innovation.description"),
+              image: innovationImage,
             },
             {
               icon: <Heart className="w-6 h-6 text-primary" />,
               title: t("values.respect.title"),
               description: t("values.respect.description"),
+              image: respectImage,
             },
             {
               icon: <Star className="w-6 h-6 text-primary" />,
               title: t("values.excellence.title"),
               description: t("values.excellence.description"),
+              image: excellenceImage,
             },
           ]}
         />
@@ -143,6 +156,7 @@ export default async function HomePage({ params }: Props) {
               ),
               title: t("approach.design.title"),
               description: t("approach.design.description"),
+              image: designImage,
             },
             {
               icon: (
@@ -150,6 +164,7 @@ export default async function HomePage({ params }: Props) {
               ),
               title: t("approach.execute.title"),
               description: t("approach.execute.description"),
+              image: executeImage,
             },
             {
               icon: (
@@ -157,6 +172,7 @@ export default async function HomePage({ params }: Props) {
               ),
               title: t("approach.sustain.title"),
               description: t("approach.sustain.description"),
+              image: sustainImage,
             },
           ]}
         />
