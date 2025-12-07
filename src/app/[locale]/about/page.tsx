@@ -6,6 +6,10 @@ import respectImage from "@/assets/images/respect.webp";
 import excellenceImage from "@/assets/images/excellence.webp";
 import visionImage from "@/assets/images/vision.webp";
 import missionImage from "@/assets/images/mission.webp";
+import year2020Image from "@/assets/images/2020.webp";
+import year2021Image from "@/assets/images/2021.webp";
+import year2023Image from "@/assets/images/2023.webp";
+import year2024Image from "@/assets/images/2024.webp";
 import { AnimatedCards } from "@/components/animations/AnimatedCards";
 import { AnimatedHero } from "@/components/animations/AnimatedHero";
 import { AnimatedValues } from "@/components/animations/AnimatedValues";
@@ -111,24 +115,28 @@ export default async function AboutPage({
             label: t("ourStory.founded.label"),
             title: t("ourStory.founded.title"),
             description: t("ourStory.founded.description"),
+            image: year2020Image,
           },
           {
             year: "2021",
             label: t("ourStory.expansion.label"),
             title: t("ourStory.expansion.title"),
             description: t("ourStory.expansion.description"),
+            image: year2021Image,
           },
           {
             year: "2023",
             label: t("ourStory.saudiPartnership.label"),
             title: t("ourStory.saudiPartnership.title"),
             description: t("ourStory.saudiPartnership.description"),
+            image: year2023Image,
           },
           {
             year: "2024",
             label: t("ourStory.today.label"),
             title: t("ourStory.today.title"),
             description: t("ourStory.today.description"),
+            image: year2024Image,
           },
         ]}
       />

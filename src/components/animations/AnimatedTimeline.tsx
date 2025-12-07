@@ -1,12 +1,14 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image, { StaticImageData } from "next/image";
 
 interface TimelineItem {
   year: string;
   label: string;
   title: string;
   description: string;
+  image?: string | StaticImageData;
 }
 
 interface AnimatedTimelineProps {
@@ -89,26 +91,39 @@ export function AnimatedTimeline({
               >
                 <div className="w-full md:w-1/3">
                   <motion.div
-                    className="bg-primary/10 rounded-lg p-6 text-center"
+                    className="rounded-lg overflow-hidden"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <motion.div
-                      className="text-2xl font-bold text-primary mb-2"
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 200,
-                        delay: index * 0.1,
-                      }}
-                      viewport={{ once: true }}
-                    >
-                      {item.year}
-                    </motion.div>
-                    <div className="text-sm text-muted-foreground">
-                      {item.label}
-                    </div>
+                    {item.image ? (
+                      <div className="relative w-full aspect-[2.35/1]">
+                        <Image
+                          src={item.image}
+                          alt={item.year}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                    ) : (
+                      <div className="bg-primary/10 p-6 text-center rounded-lg">
+                        <motion.div
+                          className="text-2xl font-bold text-primary mb-2"
+                          initial={{ scale: 0 }}
+                          whileInView={{ scale: 1 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 200,
+                            delay: index * 0.1,
+                          }}
+                          viewport={{ once: true }}
+                        >
+                          {item.year}
+                        </motion.div>
+                        <div className="text-sm text-muted-foreground">
+                          {item.label}
+                        </div>
+                      </div>
+                    )}
                   </motion.div>
                 </div>
                 <div className="w-full md:w-2/3">
