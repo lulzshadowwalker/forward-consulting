@@ -89,7 +89,7 @@ export function Navigation() {
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
-                  <Image src={logo} alt={t("brand")} width={128} />
+                  <Image src={logo} alt={t("brand")} width={128} className="md:scale-125" />
                 </motion.div>
               </Link>
             </motion.div>

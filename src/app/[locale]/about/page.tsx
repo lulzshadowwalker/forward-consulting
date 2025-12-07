@@ -1,23 +1,22 @@
 import heroImage from "@/assets/images/about-us.webp";
-import clientFirstImage from "@/assets/images/client-first.jpg";
-import professionalExcellenceImage from "@/assets/images/professional-excellence.jpg";
-import insightDrivenImage from "@/assets/images/insight-driven.jpg";
-import experiencedTeamImage from "@/assets/images/experienced-team.jpg";
-import trustedNetworkImage from "@/assets/images/trusted-network.jpg";
-import regionalFocusImage from "@/assets/images/regional-focus.jpg";
+import partnershipImage from "@/assets/images/partnership.webp";
+import integrityImage from "@/assets/images/integrity.webp";
+import innovationImage from "@/assets/images/innovation.webp";
+import respectImage from "@/assets/images/respect.webp";
+import excellenceImage from "@/assets/images/excellence.webp";
 import { AnimatedCards } from "@/components/animations/AnimatedCards";
 import { AnimatedHero } from "@/components/animations/AnimatedHero";
-import { AnimatedStats } from "@/components/animations/AnimatedStats";
-import { AnimatedTimeline } from "@/components/animations/AnimatedTimeline";
 import { AnimatedValues } from "@/components/animations/AnimatedValues";
+import { AnimatedTimeline } from "@/components/animations/AnimatedTimeline";
 import { SharedCTA } from "@/components/shared/SharedCTA";
 import {
   Award,
-  Building,
-  CheckCircle,
+  Handshake,
+  Heart,
+  Lightbulb,
+  Shield,
+  Star,
   Target,
-  TrendingUp,
-  Users,
 } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
@@ -29,6 +28,7 @@ export default async function AboutPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("AboutPage");
+  const tHome = await getTranslations("HomePage");
 
   return (
     <div className="min-h-screen">
@@ -60,44 +60,38 @@ export default async function AboutPage({
 
       {/* Values */}
       <AnimatedValues
-        title={t("coreValues.title")}
-        subtitle={t("coreValues.subtitle")}
+        title={tHome("values.title")}
+        subtitle={tHome("values.subtitle")}
         values={[
           {
-            icon: <Users className="w-6 h-6 text-primary" />,
-            title: t("coreValues.clientFirst.title"),
-            description: t("coreValues.clientFirst.description"),
-            image: clientFirstImage,
+            icon: <Handshake className="w-6 h-6 text-primary" />,
+            title: tHome("values.partnership.title"),
+            description: tHome("values.partnership.description"),
+            image: partnershipImage,
           },
           {
-            icon: <Target className="w-6 h-6 text-primary" />,
-            title: t("coreValues.professionalExcellence.title"),
-            description: t("coreValues.professionalExcellence.description"),
-            image: professionalExcellenceImage,
+            icon: <Shield className="w-6 h-6 text-primary" />,
+            title: tHome("values.integrity.title"),
+            description: tHome("values.integrity.description"),
+            image: integrityImage,
           },
           {
-            icon: <Award className="w-6 h-6 text-primary" />,
-            title: t("coreValues.insightDriven.title"),
-            description: t("coreValues.insightDriven.description"),
-            image: insightDrivenImage,
+            icon: <Lightbulb className="w-6 h-6 text-primary" />,
+            title: tHome("values.innovation.title"),
+            description: tHome("values.innovation.description"),
+            image: innovationImage,
           },
           {
-            icon: <TrendingUp className="w-6 h-6 text-primary" />,
-            title: t("coreValues.experiencedTeam.title"),
-            description: t("coreValues.experiencedTeam.description"),
-            image: experiencedTeamImage,
+            icon: <Heart className="w-6 h-6 text-primary" />,
+            title: tHome("values.respect.title"),
+            description: tHome("values.respect.description"),
+            image: respectImage,
           },
           {
-            icon: <CheckCircle className="w-6 h-6 text-primary" />,
-            title: t("coreValues.trustedNetwork.title"),
-            description: t("coreValues.trustedNetwork.description"),
-            image: trustedNetworkImage,
-          },
-          {
-            icon: <Building className="w-6 h-6 text-primary" />,
-            title: t("coreValues.regionalFocus.title"),
-            description: t("coreValues.regionalFocus.description"),
-            image: regionalFocusImage,
+            icon: <Star className="w-6 h-6 text-primary" />,
+            title: tHome("values.excellence.title"),
+            description: tHome("values.excellence.description"),
+            image: excellenceImage,
           },
         ]}
         className="bg-muted/30"
@@ -131,30 +125,6 @@ export default async function AboutPage({
             label: t("ourStory.today.label"),
             title: t("ourStory.today.title"),
             description: t("ourStory.today.description"),
-          },
-        ]}
-      />
-
-      {/* Stats Section */}
-      <AnimatedStats
-        title={t("achievements.title")}
-        subtitle={t("achievements.subtitle")}
-        stats={[
-          {
-            number: "100+",
-            label: t("achievements.publicSector"),
-          },
-          {
-            number: "50+",
-            label: t("achievements.privateSector"),
-          },
-          {
-            number: "20+",
-            label: t("achievements.leadershipDevelopment"),
-          },
-          {
-            number: "25+",
-            label: t("achievements.institutionalResilience"),
           },
         ]}
       />

@@ -3,6 +3,9 @@ import services1Image from "@/assets/images/organization-design-and-workforce.we
 import services2Image from "@/assets/images/talent-and-leadership-management.webp";
 import services3Image from "@/assets/images/talent-assessment.webp";
 import services4Image from "@/assets/images/specialized-services.webp";
+import designImage from "@/assets/images/design.webp";
+import executeImage from "@/assets/images/excute.webp";
+import sustainImage from "@/assets/images/sustain.webp";
 import { AnimatedApproach } from "@/components/animations/AnimatedApproach";
 import { AnimatedFeatureGrid } from "@/components/animations/AnimatedFeatureGrid";
 import { AnimatedHero } from "@/components/animations/AnimatedHero";
@@ -11,11 +14,11 @@ import { AnimatedServiceCards } from "@/components/animations/AnimatedServiceCar
 import { SharedCTA } from "@/components/shared/SharedCTA";
 import {
   Award,
-  BarChart3,
   Building,
+  CheckCircle,
   Clock,
-  FileSearch,
-  Rocket,
+  Handshake,
+  RefreshCw,
   Shield,
   Star,
   Target,
@@ -33,6 +36,7 @@ export default async function ServicesPage({ params }: Props) {
   setRequestLocale(locale);
 
   const t = await getTranslations("ServicesPage");
+  const tHome = await getTranslations("HomePage");
 
   return (
     <>
@@ -95,39 +99,34 @@ export default async function ServicesPage({ params }: Props) {
             },
           ]}
         />
-        {/* Service Delivery Approach */}
         {/* Our Approach */}
         <AnimatedApproach
-          title={t("approach.title")}
-          subtitle={t("approach.subtitle")}
+          title={tHome("approach.title")}
+          subtitle={tHome("approach.subtitle")}
           approaches={[
-            {
-              icon: (
-                <FileSearch className="w-8 h-8 text-teal-600 dark:text-teal-400" />
-              ),
-              title: t("approach.assessment.title"),
-              description: t("approach.assessment.description"),
-            },
             {
               icon: (
                 <Target className="w-8 h-8 text-teal-600 dark:text-teal-400" />
               ),
-              title: t("approach.strategy.title"),
-              description: t("approach.strategy.description"),
+              title: tHome("approach.design.title"),
+              description: tHome("approach.design.description"),
+              image: designImage,
             },
             {
               icon: (
-                <Rocket className="w-8 h-8 text-teal-600 dark:text-teal-400" />
+                <CheckCircle className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
               ),
-              title: t("approach.implementation.title"),
-              description: t("approach.implementation.description"),
+              title: tHome("approach.execute.title"),
+              description: tHome("approach.execute.description"),
+              image: executeImage,
             },
             {
               icon: (
-                <BarChart3 className="w-8 h-8 text-teal-600 dark:text-teal-400" />
+                <RefreshCw className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />
               ),
-              title: t("approach.optimization.title"),
-              description: t("approach.optimization.description"),
+              title: tHome("approach.sustain.title"),
+              description: tHome("approach.sustain.description"),
+              image: sustainImage,
             },
           ]}
         />
@@ -147,7 +146,7 @@ export default async function ServicesPage({ params }: Props) {
               description: t("whyChooseUs.proven.description"),
             },
             {
-              icon: <Shield className="w-8 h-8 text-primary" />,
+              icon: <Handshake className="w-8 h-8 text-primary" />,
               title: t("whyChooseUs.trust.title"),
               description: t("whyChooseUs.trust.description"),
             },

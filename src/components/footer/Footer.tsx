@@ -38,8 +38,7 @@ export function Footer() {
             <Image
               src={logo}
               alt={t("brand.name")}
-              width={128}
-              className="-translate-x-3 rtl:translate-x-3"
+              className="-translate-x-3 rtl:translate-x-3 w-32 md:w-45 md:-translate-x-5 rtl:md:translate-x-5"
             />
             <p className="text-muted-foreground text-sm leading-relaxed mb-6 max-w-sm">
               {t("brand.tagline")}
@@ -50,7 +49,7 @@ export function Footer() {
               <h4 className="font-semibold mb-3 text-foreground">
                 {t("social.title")}
               </h4>
-              <div className="flex space-x-3">
+              <div className="flex space-x-3 pointer-events-none opacity-50">
                 <Button
                   variant="ghost"
                   size="sm"
@@ -58,7 +57,7 @@ export function Footer() {
                   className="text-muted-foreground hover:text-foreground hover:bg-accent"
                 >
                   <Link
-                    href="https://linkedin.com/company/forward-consulting"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={t("social.linkedin")}
@@ -73,7 +72,7 @@ export function Footer() {
                   className="text-muted-foreground hover:text-foreground hover:bg-accent"
                 >
                   <Link
-                    href="https://twitter.com/forward_consult"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={t("social.twitter")}
@@ -88,7 +87,7 @@ export function Footer() {
                   className="text-muted-foreground hover:text-foreground hover:bg-accent"
                 >
                   <Link
-                    href="https://facebook.com/forward.consulting"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={t("social.facebook")}

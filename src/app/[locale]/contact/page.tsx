@@ -1,7 +1,6 @@
 import heroImage from "@/assets/images/contact-us.webp";
 import { AnimatedContactForm } from "@/components/animations/AnimatedContactForm";
 import { AnimatedContactInfo } from "@/components/animations/AnimatedContactInfo";
-import { AnimatedFAQ } from "@/components/animations/AnimatedFAQ";
 import { AnimatedHero } from "@/components/animations/AnimatedHero";
 import { SharedCTA } from "@/components/shared/SharedCTA";
 import { Mail, MapPin, Phone } from "lucide-react";
@@ -93,12 +92,7 @@ export default function ContactPage(props: Props) {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <AnimatedFAQ
-          title={t("faq.title")}
-          subtitle={t("faq.subtitle")}
-          faqs={t.raw("faq.items")}
-        />
+
 
         {/* CTA Section */}
         <SharedCTA variant="contact" />
