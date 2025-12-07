@@ -1,4 +1,4 @@
-import heroImage from "@/assets/images/hero-3.png";
+import heroImage from "@/assets/images/about-us.webp";
 import clientFirstImage from "@/assets/images/client-first.jpg";
 import professionalExcellenceImage from "@/assets/images/professional-excellence.jpg";
 import insightDrivenImage from "@/assets/images/insight-driven.jpg";

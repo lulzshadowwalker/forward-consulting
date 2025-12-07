@@ -119,7 +119,7 @@ export function AnimatedApproach({
               className="relative"
               variants={cardVariants}
             >
-              <Card className="h-full border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow overflow-hidden pt-0">
+              <Card className="h-full border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow overflow-hidden">
                 {approach.image && (
                   <div className="w-full h-40 overflow-hidden">
                     <Image

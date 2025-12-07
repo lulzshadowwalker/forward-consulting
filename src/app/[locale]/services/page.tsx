@@ -1,8 +1,8 @@
-import heroImage from "@/assets/images/services-hero.jpg";
-import services1Image from "@/assets/images/services-1.png";
-import services2Image from "@/assets/images/services-2.png";
-import services3Image from "@/assets/images/services-3.png";
-import services4Image from "@/assets/images/services-4.jpg";
+import heroImage from "@/assets/images/services.webp";
+import services1Image from "@/assets/images/organization-design-and-workforce.webp";
+import services2Image from "@/assets/images/talent-and-leadership-management.webp";
+import services3Image from "@/assets/images/talent-assessment.webp";
+import services4Image from "@/assets/images/specialized-services.webp";
 import { AnimatedApproach } from "@/components/animations/AnimatedApproach";
 import { AnimatedFeatureGrid } from "@/components/animations/AnimatedFeatureGrid";
 import { AnimatedHero } from "@/components/animations/AnimatedHero";
