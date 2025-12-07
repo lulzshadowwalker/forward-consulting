@@ -3,11 +3,13 @@
 import { Card } from "@/components/ui/card";
 import { motion } from "motion/react";
 import { ReactNode } from "react";
+import Image, { StaticImageData } from "next/image";
 
 interface CardItem {
   icon: ReactNode;
   title: string;
   content: string;
+  image?: StaticImageData;
 }
 
 interface AnimatedCardsProps {
@@ -47,18 +49,31 @@ export function AnimatedCards({ cards, className = "" }: AnimatedCardsProps) {
         >
           {cards.map((card, index) => (
             <motion.div key={index} variants={cardVariants}>
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card className="hover:shadow-lg transition-shadow overflow-hidden pt-0">
+                {card.image && (
+                  <div className="w-full h-48 overflow-hidden">
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      width={600}
+                      height={300}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
                 <div className="p-8">
-                  <motion.div
-                    className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto lg:mx-0"
-                    whileHover={{
-                      scale: 1.1,
-                      rotate: 10,
-                    }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    {card.icon}
-                  </motion.div>
+                  {!card.image && (
+                    <motion.div
+                      className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto lg:mx-0"
+                      whileHover={{
+                        scale: 1.1,
+                        rotate: 10,
+                      }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      {card.icon}
+                    </motion.div>
+                  )}
                   <h2 className="text-3xl font-bold mb-4 text-foreground text-center lg:text-left">
                     {card.title}
                   </h2>

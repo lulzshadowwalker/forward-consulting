@@ -4,6 +4,8 @@ import integrityImage from "@/assets/images/integrity.webp";
 import innovationImage from "@/assets/images/innovation.webp";
 import respectImage from "@/assets/images/respect.webp";
 import excellenceImage from "@/assets/images/excellence.webp";
+import visionImage from "@/assets/images/vision.webp";
+import missionImage from "@/assets/images/mission.webp";
 import { AnimatedCards } from "@/components/animations/AnimatedCards";
 import { AnimatedHero } from "@/components/animations/AnimatedHero";
 import { AnimatedValues } from "@/components/animations/AnimatedValues";
@@ -49,11 +51,13 @@ export default async function AboutPage({
             icon: <Target className="w-8 h-8 text-primary" />,
             title: t("vision.title"),
             content: t("vision.content"),
+            image: visionImage,
           },
           {
             icon: <Award className="w-8 h-8 text-primary" />,
             title: t("mission.title"),
             content: t("mission.content"),
+            image: missionImage,
           },
         ]}
       />
