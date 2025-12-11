@@ -1,5 +1,5 @@
-import heroImage from "@/assets/images/20-years.webp";
-import regionalExpertise from "@/assets/images/regional-expertise.png";
+import heroImage from "@/assets/images/home.webp";
+import regionalExpertise from "@/assets/images/20-years.webp";
 import partnershipImage from "@/assets/images/partnership.webp";
 import integrityImage from "@/assets/images/integrity.webp";
 import innovationImage from "@/assets/images/innovation.webp";
