@@ -92,8 +92,6 @@ export default function ContactPage(props: Props) {
           </div>
         </section>
 
-
-
         {/* CTA Section */}
         <SharedCTA variant="contact" />
       </main>

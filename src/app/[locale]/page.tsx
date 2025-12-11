@@ -1,4 +1,4 @@
-import heroImage from "@/assets/images/home.webp";
+import heroImage from "@/assets/images/20-years.webp";
 import regionalExpertise from "@/assets/images/regional-expertise.png";
 import partnershipImage from "@/assets/images/partnership.webp";
 import integrityImage from "@/assets/images/integrity.webp";
@@ -6,8 +6,8 @@ import innovationImage from "@/assets/images/innovation.webp";
 import respectImage from "@/assets/images/respect.webp";
 import excellenceImage from "@/assets/images/excellence.webp";
 import designImage from "@/assets/images/design.webp";
-import executeImage from "@/assets/images/excute.webp";
-import sustainImage from "@/assets/images/sustain.webp";
+import executeImage from "@/assets/images/execute.png";
+import sustainImage from "@/assets/images/sustain.png";
 import { AnimatedApproach } from "@/components/animations/AnimatedApproach";
 import { AnimatedClientsMarquee } from "@/components/animations/AnimatedClientsMarquee";
 import { AnimatedHero } from "@/components/animations/AnimatedHero";

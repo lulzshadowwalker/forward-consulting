@@ -17,7 +17,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata(
-  props: Omit<LayoutProps<"/[locale]">, "children">
+  props: Omit<LayoutProps<"/[locale]">, "children">,
 ) {
   const { locale } = await props.params;
 
@@ -55,7 +55,7 @@ export default async function LocaleLayout({
       <body
         className={clsx(
           locale === "ar" ? notoSansArabic.className : inter.className,
-          "flex min-h-full flex-col"
+          "flex min-h-full flex-col",
         )}
       >
         <NextIntlClientProvider>

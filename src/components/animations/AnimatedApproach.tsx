@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import { useLocale } from "next-intl";
@@ -80,22 +80,8 @@ export function AnimatedApproach({
             className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-4"
             variants={titleVariants}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white flex flex-wrap items-center justify-center gap-2 md:gap-4">
-              <span>{title.split(" ").at(0)}</span>
-              <div className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center shrink-0">
-                <DotLottieReact
-                  src="https://lottie.host/f7c26559-c6b8-4842-944f-dbe7e28d2cfa/Qs0P2Egxpt.lottie"
-                  loop
-                  autoplay
-                  className="w-6 h-6 md:w-12 md:h-12 ltr:scale-x-[-1] rtl:max-[372px]:scale-y-[-1]"
-                />
-              </div>
-              <span>
-                {title
-                  .split(" ")
-                  .at(1)
-                  }
-              </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white text-center">
+              {title}
             </h2>
           </motion.div>
           <motion.p
@@ -119,7 +105,7 @@ export function AnimatedApproach({
               className="relative"
               variants={cardVariants}
             >
-              <Card className="h-full border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow overflow-hidden">
+              <Card className="h-full border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow overflow-hidden pt-0">
                 {approach.image && (
                   <div className="w-full h-40 overflow-hidden">
                     <Image

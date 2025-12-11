@@ -110,8 +110,8 @@ export function AnimatedContactInfo({
                           contact.color.includes("blue")
                             ? "text-blue-600 dark:text-blue-400"
                             : contact.color.includes("green")
-                            ? "text-green-600 dark:text-green-400"
-                            : "text-purple-600 dark:text-purple-400"
+                              ? "text-green-600 dark:text-green-400"
+                              : "text-purple-600 dark:text-purple-400"
                         } hover:underline transition-all duration-200`}
                       >
                         {contact.value}

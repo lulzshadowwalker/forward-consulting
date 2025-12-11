@@ -44,7 +44,7 @@ export function AnimatedEasterEgg() {
 
         // Check if sequence matches Konami code
         const matches = KONAMI_CODE.every(
-          (code, index) => trimmedSequence[index] === code
+          (code, index) => trimmedSequence[index] === code,
         );
 
         if (matches && trimmedSequence.length === KONAMI_CODE.length) {

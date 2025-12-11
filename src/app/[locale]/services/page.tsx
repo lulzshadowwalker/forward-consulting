@@ -1,28 +1,29 @@
 import heroImage from "@/assets/images/services.webp";
-import services1Image from "@/assets/images/organization-design-and-workforce.webp";
-import services2Image from "@/assets/images/talent-and-leadership-management.webp";
-import services3Image from "@/assets/images/talent-assessment.webp";
-import services4Image from "@/assets/images/specialized-services.webp";
+import services1Image from "@/assets/images/service-1.webp";
+import services2Image from "@/assets/images/service-2.png";
+import services3Image from "@/assets/images/service-3.png";
+import services4Image from "@/assets/images/service-4.webp";
 import designImage from "@/assets/images/design.webp";
-import executeImage from "@/assets/images/excute.webp";
-import sustainImage from "@/assets/images/sustain.webp";
+import executeImage from "@/assets/images/execute.png";
+import sustainImage from "@/assets/images/sustain.png";
 import { AnimatedApproach } from "@/components/animations/AnimatedApproach";
 import { AnimatedFeatureGrid } from "@/components/animations/AnimatedFeatureGrid";
 import { AnimatedHero } from "@/components/animations/AnimatedHero";
 import { AnimatedSection } from "@/components/animations/AnimatedSection";
 import { AnimatedServiceCards } from "@/components/animations/AnimatedServiceCards";
+import {
+  IconProvenTrackRecord,
+  IconRegionalExpertise,
+  IconSustainableImpact,
+} from "@/components/icons/ServiceIcons";
 import { SharedCTA } from "@/components/shared/SharedCTA";
 import {
   Award,
   Building,
   CheckCircle,
-  Clock,
   Handshake,
   RefreshCw,
-  Shield,
-  Star,
   Target,
-  TrendingUp,
   Users,
 } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -136,12 +137,12 @@ export default async function ServicesPage({ params }: Props) {
           subtitle={t("whyChooseUs.subtitle")}
           features={[
             {
-              icon: <Star className="w-8 h-8 text-primary" />,
+              icon: <IconRegionalExpertise className="w-9 h-9 text-primary" />,
               title: t("whyChooseUs.expertise.title"),
               description: t("whyChooseUs.expertise.description"),
             },
             {
-              icon: <Clock className="w-8 h-8 text-primary" />,
+              icon: <IconProvenTrackRecord className="w-9 h-9 text-primary" />,
               title: t("whyChooseUs.proven.title"),
               description: t("whyChooseUs.proven.description"),
             },
@@ -151,7 +152,7 @@ export default async function ServicesPage({ params }: Props) {
               description: t("whyChooseUs.trust.description"),
             },
             {
-              icon: <TrendingUp className="w-8 h-8 text-primary" />,
+              icon: <IconSustainableImpact className="w-9 h-9 text-primary" />,
               title: t("whyChooseUs.results.title"),
               description: t("whyChooseUs.results.description"),
             },

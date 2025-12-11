@@ -182,7 +182,7 @@ export function Footer() {
             {t("legal.copyright")}
           </p>
           <div className="flex items-center space-x-1">
-            <span className="text-muted-foreground text-sm">
+            {/* <span className="text-muted-foreground text-sm">
               {t("legal.poweredBy")}
             </span>
             <Link
@@ -192,7 +192,7 @@ export function Footer() {
               className="text-primary hover:text-primary/80 transition-colors text-sm font-medium"
             >
               {t("legal.bayanata")}
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
