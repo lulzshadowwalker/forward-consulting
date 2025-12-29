@@ -19,10 +19,8 @@ const serviceLinks = [
   { name: "organizationDesign", href: "/services#organization-design" },
   { name: "talentManagement", href: "/services#talent-leadership-management" },
   { name: "talentAssessment", href: "/services#talent-assessment" },
-  {
-    name: "specializedServices",
-    href: "/services#specialized-services-combined",
-  },
+  { name: "pmoServices", href: "/services#pmo-services" },
+  { name: "governmentExcellence", href: "/services#government-excellence" },
 ] as const;
 
 export function Footer() {
