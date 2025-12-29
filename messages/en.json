@@ -110,18 +110,18 @@
     },
     "approach": {
       "title": "DES Methodology",
-      "subtitle": "We partner with clients to design and deliver impactful HR solutions",
+      "subtitle": "We partner with our clients using the DES methodology, focused on design, execution, and sustainability to deliver impactful and sustainable HR and organizational solutions.",
       "design": {
         "title": "Design",
-        "description": "Understanding each client's unique needs to create customized HR solutions that align with strategy and drive meaningful outcomes"
+        "description": "We design tailored solutions aligned with each client’s strategy to deliver actionable results"
       },
       "execute": {
         "title": "Execute",
-        "description": "Implementing solutions with precision and care, ensuring smooth deployment while building internal capabilities for long-term success"
+        "description": "We work alongside teams during implementation, ensuring knowledge transfer and capability building to enable effective execution and achieve objectives"
       },
       "sustain": {
         "title": "Sustain",
-        "description": "We transfer knowledge, measure results, and refine solutions so your organization continues to thrive long after our engagement."
+        "description": "We embed solutions and measure impact to drive continuous improvement and long-term value"
       }
     },
     "cta": {
@@ -293,62 +293,66 @@
   },
   "ServicesPage": {
     "hero": {
-      "title": "Comprehensive HR Solutions",
-      "subtitle": "Strategic consulting services designed to transform your organization and drive sustainable growth across the GCC region",
+      "title": "Comprehensive Human Resources and Organizational Development Solutions",
+      "subtitle": "Strategic consulting services that empower organizations to achieve organizational development, build capabilities, develop talent and leadership, and attain institutional excellence and sustainable growth.",
       "badge": "Our Services"
     },
     "introduction": {
       "title": "What We Perfectly Deliver",
-      "subtitle": "HR and more... Tailored solutions that align with your organizational strategy and deliver measurable results",
-      "description": "Our comprehensive suite of services spans across organizational design, talent management, assessment solutions, and specialized consulting. Each service is carefully crafted to meet the unique needs of organizations in the Gulf region."
+      "subtitle": "",
+      "description": "At Forward Consulting, we deliver integrated consulting solutions in human resources and organizational development, thoughtfully designed to align with organizational strategies and achieve measurable, sustainable results. Our services include organizational structure design and workforce planning, talent management and assessment, leadership development, the implementation of institutional excellence models, and effective execution support through Project Management Offices (PMO). All our solutions are tailored to the unique needs of each organization, taking into account sector-specific requirements and the institutional context of the GCC region."
     },
     "organizationDesign": {
       "title": "Organization Design & Workforce Planning",
       "shortDescription": "Strategic organizational structures and workforce optimization for sustainable growth",
-      "description": "Transform your organizational structure with our comprehensive design and planning services. We help you build efficient, scalable structures that support your business objectives.",
+      "description": "We help you develop an effective and flexible organizational structure that supports your strategy and achieves your institutional objectives.",
       "services": [
-        "HR strategy development",
-        "Succession planning",
-        "Behavioral & technical competency frameworks",
-        "Designing required organizational strategy & programs"
+        "Organizational Design",
+        "Role and Responsibility Definition",
+        "Job Description Development",
+        "Workforce Planning and Workforce Analytics"
       ]
     },
     "talentManagement": {
       "title": "Talent & Leadership Management",
       "shortDescription": "Comprehensive talent strategies and leadership development programs",
-      "description": "Develop your most valuable asset - your people. Our talent management solutions ensure you attract, develop, and retain the right talent for sustainable success.",
+      "description": "We empower talent and develop leaders through integrated talent management solutions that drive performance and strategic success",
       "services": [
-        "Establishment and setup",
-        "Performance management",
-        "Career path design",
-        "Learning & development strategy & programs"
+        "HR Strategy Development",
+        "Succession Planning",
+        "Behavioral and Technical Competency Framework Design",
+        "Leadership Development Programs",
+        "Performance Management Systems",
+        "Career Pathing",
+        "Learning & Development Strategy and Programs"
       ]
     },
     "talentAssessment": {
       "title": "Talent Assessment",
       "shortDescription": "Data-driven assessment solutions for informed talent decisions",
-      "description": "Make confident talent decisions with our scientifically-backed assessment solutions. We provide comprehensive evaluation tools for all organizational levels.",
+      "description": "We enable informed talent decisions through reliable, science-based assessment solutions that offer a holistic view of performance and potential across the organization.",
       "services": [
-        "Behavioral & competency assessments",
-        "Employee potential assessments",
-        "Designing required assessment solutions"
+        "Behavioral & Competency Assessments",
+        "Leadership Potential Assessment for Managers and Leaders",
+        "Employee Potential Assessments",
+        "Designing Required Assessment Solutions"
       ]
     },
     "pmoServices": {
       "title": "Project Management Office (PMO) Services",
-      "shortDescription": "Professional PMO establishment and management solutions",
-      "description": "Enhance your project delivery capabilities with our comprehensive PMO services. From setup to full operational management, we ensure your projects succeed.",
+      "shortDescription": "We support organizations in establishing, developing, and operating Project Management Offices (PMOs) through integrated solutions that strengthen governance and execution efficiency.",
+      "description": "We support organizations in establishing, developing, and operating Project Management Offices (PMOs) through integrated solutions that strengthen governance and execution efficiency.",
       "services": [
-        "Establishment and setup of Project Management Offices (PMOs)",
-        "PMO outsourcing models to lead and operate client PMOs",
-        "Resource secondment for project management roles within client organizations",
-        "Leadership and advisory support for PMO governance & operations"
+        "PMO Establishment and Setup",
+        "Outsourcing Models for Leading and Operating Client PMOs",
+        "Secondment Services to Provide Specialized Project Management Resources",
+        "PMO Leadership and Advisory Services to Support Governance and Operations"
       ]
     },
     "governmentExcellence": {
       "title": "Government Excellence Services",
-      "shortDescription": "Specialized consulting for government entities and public sector excellence",
-      "description": "Support your journey toward government excellence with our specialized consulting services designed specifically for public sector organizations.",
+      "shortDescription": "We enable government entities to achieve institutional excellence through integrated solutions for managing excellence programs, performance assessment, and compliance with approved standards.",
+      "description": "We enable government entities to achieve institutional excellence through integrated solutions for managing excellence programs, performance assessment, and compliance with approved standards.",
       "services": [
         "Managing government excellence programs & frameworks",
         "Evaluating government entities' performance & compliance with excellence requirements",
@@ -382,22 +386,26 @@
     },
     "whyChooseUs": {
       "title": "Why Choose Forward Consulting",
-      "subtitle": "Our unique combination of expertise, experience, and regional focus sets us apart",
-      "expertise": {
-        "title": "Deep Regional Expertise",
-        "description": "20+ years of proven experience serving organizations across the GCC with deep market knowledge and cultural understanding"
+      "subtitle": "An integrated combination of practical expertise, deep local insight, and an impact-focused, sustainability-driven consulting approach.",
+      "values": {
+        "title": "Our Values",
+        "description": "We operate with a client-centric approach, committed to delivering high-quality, practical solutions grounded in a deep understanding of local and regional regulations, systems, and human resources."
       },
-      "proven": {
-        "title": "Proven Track Record",
-        "description": "Successfully delivered 100+ projects across diverse industries with measurable results and sustainable impact"
+      "about": {
+        "title": "Who We Are",
+        "description": "A consulting team with local, regional, and international expertise, strong networks with government and private sectors, and a proven track record of supporting organizations in the Kingdom and the GCC region."
       },
-      "trust": {
-        "title": "Collaborative Approach",
-        "description": "Built on integrity and confidentiality, we maintain the highest ethical standards in all client relationships"
+      "deliver": {
+        "title": "What We Deliver",
+        "description": "We provide tailored HR and organizational solutions designed to meet each client's specific needs, with high flexibility enabling teams to adapt to changes and ensure lasting impact."
       },
-      "results": {
-        "title": "Sustainable Impact",
-        "description": "Our data-driven approach ensures transparent metrics and measurable outcomes that align with your strategic objectives"
+      "context": {
+        "title": "Our Context Vision",
+        "description": "We possess a deep understanding of the regulatory and economic environment in the Kingdom and the region, with practical experience supporting organizations through establishment, growth, and transformation phases."
+      },
+      "how": {
+        "title": "How We Work",
+        "description": "We follow a collaborative, partnership-based approach, working alongside our clients from design to execution, focusing on knowledge transfer and ensuring sustainable results after project completion."
       }
     }
   },

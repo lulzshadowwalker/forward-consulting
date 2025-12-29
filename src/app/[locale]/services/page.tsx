@@ -3,6 +3,7 @@ import services1Image from "@/assets/images/service-1.webp";
 import services2Image from "@/assets/images/service-2.png";
 import services3Image from "@/assets/images/service-3.png";
 import services4Image from "@/assets/images/service-4.webp";
+import specializedServicesImage from "@/assets/images/specialized-services.webp";
 import designImage from "@/assets/images/design.webp";
 import executeImage from "@/assets/images/execute.png";
 import sustainImage from "@/assets/images/sustain.png";
@@ -12,7 +13,6 @@ import { AnimatedHero } from "@/components/animations/AnimatedHero";
 import { AnimatedSection } from "@/components/animations/AnimatedSection";
 import { AnimatedServiceCards } from "@/components/animations/AnimatedServiceCards";
 import {
-  IconProvenTrackRecord,
   IconRegionalExpertise,
   IconSustainableImpact,
 } from "@/components/icons/ServiceIcons";
@@ -86,17 +86,19 @@ export default async function ServicesPage({ params }: Props) {
               icon: (
                 <Award className="w-8 h-8 text-green-600 dark:text-green-400" />
               ),
-              title: t("specializedServices.title"),
-              description: t("specializedServices.description"),
-              services: [
-                t("pmoServices.title") +
-                  ": " +
-                  t("pmoServices.shortDescription"),
-                t("governmentExcellence.title") +
-                  ": " +
-                  t("governmentExcellence.shortDescription"),
-              ],
+              title: t("pmoServices.title"),
+              description: t("pmoServices.shortDescription"),
+              services: t.raw("pmoServices.services"),
               image: services4Image,
+            },
+            {
+              icon: (
+                <Award className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+              ),
+              title: t("governmentExcellence.title"),
+              description: t("governmentExcellence.shortDescription"),
+              services: t.raw("governmentExcellence.services"),
+              image: specializedServicesImage,
             },
           ]}
         />
@@ -137,24 +139,29 @@ export default async function ServicesPage({ params }: Props) {
           subtitle={t("whyChooseUs.subtitle")}
           features={[
             {
-              icon: <IconRegionalExpertise className="w-9 h-9 text-primary" />,
-              title: t("whyChooseUs.expertise.title"),
-              description: t("whyChooseUs.expertise.description"),
-            },
-            {
-              icon: <IconProvenTrackRecord className="w-9 h-9 text-primary" />,
-              title: t("whyChooseUs.proven.title"),
-              description: t("whyChooseUs.proven.description"),
-            },
-            {
-              icon: <Handshake className="w-8 h-8 text-primary" />,
-              title: t("whyChooseUs.trust.title"),
-              description: t("whyChooseUs.trust.description"),
-            },
-            {
               icon: <IconSustainableImpact className="w-9 h-9 text-primary" />,
-              title: t("whyChooseUs.results.title"),
-              description: t("whyChooseUs.results.description"),
+              title: t("whyChooseUs.values.title"),
+              description: t("whyChooseUs.values.description"),
+            },
+            {
+              icon: <Users className="w-9 h-9 text-primary" />,
+              title: t("whyChooseUs.about.title"),
+              description: t("whyChooseUs.about.description"),
+            },
+            {
+              icon: <Target className="w-8 h-8 text-primary" />,
+              title: t("whyChooseUs.deliver.title"),
+              description: t("whyChooseUs.deliver.description"),
+            },
+            {
+              icon: <IconRegionalExpertise className="w-9 h-9 text-primary" />,
+              title: t("whyChooseUs.context.title"),
+              description: t("whyChooseUs.context.description"),
+            },
+            {
+              icon: <Handshake className="w-9 h-9 text-primary" />,
+              title: t("whyChooseUs.how.title"),
+              description: t("whyChooseUs.how.description"),
             },
           ]}
         />{" "}
