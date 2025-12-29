@@ -9,8 +9,8 @@ interface ContactInfo {
   icon: ReactNode;
   title: string;
   description: string;
-  value: string;
-  href: string;
+  value: ReactNode;
+  href?: string;
   color: string;
 }
 
@@ -104,18 +104,32 @@ export function AnimatedContactInfo({
                       whileHover={{ scale: 1.05 }}
                       transition={{ type: "spring", stiffness: 400 }}
                     >
-                      <Link
-                        href={contact.href}
-                        className={`${
-                          contact.color.includes("blue")
-                            ? "text-blue-600 dark:text-blue-400"
-                            : contact.color.includes("green")
-                              ? "text-green-600 dark:text-green-400"
-                              : "text-purple-600 dark:text-purple-400"
-                        } hover:underline transition-all duration-200`}
-                      >
-                        {contact.value}
-                      </Link>
+                      {contact.href ? (
+                        <Link
+                          href={contact.href}
+                          className={`${
+                            contact.color.includes("blue")
+                              ? "text-blue-600 dark:text-blue-400"
+                              : contact.color.includes("green")
+                                ? "text-green-600 dark:text-green-400"
+                                : "text-purple-600 dark:text-purple-400"
+                          } hover:underline transition-all duration-200`}
+                        >
+                          {contact.value}
+                        </Link>
+                      ) : (
+                        <div
+                          className={`${
+                            contact.color.includes("blue")
+                              ? "text-blue-600 dark:text-blue-400"
+                              : contact.color.includes("green")
+                                ? "text-green-600 dark:text-green-400"
+                                : "text-purple-600 dark:text-purple-400"
+                          } transition-all duration-200`}
+                        >
+                          {contact.value}
+                        </div>
+                      )}
                     </motion.div>
                   </div>
                 </motion.div>

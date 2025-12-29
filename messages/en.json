@@ -32,9 +32,8 @@
     },
     "contact": {
       "title": "Get In Touch",
-      "email": "info@forwardconsulting.ae",
-      "phone": "+971 4 123 4567",
-      "address": "Dubai Business Bay, UAE"
+      "email": "info@forwardconsultingme.com",
+      "phone": "Saudi Arabia: +966500639061\nJordan: +962795337755"
     },
     "social": {
       "title": "Follow Us",
@@ -127,7 +126,7 @@
     },
     "cta": {
       "title": "Ready to Transform Your Organization?",
-      "description": "Let's discuss how our proven expertise can help you achieve your strategic objectives",
+      "description": "Let’s discuss how our specialized expertise can help you achieve your strategic goals and create sustainable impact.",
       "button": "Start Your Journey"
     },
     "clients": {
@@ -278,7 +277,7 @@
   "SharedCTA": {
     "contact": {
       "title": "Ready to Transform Your Organization?",
-      "description": "Let's discuss how our proven expertise can help you achieve your strategic objectives",
+      "description": "Let’s discuss how our specialized expertise can help you achieve your strategic goals and create sustainable impact.",
       "button": "Start Your Journey"
     },
     "partner": {
@@ -404,13 +403,13 @@
   },
   "ContactPage": {
     "hero": {
-      "title": "Let's Build Your Success Together",
-      "subtitle": "Get in touch with our expert consultants to discuss your organizational challenges and opportunities",
+      "title": "Together, we set the path for lasting success",
+      "subtitle": "Get in touch with us to discuss your organizational challenges and opportunities",
       "badge": "Contact Us"
     },
     "form": {
       "title": "Send us a message",
-      "subtitle": "We'll get back to you within 24 hours",
+      "subtitle": "",
       "email": {
         "label": "Your Email",
         "placeholder": "Enter your email address"
@@ -430,17 +429,12 @@
       "email": {
         "title": "Email Us",
         "description": "Send us an email anytime",
-        "value": "info@forwardconsulting.ae"
+        "value": "info@forwardconsultingme.com"
       },
       "phone": {
         "title": "Call Us",
         "description": "Speak directly with our team",
-        "value": "+971 4 123 4567"
-      },
-      "office": {
-        "title": "Visit Our Office",
-        "description": "Meet us in person",
-        "value": "Dubai Business Bay, UAE"
+        "value": "Saudi Arabia: +966500639061\nJordan: +962795337755"
       }
     },
     "faq": {

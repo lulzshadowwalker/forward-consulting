@@ -154,18 +154,11 @@ export function Footer() {
               </div>
               <div className="flex items-start space-x-3">
                 <Phone className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                <Link
-                  href={`tel:${t("contact.phone")}`}
-                  className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                <span
+                  className="text-muted-foreground text-sm whitespace-pre-line"
                   dir="ltr"
                 >
                   {t("contact.phone")}
-                </Link>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                <span className="text-muted-foreground text-sm">
-                  {t("contact.address")}
                 </span>
               </div>
             </div>

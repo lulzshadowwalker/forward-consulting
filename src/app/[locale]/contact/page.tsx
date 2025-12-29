@@ -70,21 +70,13 @@ export default function ContactPage(props: Props) {
                     ),
                     title: t("contact.phone.title"),
                     description: t("contact.phone.description"),
-                    value: t("contact.phone.value"),
-                    href: `tel:${t("contact.phone.value")}`,
+                    value: (
+                      <div className="whitespace-pre-line">
+                        {t("contact.phone.value")}
+                      </div>
+                    ),
                     color:
                       "bg-green-100 dark:bg-green-900/30 group-hover:bg-green-200 dark:group-hover:bg-green-800/50",
-                  },
-                  {
-                    icon: (
-                      <MapPin className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                    ),
-                    title: t("contact.office.title"),
-                    description: t("contact.office.description"),
-                    value: t("contact.office.value"),
-                    href: "#",
-                    color:
-                      "bg-purple-100 dark:bg-purple-900/30 group-hover:bg-purple-200 dark:group-hover:bg-purple-800/50",
                   },
                 ]}
               />
