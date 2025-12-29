@@ -1,6 +1,6 @@
 import heroImage from "@/assets/images/services.webp";
 import services1Image from "@/assets/images/service-1.webp";
-import services2Image from "@/assets/images/service-2.png";
+import services2Image from "@/assets/images/talent-leadership-management.png";
 import services3Image from "@/assets/images/service-3.png";
 import services4Image from "@/assets/images/service-4.webp";
 import specializedServicesImage from "@/assets/images/specialized-services.webp";

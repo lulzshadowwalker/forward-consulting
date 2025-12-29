@@ -1,4 +1,4 @@
-import heroImage from "@/assets/images/contact-us.webp";
+import heroImage from "@/assets/images/contact-hero.png";
 import { AnimatedContactForm } from "@/components/animations/AnimatedContactForm";
 import { AnimatedContactInfo } from "@/components/animations/AnimatedContactInfo";
 import { AnimatedHero } from "@/components/animations/AnimatedHero";
