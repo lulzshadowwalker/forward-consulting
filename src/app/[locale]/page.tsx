@@ -17,6 +17,7 @@ import { AnimatedValues } from "@/components/animations/AnimatedValues";
 import { SharedCTA } from "@/components/shared/SharedCTA";
 import {
   Award,
+  Briefcase,
   Building,
   CheckCircle,
   Handshake,
@@ -76,6 +77,11 @@ export default async function HomePage({ params }: Props) {
               description: t("services.talentAssessment.description"),
             },
             {
+              icon: <Briefcase className="w-6 h-6 text-primary" />,
+              title: t("services.pmoServices.title"),
+              description: t("services.pmoServices.description"),
+            },
+            {
               icon: <Award className="w-6 h-6 text-primary" />,
               title: t("services.specialized.title"),
               description: t("services.specialized.description"),
@@ -93,16 +99,7 @@ export default async function HomePage({ params }: Props) {
           badge={t("expertise.region")}
           title={t("expertise.title")}
           description={t("expertise.description")}
-          stats={[
-            {
-              number: t("expertise.years"),
-              label: t("expertise.yearsLabel"),
-            },
-            {
-              number: t("expertise.clients"),
-              label: t("expertise.clientsLabel"),
-            },
-          ]}
+          stats={[]}
           image={regionalExpertise}
           imageAlt={t("expertise.imageAlt")}
         />

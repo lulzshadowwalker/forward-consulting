@@ -49,34 +49,38 @@
   },
   "HomePage": {
     "hero": {
-      "title": "Empowering Organizations for Tomorrow's Success",
-      "subtitle": "Strategic HR consulting and organizational development with over 20 years of regional expertise",
+      "title": "Empowering Organizations for Tomorrow’s Success",
+      "subtitle": "Over twenty years of regional expertise in delivering human resources and organizational development consulting",
       "cta": "Discover Our Services",
       "contact": "Get In Touch"
     },
     "services": {
       "title": "Our Core Services",
-      "subtitle": "Comprehensive HR solutions tailored to your organizational needs",
+      "subtitle": "Forward Consulting provides integrated HR and organizational development consulting solutions aligned with organizational strategies to deliver measurable and sustainable outcomes",
       "organizationDesign": {
         "title": "Organization Design & Workforce Planning",
-        "description": "Strategic organizational structures and workforce optimization for sustainable growth"
+        "description": "We help you develop an effective and flexible organizational structure that supports your strategy and achieves your organizational objectives"
       },
       "talentManagement": {
         "title": "Talent & Leadership Management",
-        "description": "Comprehensive talent strategies and leadership development programs"
+        "description": "We empower talent and build leadership through integrated talent management solutions that enhance organizational performance and support the achievement of strategic objectives"
       },
       "talentAssessment": {
         "title": "Talent Assessment",
-        "description": "Data-driven assessment solutions for informed talent decisions"
+        "description": "We support your talent-related decisions through scientifically grounded, reliable assessment solutions that provide a comprehensive view of performance and potential across all organizational levels"
+      },
+      "pmoServices": {
+        "title": "Project Management Office (PMO) Services",
+        "description": "We support organizations in establishing, developing, and operating Project Management Offices (PMOs) through integrated solutions that strengthen governance and execution efficiency"
       },
       "specialized": {
-        "title": "Specialized Services",
-        "description": "PMO services and government excellence consulting for enhanced performance"
+        "title": "Government Excellence Services",
+        "description": "Project Management Office (PMO) services and government excellence consulting to enhance performance"
       }
     },
     "expertise": {
       "title": "Two Decades of Regional Excellence",
-      "description": "Based in Jordan with over 20 years of proven expertise serving the Gulf region, with strategic focus on the Saudi market",
+      "description": "Over twenty years of regional expertise serving organizations across the Gulf, with a strategic focus on supporting market transformation in Saudi Arabia",
       "years": "20+",
       "yearsLabel": "Years Experience",
       "region": "GCC Focus",
@@ -131,7 +135,7 @@
     },
     "clients": {
       "title": "Our Clients",
-      "subtitle": "We have worked with a wide range of clients, from small startups to large corporations. Here are some of the companies we have had the pleasure of working with."
+      "subtitle": "Our team has worked with a diverse range of clients, from startups to large enterprises, across multiple sectors, demonstrating both depth of expertise and breadth of experience"
     }
   },
   "AboutPage": {
