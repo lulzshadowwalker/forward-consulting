@@ -131,13 +131,6 @@ export default async function AboutPage({
             description: t("ourStory.saudiPartnership.description"),
             image: year2023Image,
           },
-          {
-            year: "2024",
-            label: t("ourStory.today.label"),
-            title: t("ourStory.today.title"),
-            description: t("ourStory.today.description"),
-            image: year2024Image,
-          },
         ]}
       />
 

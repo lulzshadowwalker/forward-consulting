@@ -86,7 +86,7 @@
     },
     "values": {
       "title": "Our Values Drive Lasting Impact",
-      "subtitle": "Built on trusted partnerships, we support organizations across sectors to achieve excellence",
+      "subtitle": "We build trust-based partnerships to support organizations across sectors in achieving their goals and empowering their people. Anchored in integrity, innovation, and respect, our work is driven by accountability, transparency, collaboration, and an unwavering commitment to excellence.",
       "partnership": {
         "title": "Partnership",
         "description": "Building long-term, trust-based relationships"
@@ -137,7 +137,7 @@
   "AboutPage": {
     "hero": {
       "title": "About Forward Consulting",
-      "subtitle": "Trusted partners in organizational excellence, driving transformation across the Gulf region for over two decades",
+      "subtitle": "We lead organizational transformation and empower organizations to achieve sustainable excellence through deep expertise spanning more than twenty years across the Gulf region",
       "badge": "About Us",
       "infoItems": {
         "founded": "Founded 2020",
@@ -227,26 +227,21 @@
     },
     "ourStory": {
       "title": "Our Story",
-      "subtitle": "Two decades of excellence in HR consulting and organizational development",
+      "subtitle": "Over two decades of excellence in human resources and organizational development consulting",
       "founded": {
         "title": "Founded in Jordan",
-        "description": "Established as a regional HR consulting firm with a vision to transform organizations across the Middle East",
+        "description": "Forward Consulting is a regional consulting firm specializing in HR and organizational development, focused on enabling organizational transformation and capability building across the Middle East.",
         "label": "Founded"
       },
       "expansion": {
         "title": "Gulf Region Expansion",
-        "description": "Extended our services throughout the GCC, developing deep expertise in regional business practices and cultural nuances",
+        "description": "We expanded our services across the Gulf region, building deep expertise in HR practices alongside a nuanced understanding of the region’s organizational, business, and cultural environments",
         "label": "Expansion"
       },
       "saudiPartnership": {
         "title": "Strategic Saudi Partnership",
-        "description": "Partnered with the Ministry of Human Resources and Social Development in Saudi Arabia to co-design the National Leadership Succession Program",
+        "description": "We strengthened our presence in the Kingdom of Saudi Arabia through a strategic partnership with Ariba Business Solutions, a leading national company in the field, to deliver integrated HR and organizational development solutions and support public and private sector organizations in achieving their strategic objectives and building sustainable capabilities aligned with national transformations",
         "label": "Partnership"
-      },
-      "today": {
-        "title": "Forward Consulting Today",
-        "description": "A trusted advisor to 100+ organizations, continuing to drive innovation in HR consulting and organizational excellence",
-        "label": "Today"
       }
     },
     "leadership": {
