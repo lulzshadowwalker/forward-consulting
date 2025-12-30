@@ -101,7 +101,7 @@ export function AnimatedTimeline({
                           src={item.image}
                           alt={item.year}
                           fill
-                          className="object-contain"
+                          className="object-cover"
                         />
                       </div>
                     ) : (
