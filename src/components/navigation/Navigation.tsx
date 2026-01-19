@@ -71,7 +71,7 @@ export function Navigation() {
             : 'bg-background/80 backdrop-blur-sm border-b border-border'
         }`}
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-8">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <motion.div
@@ -92,7 +92,7 @@ export function Navigation() {
                   <Image
                     src={logo}
                     alt={t('brand')}
-                    width={128}
+                    width={100}
                     className="md:scale-125"
                   />
                 </motion.div>

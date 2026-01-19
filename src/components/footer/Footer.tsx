@@ -36,7 +36,7 @@ export function Footer() {
             <Image
               src={logo}
               alt={t('brand.name')}
-              className="-translate-x-3 rtl:translate-x-3 w-32 md:w-45 md:-translate-x-5 rtl:md:translate-x-5"
+              className="-translate-x-1 rtl:translate-x-1 w-32 md:w-45 md:-translate-x-2 rtl:md:translate-x-2"
             />
             <p className="text-muted-foreground text-sm leading-relaxed mb-6 max-w-sm">
               {t('brand.tagline')}
