@@ -45,7 +45,7 @@ export function AnimatedContactForm({
     setIsSubmitting(true)
 
     try {
-      const response = await fetch('https://formspree.io/f/mqadrgrl', {
+      const response = await fetch('https://formspree.io/f/mbddypoj', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ export function AnimatedContactForm({
   }
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
