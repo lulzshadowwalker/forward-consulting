@@ -74,7 +74,7 @@ export default function ContactPage(props: Props) {
                       <div className="flex flex-col whitespace-pre-line">
                         <div className="flex items-center">
                           <span className="me-2 text-foreground">
-                            {t('contact.phone.saudi-arabia')}
+                            {t('contact.phone.saudi-arabia')}:
                           </span>
                           <a
                             href={`tel:${t('contact.phone.saudi-arabia-phone')}`}
@@ -86,7 +86,7 @@ export default function ContactPage(props: Props) {
                         </div>
                         <div className="flex items-center">
                           <span className="me-2 text-foreground">
-                            {t('contact.phone.jordan')}
+                            {t('contact.phone.jordan')}:
                           </span>
                           <a
                             href={`tel:${t('contact.phone.jordan-phone')}`}
