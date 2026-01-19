@@ -88,7 +88,7 @@ export function AnimatedServiceCards({
                         alt={service.title}
                         width={400}
                         height={250}
-                        className="w-full h-48 object-cover rounded-lg shadow-md"
+                        className="w-full h-54 object-cover rounded-lg shadow-md"
                       />
                     </motion.div>
                   )}
