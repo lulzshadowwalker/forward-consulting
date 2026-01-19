@@ -1,22 +1,22 @@
-import { Button } from "@/components/ui/button";
-import { Link } from "@/i18n/navigation";
-import { ArrowRight } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { Button } from '@/components/ui/button'
+import { Link } from '@/i18n/navigation'
+import { ArrowRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
-type CTAVariant = "contact" | "partner" | "services";
+type CTAVariant = 'contact' | 'partner' | 'services'
 
 interface SharedCTAProps {
-  variant?: CTAVariant;
-  href?: string;
-  className?: string;
+  variant?: CTAVariant
+  href?: string
+  className?: string
 }
 
 export function SharedCTA({
-  variant = "contact",
-  href = "/contact",
-  className = "",
+  variant = 'contact',
+  href = '/contact',
+  className = '',
 }: SharedCTAProps) {
-  const t = useTranslations("SharedCTA");
+  const t = useTranslations('SharedCTA')
 
   return (
     <section
@@ -46,5 +46,5 @@ export function SharedCTA({
         </div>
       </div>
     </section>
-  );
+  )
 }

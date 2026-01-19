@@ -1,19 +1,19 @@
-"use client";
+'use client'
 
-import { motion } from "motion/react";
+import { motion } from 'motion/react'
 
 interface AnimatedSectionProps {
-  title: string;
-  subtitle: string;
-  description: string;
-  className?: string;
+  title: string
+  subtitle: string
+  description: string
+  className?: string
 }
 
 export function AnimatedSection({
   title,
   subtitle,
   description,
-  className = "",
+  className = '',
 }: AnimatedSectionProps) {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -24,7 +24,7 @@ export function AnimatedSection({
         staggerChildren: 0.2,
       },
     },
-  };
+  }
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -32,7 +32,7 @@ export function AnimatedSection({
       opacity: 1,
       y: 0,
     },
-  };
+  }
 
   return (
     <section className={`py-20 bg-background ${className}`}>
@@ -65,5 +65,5 @@ export function AnimatedSection({
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

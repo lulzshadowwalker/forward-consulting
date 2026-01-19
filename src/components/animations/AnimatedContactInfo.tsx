@@ -1,31 +1,31 @@
-"use client";
+'use client'
 
-import { Card, CardContent } from "@/components/ui/card";
-import { Link } from "@/i18n/navigation";
-import { motion } from "motion/react";
-import { ReactNode } from "react";
+import { Card, CardContent } from '@/components/ui/card'
+import { Link } from '@/i18n/navigation'
+import { motion } from 'motion/react'
+import { ReactNode } from 'react'
 
 interface ContactInfo {
-  icon: ReactNode;
-  title: string;
-  description: string;
-  value: ReactNode;
-  href?: string;
-  color: string;
+  icon: ReactNode
+  title: string
+  description: string
+  value: ReactNode
+  href?: string
+  color: string
 }
 
 interface AnimatedContactInfoProps {
-  title: string;
-  subtitle: string;
-  contacts: ContactInfo[];
-  className?: string;
+  title: string
+  subtitle: string
+  contacts: ContactInfo[]
+  className?: string
 }
 
 export function AnimatedContactInfo({
   title,
   subtitle,
   contacts,
-  className = "",
+  className = '',
 }: AnimatedContactInfoProps) {
   const containerVariants = {
     hidden: { opacity: 0, x: 50 },
@@ -37,7 +37,7 @@ export function AnimatedContactInfo({
         staggerChildren: 0.2,
       },
     },
-  };
+  }
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -46,7 +46,7 @@ export function AnimatedContactInfo({
       y: 0,
       transition: { duration: 0.5 },
     },
-  };
+  }
 
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.9 },
@@ -55,7 +55,7 @@ export function AnimatedContactInfo({
       scale: 1,
       transition: { duration: 0.5 },
     },
-  };
+  }
 
   return (
     <motion.div
@@ -78,14 +78,14 @@ export function AnimatedContactInfo({
             key={index}
             variants={cardVariants}
             whileHover={{ scale: 1.03 }}
-            transition={{ type: "spring", stiffness: 300 }}
+            transition={{ type: 'spring', stiffness: 300 }}
           >
             <Card className="group hover:shadow-lg transition-shadow border-slate-200 dark:border-slate-700">
               <CardContent className="px-6">
                 <motion.div
                   className="flex items-start space-x-4"
                   whileHover={{ x: 5 }}
-                  transition={{ type: "spring", stiffness: 400 }}
+                  transition={{ type: 'spring', stiffness: 400 }}
                 >
                   <motion.div
                     className={`w-12 h-12 ${contact.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-all duration-200`}
@@ -102,17 +102,17 @@ export function AnimatedContactInfo({
                     </p>
                     <motion.div
                       whileHover={{ scale: 1.05 }}
-                      transition={{ type: "spring", stiffness: 400 }}
+                      transition={{ type: 'spring', stiffness: 400 }}
                     >
                       {contact.href ? (
                         <Link
                           href={contact.href}
                           className={`${
-                            contact.color.includes("blue")
-                              ? "text-blue-600 dark:text-blue-400"
-                              : contact.color.includes("green")
-                                ? "text-green-600 dark:text-green-400"
-                                : "text-purple-600 dark:text-purple-400"
+                            contact.color.includes('blue')
+                              ? 'text-blue-600 dark:text-blue-400'
+                              : contact.color.includes('green')
+                                ? 'text-green-600 dark:text-green-400'
+                                : 'text-purple-600 dark:text-purple-400'
                           } hover:underline transition-all duration-200`}
                         >
                           {contact.value}
@@ -120,11 +120,11 @@ export function AnimatedContactInfo({
                       ) : (
                         <div
                           className={`${
-                            contact.color.includes("blue")
-                              ? "text-blue-600 dark:text-blue-400"
-                              : contact.color.includes("green")
-                                ? "text-green-600 dark:text-green-400"
-                                : "text-purple-600 dark:text-purple-400"
+                            contact.color.includes('blue')
+                              ? 'text-blue-600 dark:text-blue-400'
+                              : contact.color.includes('green')
+                                ? 'text-green-600 dark:text-green-400'
+                                : 'text-purple-600 dark:text-purple-400'
                           } transition-all duration-200`}
                         >
                           {contact.value}
@@ -139,5 +139,5 @@ export function AnimatedContactInfo({
         ))}
       </motion.div>
     </motion.div>
-  );
+  )
 }

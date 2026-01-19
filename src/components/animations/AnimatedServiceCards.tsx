@@ -1,28 +1,28 @@
-"use client";
+'use client'
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle } from "lucide-react";
-import { motion } from "motion/react";
-import { ReactNode } from "react";
-import Image from "next/image";
-import { StaticImageData } from "next/image";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { CheckCircle } from 'lucide-react'
+import { motion } from 'motion/react'
+import { ReactNode } from 'react'
+import Image from 'next/image'
+import { StaticImageData } from 'next/image'
 
 interface ServiceItem {
-  icon: ReactNode;
-  title: string;
-  description: string;
-  services: string[];
-  image?: StaticImageData;
+  icon: ReactNode
+  title: string
+  description: string
+  services: string[]
+  image?: StaticImageData
 }
 
 interface AnimatedServiceCardsProps {
-  services: ServiceItem[];
-  className?: string;
+  services: ServiceItem[]
+  className?: string
 }
 
 export function AnimatedServiceCards({
   services,
-  className = "",
+  className = '',
 }: AnimatedServiceCardsProps) {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -33,7 +33,7 @@ export function AnimatedServiceCards({
         staggerChildren: 0.2,
       },
     },
-  };
+  }
 
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -41,7 +41,7 @@ export function AnimatedServiceCards({
       opacity: 1,
       y: 0,
     },
-  };
+  }
 
   return (
     <section className={`py-20 bg-muted/30 ${className}`}>
@@ -64,7 +64,7 @@ export function AnimatedServiceCards({
                         scale: 1.1,
                         rotate: 5,
                       }}
-                      transition={{ type: "spring", stiffness: 300 }}
+                      transition={{ type: 'spring', stiffness: 300 }}
                     >
                       {service.icon}
                     </motion.div>
@@ -118,5 +118,5 @@ export function AnimatedServiceCards({
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

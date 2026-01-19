@@ -1,27 +1,27 @@
-"use client";
+'use client'
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { motion } from "motion/react";
-import { ReactNode } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { motion } from 'motion/react'
+import { ReactNode } from 'react'
 
 interface ServiceItem {
-  icon: ReactNode;
-  title: string;
-  description: string;
+  icon: ReactNode
+  title: string
+  description: string
 }
 
 interface AnimatedServicesGridProps {
-  title: string;
-  subtitle: string;
-  services: ServiceItem[];
-  className?: string;
+  title: string
+  subtitle: string
+  services: ServiceItem[]
+  className?: string
 }
 
 export function AnimatedServicesGrid({
   title,
   subtitle,
   services,
-  className = "",
+  className = '',
 }: AnimatedServicesGridProps) {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -32,7 +32,7 @@ export function AnimatedServicesGrid({
         staggerChildren: 0.1,
       },
     },
-  };
+  }
 
   const titleVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -40,7 +40,7 @@ export function AnimatedServicesGrid({
       opacity: 1,
       y: 0,
     },
-  };
+  }
 
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -48,7 +48,7 @@ export function AnimatedServicesGrid({
       opacity: 1,
       y: 0,
     },
-  };
+  }
 
   return (
     <section className={`py-20 bg-background ${className}`}>
@@ -88,7 +88,7 @@ export function AnimatedServicesGrid({
                   <motion.div
                     className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors"
                     whileHover={{ scale: 1.1 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                   >
                     {service.icon}
                   </motion.div>
@@ -107,5 +107,5 @@ export function AnimatedServicesGrid({
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

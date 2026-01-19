@@ -1,23 +1,23 @@
-"use client";
+'use client'
 
-import { Card } from "@/components/ui/card";
-import { motion } from "motion/react";
-import { ReactNode } from "react";
-import Image, { StaticImageData } from "next/image";
+import { Card } from '@/components/ui/card'
+import { motion } from 'motion/react'
+import { ReactNode } from 'react'
+import Image, { StaticImageData } from 'next/image'
 
 interface CardItem {
-  icon: ReactNode;
-  title: string;
-  content: string;
-  image?: StaticImageData;
+  icon: ReactNode
+  title: string
+  content: string
+  image?: StaticImageData
 }
 
 interface AnimatedCardsProps {
-  cards: CardItem[];
-  className?: string;
+  cards: CardItem[]
+  className?: string
 }
 
-export function AnimatedCards({ cards, className = "" }: AnimatedCardsProps) {
+export function AnimatedCards({ cards, className = '' }: AnimatedCardsProps) {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -27,7 +27,7 @@ export function AnimatedCards({ cards, className = "" }: AnimatedCardsProps) {
         staggerChildren: 0.3,
       },
     },
-  };
+  }
 
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -35,7 +35,7 @@ export function AnimatedCards({ cards, className = "" }: AnimatedCardsProps) {
       opacity: 1,
       y: 0,
     },
-  };
+  }
 
   return (
     <section className={`py-20 bg-background ${className}`}>
@@ -69,15 +69,15 @@ export function AnimatedCards({ cards, className = "" }: AnimatedCardsProps) {
                         scale: 1.1,
                         rotate: 10,
                       }}
-                      transition={{ type: "spring", stiffness: 300 }}
+                      transition={{ type: 'spring', stiffness: 300 }}
                     >
                       {card.icon}
                     </motion.div>
                   )}
-                  <h2 className="text-3xl font-bold mb-4 text-foreground text-center lg:text-left">
+                  <h2 className="text-3xl font-bold mb-4 text-foreground text-center lg:text-start">
                     {card.title}
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed text-center lg:text-left">
+                  <p className="text-muted-foreground leading-relaxed text-center lg:text-start">
                     {card.content}
                   </p>
                 </div>
@@ -87,5 +87,5 @@ export function AnimatedCards({ cards, className = "" }: AnimatedCardsProps) {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

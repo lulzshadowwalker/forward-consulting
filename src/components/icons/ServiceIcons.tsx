@@ -1,7 +1,7 @@
-import { cn } from "@/lib/utils";
-import { ComponentProps } from "react";
+import { cn } from '@/lib/utils'
+import { ComponentProps } from 'react'
 
-type IconProps = ComponentProps<"svg">;
+type IconProps = ComponentProps<'svg'>
 
 export function IconRegionalExpertise({ className, ...props }: IconProps) {
   return (
@@ -11,7 +11,7 @@ export function IconRegionalExpertise({ className, ...props }: IconProps) {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("stroke-current", className)}
+      className={cn('stroke-current', className)}
       {...props}
     >
       <g strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -25,7 +25,7 @@ export function IconRegionalExpertise({ className, ...props }: IconProps) {
         <circle cx="12" cy="10.3" r="1" />
       </g>
     </svg>
-  );
+  )
 }
 
 export function IconProvenTrackRecord({ className, ...props }: IconProps) {
@@ -36,7 +36,7 @@ export function IconProvenTrackRecord({ className, ...props }: IconProps) {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("stroke-current", className)}
+      className={cn('stroke-current', className)}
       {...props}
     >
       <g strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -56,7 +56,7 @@ export function IconProvenTrackRecord({ className, ...props }: IconProps) {
         <path d="M17.8 9.1L18.9 10.2L20.3 7.9" />
       </g>
     </svg>
-  );
+  )
 }
 
 export function IconSustainableImpact({ className, ...props }: IconProps) {
@@ -67,7 +67,7 @@ export function IconSustainableImpact({ className, ...props }: IconProps) {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("stroke-current", className)}
+      className={cn('stroke-current', className)}
       {...props}
     >
       <g strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -84,5 +84,5 @@ export function IconSustainableImpact({ className, ...props }: IconProps) {
         <line x1="16" y1="7" x2="17.5" y2="9" />
       </g>
     </svg>
-  );
+  )
 }

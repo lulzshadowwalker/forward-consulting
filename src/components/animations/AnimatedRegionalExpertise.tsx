@@ -1,22 +1,22 @@
-"use client";
+'use client'
 
-import { Badge } from "@/components/ui/badge";
-import { motion } from "motion/react";
-import Image from "next/image";
+import { Badge } from '@/components/ui/badge'
+import { motion } from 'motion/react'
+import Image from 'next/image'
 
 interface StatItem {
-  number: string;
-  label: string;
+  number: string
+  label: string
 }
 
 interface AnimatedRegionalExpertiseProps {
-  badge: string;
-  title: string;
-  description: string;
-  stats: StatItem[];
-  image: any;
-  imageAlt: string;
-  className?: string;
+  badge: string
+  title: string
+  description: string
+  stats: StatItem[]
+  image: any
+  imageAlt: string
+  className?: string
 }
 
 export function AnimatedRegionalExpertise({
@@ -26,7 +26,7 @@ export function AnimatedRegionalExpertise({
   stats,
   image,
   imageAlt,
-  className = "",
+  className = '',
 }: AnimatedRegionalExpertiseProps) {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -37,7 +37,7 @@ export function AnimatedRegionalExpertise({
         staggerChildren: 0.2,
       },
     },
-  };
+  }
 
   const textVariants = {
     hidden: { opacity: 0, x: -30 },
@@ -45,7 +45,7 @@ export function AnimatedRegionalExpertise({
       opacity: 1,
       x: 0,
     },
-  };
+  }
 
   const imageVariants = {
     hidden: { opacity: 0, x: 30 },
@@ -53,7 +53,7 @@ export function AnimatedRegionalExpertise({
       opacity: 1,
       x: 0,
     },
-  };
+  }
 
   const statsVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -61,7 +61,7 @@ export function AnimatedRegionalExpertise({
       opacity: 1,
       y: 0,
     },
-  };
+  }
 
   return (
     <section className={`py-20 bg-muted/30 ${className}`}>
@@ -96,14 +96,14 @@ export function AnimatedRegionalExpertise({
                   key={index}
                   className="text-center"
                   whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <motion.div
                     className="text-3xl font-bold text-primary mb-2"
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     transition={{
-                      type: "spring",
+                      type: 'spring',
                       stiffness: 200,
                       delay: index * 0.1,
                     }}
@@ -121,15 +121,15 @@ export function AnimatedRegionalExpertise({
 
           <motion.div className="relative" variants={imageVariants}>
             <motion.div
-              className="bg-gradient-to-br from-primary/10 to-muted/20 rounded-2xl p-8 h-80 flex items-center justify-center overflow-hidden"
+              className="rounded-full p-8 h-80 flex items-center justify-center overflow-hidden"
               whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300 }}
+              transition={{ type: 'spring', stiffness: 300 }}
             >
               <Image
                 src={image}
                 alt={imageAlt}
                 fill
-                className="object-cover rounded-2xl"
+                className="object-contain rounded-[inherit]"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </motion.div>
@@ -137,5 +137,5 @@ export function AnimatedRegionalExpertise({
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,27 +1,27 @@
-"use client";
+'use client'
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Send } from "lucide-react";
-import { motion } from "motion/react";
-import { useState } from "react";
-import { toast } from "sonner";
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { Textarea } from '@/components/ui/textarea'
+import { Send } from 'lucide-react'
+import { motion } from 'motion/react'
+import { useState } from 'react'
+import { toast } from 'sonner'
 
 interface AnimatedContactFormProps {
-  title: string;
-  subtitle: string;
+  title: string
+  subtitle: string
   formLabels: {
-    email: { label: string; placeholder: string };
-    message: { label: string; placeholder: string };
-  };
-  submitText: string;
-  sendingText: string;
-  successMessage: string;
-  errorMessage: string;
-  className?: string;
+    email: { label: string; placeholder: string }
+    message: { label: string; placeholder: string }
+  }
+  submitText: string
+  sendingText: string
+  successMessage: string
+  errorMessage: string
+  className?: string
 }
 
 export function AnimatedContactForm({
@@ -32,51 +32,51 @@ export function AnimatedContactForm({
   sendingText,
   successMessage,
   errorMessage,
-  className = "",
+  className = '',
 }: AnimatedContactFormProps) {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
-    email: "",
-    message: "",
-  });
+    email: '',
+    message: '',
+  })
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault()
+    setIsSubmitting(true)
 
     try {
-      const response = await fetch("https://formspree.io/f/mqadrgrl", {
-        method: "POST",
+      const response = await fetch('https://formspree.io/f/mqadrgrl', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           email: formData.email,
           message: formData.message,
         }),
-      });
+      })
 
       if (response.ok) {
-        toast.success(successMessage);
-        setFormData({ email: "", message: "" });
+        toast.success(successMessage)
+        setFormData({ email: '', message: '' })
       } else {
-        throw new Error("Failed to send message");
+        throw new Error('Failed to send message')
       }
     } catch (error) {
-      toast.error(errorMessage);
+      toast.error(errorMessage)
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  }
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    });
-  };
+    })
+  }
 
   const containerVariants = {
     hidden: { opacity: 0, x: -50 },
@@ -88,7 +88,7 @@ export function AnimatedContactForm({
         staggerChildren: 0.2,
       },
     },
-  };
+  }
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -97,7 +97,7 @@ export function AnimatedContactForm({
       y: 0,
       transition: { duration: 0.5 },
     },
-  };
+  }
 
   const formVariants = {
     hidden: { opacity: 0, scale: 0.95 },
@@ -106,7 +106,7 @@ export function AnimatedContactForm({
       scale: 1,
       transition: { duration: 0.6, delay: 0.3 },
     },
-  };
+  }
 
   return (
     <motion.div
@@ -138,7 +138,7 @@ export function AnimatedContactForm({
                 </Label>
                 <motion.div
                   whileFocus={{ scale: 1.02 }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <Input
                     id="email"
@@ -163,7 +163,7 @@ export function AnimatedContactForm({
                 </Label>
                 <motion.div
                   whileFocus={{ scale: 1.02 }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <Textarea
                     id="message"
@@ -201,7 +201,7 @@ export function AnimatedContactForm({
                         {submitText}
                         <motion.div
                           whileHover={{ x: 5, y: -2, rotate: 20 }}
-                          transition={{ type: "spring", stiffness: 400 }}
+                          transition={{ type: 'spring', stiffness: 400 }}
                         >
                           <Send className="w-4 h-4" />
                         </motion.div>
@@ -215,5 +215,5 @@ export function AnimatedContactForm({
         </Card>
       </motion.div>
     </motion.div>
-  );
+  )
 }

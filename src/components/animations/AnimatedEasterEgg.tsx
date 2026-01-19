@@ -1,95 +1,95 @@
-"use client";
+'use client'
 
-import { AnimatePresence, motion } from "framer-motion";
-import { useCallback, useEffect, useState } from "react";
+import { AnimatePresence, motion } from 'framer-motion'
+import { useCallback, useEffect, useState } from 'react'
 
 // Konami Code sequence: Up, Up, Down, Down, Left, Right, Left, Right, B, A
 const KONAMI_CODE = [
-  "ArrowUp",
-  "ArrowUp",
-  "ArrowDown",
-  "ArrowDown",
-  "ArrowLeft",
-  "ArrowRight",
-  "ArrowLeft",
-  "ArrowRight",
-  "KeyB",
-  "KeyA",
-];
+  'ArrowUp',
+  'ArrowUp',
+  'ArrowDown',
+  'ArrowDown',
+  'ArrowLeft',
+  'ArrowRight',
+  'ArrowLeft',
+  'ArrowRight',
+  'KeyB',
+  'KeyA',
+]
 
 export function AnimatedEasterEgg() {
-  const [sequence, setSequence] = useState<string[]>([]);
-  const [isActive, setIsActive] = useState(false);
-  const [showMessage, setShowMessage] = useState(false);
+  const [sequence, setSequence] = useState<string[]>([])
+  const [isActive, setIsActive] = useState(false)
+  const [showMessage, setShowMessage] = useState(false)
 
   const resetSequence = useCallback(() => {
-    setSequence([]);
-  }, []);
+    setSequence([])
+  }, [])
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Prevent triggering during form inputs
       if (
-        (e.target && (e.target as HTMLElement).tagName === "INPUT") ||
-        (e.target as HTMLElement).tagName === "TEXTAREA"
+        (e.target && (e.target as HTMLElement).tagName === 'INPUT') ||
+        (e.target as HTMLElement).tagName === 'TEXTAREA'
       ) {
-        return;
+        return
       }
 
       setSequence((prev) => {
-        const newSequence = [...prev, e.code];
+        const newSequence = [...prev, e.code]
 
         // Keep only the last 10 keys (length of Konami code)
-        const trimmedSequence = newSequence.slice(-KONAMI_CODE.length);
+        const trimmedSequence = newSequence.slice(-KONAMI_CODE.length)
 
         // Check if sequence matches Konami code
         const matches = KONAMI_CODE.every(
-          (code, index) => trimmedSequence[index] === code,
-        );
+          (code, index) => trimmedSequence[index] === code
+        )
 
         if (matches && trimmedSequence.length === KONAMI_CODE.length) {
-          setIsActive(true);
-          setShowMessage(true);
-          return [];
+          setIsActive(true)
+          setShowMessage(true)
+          return []
         }
 
-        return trimmedSequence;
-      });
-    };
+        return trimmedSequence
+      })
+    }
 
     // Reset sequence after 3 seconds of inactivity
-    const timeoutId = setTimeout(resetSequence, 3000);
+    const timeoutId = setTimeout(resetSequence, 3000)
 
-    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener('keydown', handleKeyDown)
 
     return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-      clearTimeout(timeoutId);
-    };
-  }, [resetSequence]);
+      window.removeEventListener('keydown', handleKeyDown)
+      clearTimeout(timeoutId)
+    }
+  }, [resetSequence])
 
   const closeEasterEgg = () => {
-    setIsActive(false);
-    setShowMessage(false);
-  };
+    setIsActive(false)
+    setShowMessage(false)
+  }
 
   const particles = Array.from({ length: 50 }, (_, i) => (
     <motion.div
       key={i}
       className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full"
       initial={{
-        x: typeof window !== "undefined" ? window.innerWidth / 2 : 400,
-        y: typeof window !== "undefined" ? window.innerHeight / 2 : 300,
+        x: typeof window !== 'undefined' ? window.innerWidth / 2 : 400,
+        y: typeof window !== 'undefined' ? window.innerHeight / 2 : 300,
         scale: 0,
         opacity: 1,
       }}
       animate={{
         x:
-          typeof window !== "undefined"
+          typeof window !== 'undefined'
             ? Math.random() * window.innerWidth
             : Math.random() * 800,
         y:
-          typeof window !== "undefined"
+          typeof window !== 'undefined'
             ? Math.random() * window.innerHeight
             : Math.random() * 600,
         scale: [0, 1, 0],
@@ -98,10 +98,10 @@ export function AnimatedEasterEgg() {
       transition={{
         duration: 2,
         delay: Math.random() * 0.5,
-        ease: "easeOut",
+        ease: 'easeOut',
       }}
     />
-  ));
+  ))
 
   return (
     <AnimatePresence>
@@ -127,13 +127,13 @@ export function AnimatedEasterEgg() {
             }}
             transition={{
               duration: 3,
-              ease: "easeInOut",
+              ease: 'easeInOut',
             }}
             style={{
               background:
-                "conic-gradient(from 0deg, #ff0000, #ff8800, #ffff00, #88ff00, #00ff00, #00ff88, #00ffff, #0088ff, #0000ff, #8800ff, #ff00ff, #ff0088, #ff0000)",
-              borderRadius: "50%",
-              transformOrigin: "center",
+                'conic-gradient(from 0deg, #ff0000, #ff8800, #ffff00, #88ff00, #00ff00, #00ff88, #00ffff, #0088ff, #0000ff, #8800ff, #ff00ff, #ff0088, #ff0000)',
+              borderRadius: '50%',
+              transformOrigin: 'center',
             }}
           />
 
@@ -146,7 +146,7 @@ export function AnimatedEasterEgg() {
               initial={{ y: -100 }}
               animate={{
                 y:
-                  typeof window !== "undefined"
+                  typeof window !== 'undefined'
                     ? window.innerHeight + 100
                     : 700,
               }}
@@ -154,7 +154,7 @@ export function AnimatedEasterEgg() {
                 duration: Math.random() * 3 + 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
-                ease: "linear",
+                ease: 'linear',
               }}
             >
               {Array.from({ length: 20 }, (_, j) => (
@@ -181,7 +181,7 @@ export function AnimatedEasterEgg() {
                   animate={{ scale: 1, rotateY: 0 }}
                   exit={{ scale: 0, rotateY: -180 }}
                   transition={{
-                    type: "spring",
+                    type: 'spring',
                     damping: 15,
                     delay: 1.5,
                   }}
@@ -195,7 +195,7 @@ export function AnimatedEasterEgg() {
                     transition={{
                       duration: 2,
                       repeat: Infinity,
-                      ease: "easeInOut",
+                      ease: 'easeInOut',
                     }}
                   >
                     🎮✨🚀
@@ -248,5 +248,5 @@ export function AnimatedEasterEgg() {
         </motion.div>
       )}
     </AnimatePresence>
-  );
+  )
 }

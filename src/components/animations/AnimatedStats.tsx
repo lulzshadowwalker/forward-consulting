@@ -1,24 +1,24 @@
-"use client";
+'use client'
 
-import { motion } from "motion/react";
+import { motion } from 'motion/react'
 
 interface StatItem {
-  number: string;
-  label: string;
+  number: string
+  label: string
 }
 
 interface AnimatedStatsProps {
-  title: string;
-  subtitle: string;
-  stats: StatItem[];
-  className?: string;
+  title: string
+  subtitle: string
+  stats: StatItem[]
+  className?: string
 }
 
 export function AnimatedStats({
   title,
   subtitle,
   stats,
-  className = "",
+  className = '',
 }: AnimatedStatsProps) {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -29,7 +29,7 @@ export function AnimatedStats({
         staggerChildren: 0.2,
       },
     },
-  };
+  }
 
   const titleVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -37,7 +37,7 @@ export function AnimatedStats({
       opacity: 1,
       y: 0,
     },
-  };
+  }
 
   const statVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -45,7 +45,7 @@ export function AnimatedStats({
       opacity: 1,
       scale: 1,
     },
-  };
+  }
 
   return (
     <section className={`py-20 bg-muted/30 ${className}`}>
@@ -89,7 +89,7 @@ export function AnimatedStats({
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{
-                  type: "spring",
+                  type: 'spring',
                   stiffness: 200,
                   delay: index * 0.1,
                 }}
@@ -109,5 +109,5 @@ export function AnimatedStats({
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,28 +1,28 @@
-"use client";
+'use client'
 
-import { motion } from "motion/react";
-import Image from "next/image";
-import Marquee from "react-fast-marquee";
+import { motion } from 'motion/react'
+import Image from 'next/image'
+import Marquee from 'react-fast-marquee'
 
-import Image1 from "@/assets/images/communications-and-information-technology-commission.png";
-import Image2 from "@/assets/images/education-and-training-evaluation-commission.png";
-import Image3 from "@/assets/images/general-authority-of-civil-aviation.png";
-import Image4 from "@/assets/images/human-resources-and-social-development.png";
-import Image5 from "@/assets/images/human-resources-development-fund.png";
-import Image6 from "@/assets/images/king-abdullah-city-for-atomic-and-renewable-energy.png";
-import Image7 from "@/assets/images/ministry-of-commerce.png";
-import Image8 from "@/assets/images/ministry-of-culture.png";
-import Image9 from "@/assets/images/ministry-of-economy-and-planning.png";
-import Image10 from "@/assets/images/ministry-of-education.png";
-import Image11 from "@/assets/images/ministry-of-hajj-and-umrah.png";
-import Image12 from "@/assets/images/ministry-of-tourism.png";
-import Image13 from "@/assets/images/royal-commission-for-alula.png";
-import Image14 from "@/assets/images/saline-water-conversion-corporation.webp";
-import Image15 from "@/assets/images/saudi-electricity-regulatory-authority.png";
+import Image1 from '@/assets/images/communications-and-information-technology-commission.png'
+import Image2 from '@/assets/images/education-and-training-evaluation-commission.png'
+import Image3 from '@/assets/images/general-authority-of-civil-aviation.png'
+import Image4 from '@/assets/images/human-resources-and-social-development.png'
+import Image5 from '@/assets/images/human-resources-development-fund.png'
+import Image6 from '@/assets/images/king-abdullah-city-for-atomic-and-renewable-energy.png'
+import Image7 from '@/assets/images/ministry-of-commerce.png'
+import Image8 from '@/assets/images/ministry-of-culture.png'
+import Image9 from '@/assets/images/ministry-of-economy-and-planning.png'
+import Image10 from '@/assets/images/ministry-of-education.png'
+import Image11 from '@/assets/images/ministry-of-hajj-and-umrah.png'
+import Image12 from '@/assets/images/ministry-of-tourism.png'
+import Image13 from '@/assets/images/royal-commission-for-alula.png'
+import Image14 from '@/assets/images/saline-water-conversion-corporation.webp'
+import Image15 from '@/assets/images/saudi-electricity-regulatory-authority.png'
 
 interface AnimatedClientsMarqueeProps {
-  title: string;
-  subtitle: string;
+  title: string
+  subtitle: string
 }
 
 export function AnimatedClientsMarquee({
@@ -38,7 +38,7 @@ export function AnimatedClientsMarquee({
         staggerChildren: 0.1,
       },
     },
-  };
+  }
 
   const titleVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -46,7 +46,7 @@ export function AnimatedClientsMarquee({
       opacity: 1,
       y: 0,
     },
-  };
+  }
 
   return (
     <section className="relative mb-20">
@@ -85,7 +85,7 @@ export function AnimatedClientsMarquee({
             autoFill
             speed={30}
             key={index}
-            direction={index % 2 === 0 ? "left" : "right"}
+            direction={index % 2 === 0 ? 'left' : 'right'}
           >
             {arr.map((client, index) => (
               <div
@@ -104,68 +104,68 @@ export function AnimatedClientsMarquee({
         ))}
       </div>
     </section>
-  );
+  )
 }
 
 const clients = [
   {
     src: Image1,
-    alt: "Communications and Information Technology Commission",
+    alt: 'Communications and Information Technology Commission',
   },
   {
     src: Image2,
-    alt: "Education and Training Evaluation Commission",
+    alt: 'Education and Training Evaluation Commission',
   },
   {
     src: Image3,
-    alt: "General Authority of Civil Aviation",
+    alt: 'General Authority of Civil Aviation',
   },
   {
     src: Image4,
-    alt: "Ministry of Human Resources and Social Development",
+    alt: 'Ministry of Human Resources and Social Development',
   },
   {
     src: Image5,
-    alt: "Human Resources Development Fund",
+    alt: 'Human Resources Development Fund',
   },
   {
     src: Image6,
-    alt: "King Abdullah City for Atomic and Renewable Energy",
+    alt: 'King Abdullah City for Atomic and Renewable Energy',
   },
   {
     src: Image7,
-    alt: "Ministry of Commerce",
+    alt: 'Ministry of Commerce',
   },
   {
     src: Image8,
-    alt: "Ministry of Culture",
+    alt: 'Ministry of Culture',
   },
   {
     src: Image9,
-    alt: "Ministry of Economy and Planning",
+    alt: 'Ministry of Economy and Planning',
   },
   {
     src: Image10,
-    alt: "Ministry of Education",
+    alt: 'Ministry of Education',
   },
   {
     src: Image11,
-    alt: "Ministry of Hajj and Umrah",
+    alt: 'Ministry of Hajj and Umrah',
   },
   {
     src: Image12,
-    alt: "Ministry of Tourism",
+    alt: 'Ministry of Tourism',
   },
   {
     src: Image13,
-    alt: "Royal Commission for AlUla",
+    alt: 'Royal Commission for AlUla',
   },
   {
     src: Image14,
-    alt: "Saline Water Conversion Corporation",
+    alt: 'Saline Water Conversion Corporation',
   },
   {
     src: Image15,
-    alt: "Saudi Electricity Regulatory Authority",
+    alt: 'Saudi Electricity Regulatory Authority',
   },
-];
+]

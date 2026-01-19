@@ -1,29 +1,29 @@
-"use client";
+'use client'
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { motion } from "motion/react";
-import { ReactNode } from "react";
-import Image, { StaticImageData } from "next/image";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { motion } from 'motion/react'
+import { ReactNode } from 'react'
+import Image, { StaticImageData } from 'next/image'
 
 interface ValueItem {
-  icon: ReactNode;
-  title: string;
-  description: string;
-  image?: StaticImageData;
+  icon: ReactNode
+  title: string
+  description: string
+  image?: StaticImageData
 }
 
 interface AnimatedValuesProps {
-  title: string;
-  subtitle: string;
-  values: ValueItem[];
-  className?: string;
+  title: string
+  subtitle: string
+  values: ValueItem[]
+  className?: string
 }
 
 export function AnimatedValues({
   title,
   subtitle,
   values,
-  className = "",
+  className = '',
 }: AnimatedValuesProps) {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -34,7 +34,7 @@ export function AnimatedValues({
         staggerChildren: 0.1,
       },
     },
-  };
+  }
 
   const titleVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -42,7 +42,7 @@ export function AnimatedValues({
       opacity: 1,
       y: 0,
     },
-  };
+  }
 
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -50,7 +50,7 @@ export function AnimatedValues({
       opacity: 1,
       scale: 1,
     },
-  };
+  }
 
   return (
     <section className={`py-20 bg-background ${className}`}>
@@ -106,7 +106,7 @@ export function AnimatedValues({
                         scale: 1.1,
                       }}
                       transition={{
-                        type: "spring",
+                        type: 'spring',
                         stiffness: 200,
                         duration: 0.6,
                       }}
@@ -129,5 +129,5 @@ export function AnimatedValues({
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

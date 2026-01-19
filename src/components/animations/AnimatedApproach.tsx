@@ -1,35 +1,36 @@
-"use client";
+'use client'
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
-import { ArrowRight } from "lucide-react";
-import { motion } from "motion/react";
-import { useLocale } from "next-intl";
-import { ReactNode } from "react";
-import Image, { StaticImageData } from "next/image";
+import { ArrowRight } from 'lucide-react'
+import { motion } from 'motion/react'
+import { useLocale } from 'next-intl'
+import { ReactNode } from 'react'
+import Image, { StaticImageData } from 'next/image'
 
 interface ApproachItem {
-  icon: ReactNode;
-  title: string;
-  description: string;
-  image?: StaticImageData;
+  icon: ReactNode
+  title: string
+  description: string
+  image?: StaticImageData
+  backgroundColor?: string
 }
 
 interface AnimatedApproachProps {
-  title: string;
-  subtitle: string;
-  approaches: ApproachItem[];
-  className?: string;
+  title: string
+  subtitle: string
+  approaches: ApproachItem[]
+  className?: string
 }
 
 export function AnimatedApproach({
   title,
   subtitle,
   approaches,
-  className = "",
+  className = '',
 }: AnimatedApproachProps) {
-  const locale = useLocale();
-  const isRtl = locale === "ar";
+  const locale = useLocale()
+  const isRtl = locale === 'ar'
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -40,7 +41,7 @@ export function AnimatedApproach({
         staggerChildren: 0.3,
       },
     },
-  };
+  }
 
   const titleVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -48,7 +49,7 @@ export function AnimatedApproach({
       opacity: 1,
       y: 0,
     },
-  };
+  }
 
   const cardVariants = {
     hidden: { opacity: 0, x: -30 },
@@ -56,7 +57,7 @@ export function AnimatedApproach({
       opacity: 1,
       x: 0,
     },
-  };
+  }
 
   const arrowVariants = {
     hidden: { opacity: 0, scale: 0 },
@@ -64,7 +65,7 @@ export function AnimatedApproach({
       opacity: 1,
       scale: 1,
     },
-  };
+  }
 
   return (
     <section className={`py-20 bg-slate-50 dark:bg-slate-800/50 ${className}`}>
@@ -107,13 +108,18 @@ export function AnimatedApproach({
             >
               <Card className="h-full border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow overflow-hidden pt-0">
                 {approach.image && (
-                  <div className="w-full h-40 overflow-hidden">
+                  <div
+                    className="w-full h-46 overflow-hidden"
+                    style={{
+                      backgroundColor: approach.backgroundColor,
+                    }}
+                  >
                     <Image
                       src={approach.image}
                       alt={approach.title}
                       width={400}
                       height={160}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 )}
@@ -125,7 +131,7 @@ export function AnimatedApproach({
                         rotateY: 180,
                         scale: 1.1,
                       }}
-                      transition={{ type: "spring", stiffness: 200 }}
+                      transition={{ type: 'spring', stiffness: 200 }}
                     >
                       {approach.icon}
                     </motion.div>
@@ -156,7 +162,7 @@ export function AnimatedApproach({
           <div className="hidden md:block">
             <motion.div
               whileHover={{ x: 10 }}
-              transition={{ type: "spring", stiffness: 400 }}
+              transition={{ type: 'spring', stiffness: 400 }}
             >
               <ArrowRight className="w-8 h-8 text-teal-600 dark:text-teal-400 rtl:rotate-180" />
             </motion.div>
@@ -164,5 +170,5 @@ export function AnimatedApproach({
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

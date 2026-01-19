@@ -34,7 +34,10 @@
     "contact": {
       "title": "Get In Touch",
       "email": "info@forwardconsultingme.com",
-      "phone": "Saudi Arabia: +966500639061\nJordan: +962795337755"
+      "saudi-arabia": "Saudi Arabia",
+      "saudi-arabia-phone": "+966500639061",
+      "jordan": "Jordan",
+      "jordan-phone": "+962795337755"
     },
     "social": {
       "title": "Follow Us",
@@ -72,11 +75,11 @@
       },
       "pmoServices": {
         "title": "Project Management Office (PMO) Services",
-        "description": "We support organizations in establishing, developing, and operating Project Management Offices (PMOs) through integrated solutions that strengthen governance and execution efficiency"
+        "description": "Project Management Office (PMO) services and government excellence consulting to enhance performance"
       },
       "specialized": {
         "title": "Government Excellence Services",
-        "description": "Project Management Office (PMO) services and government excellence consulting to enhance performance"
+        "description": "We empower government entities to achieve institutional excellence through integrated solutions for managing excellence programs, performance evaluation, and compliance with approved standards."
       }
     },
     "expertise": {
@@ -245,7 +248,7 @@
       },
       "saudiPartnership": {
         "title": "Strategic Saudi Partnership",
-        "description": "We strengthened our presence in the Kingdom of Saudi Arabia through a strategic partnership with Ariba Business Solutions, a leading national company in the field, to deliver integrated HR and organizational development solutions and support public and private sector organizations in achieving their strategic objectives and building sustainable capabilities aligned with national transformations",
+        "description": "We strengthened our presence in the Kingdom of Saudi Arabia through a strategic partnership with <link>Ariba Business Solutions</link>, a leading national company in the field, to deliver integrated HR and organizational development solutions and support public and private sector organizations in achieving their strategic objectives and building sustainable capabilities aligned with national transformations",
         "label": "Partnership"
       }
     },
@@ -442,7 +445,10 @@
       "phone": {
         "title": "Call Us",
         "description": "Speak directly with our team",
-        "value": "Saudi Arabia: +966500639061\nJordan: +962795337755"
+        "saudi-arabia-phone": "+966500639061",
+        "jordan-phone": "+962795337755",
+        "saudi-arabia": "Saudi Arabia",
+        "jordan": "Jordan"
       }
     },
     "faq": {

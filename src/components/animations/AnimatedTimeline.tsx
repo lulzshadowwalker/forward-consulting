@@ -1,28 +1,29 @@
-"use client";
+'use client'
 
-import { motion } from "motion/react";
-import Image, { StaticImageData } from "next/image";
+import { motion } from 'motion/react'
+import Image, { StaticImageData } from 'next/image'
+import { ReactNode } from 'react'
 
 interface TimelineItem {
-  year: string;
-  label: string;
-  title: string;
-  description: string;
-  image?: string | StaticImageData;
+  year: string
+  label: string
+  title: string
+  description: ReactNode
+  image?: string | StaticImageData
 }
 
 interface AnimatedTimelineProps {
-  title: string;
-  subtitle: string;
-  items: TimelineItem[];
-  className?: string;
+  title: string
+  subtitle: string
+  items: TimelineItem[]
+  className?: string
 }
 
 export function AnimatedTimeline({
   title,
   subtitle,
   items,
-  className = "",
+  className = '',
 }: AnimatedTimelineProps) {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -33,7 +34,7 @@ export function AnimatedTimeline({
         staggerChildren: 0.3,
       },
     },
-  };
+  }
 
   const titleVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -41,7 +42,7 @@ export function AnimatedTimeline({
       opacity: 1,
       y: 0,
     },
-  };
+  }
 
   const timelineVariants = {
     hidden: { opacity: 0, x: -30 },
@@ -49,7 +50,7 @@ export function AnimatedTimeline({
       opacity: 1,
       x: 0,
     },
-  };
+  }
 
   return (
     <section className={`py-20 bg-background ${className}`}>
@@ -93,7 +94,7 @@ export function AnimatedTimeline({
                   <motion.div
                     className="rounded-lg overflow-hidden"
                     whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                    transition={{ type: 'spring', stiffness: 300 }}
                   >
                     {item.image ? (
                       <div className="relative w-full aspect-[2.35/1]">
@@ -111,7 +112,7 @@ export function AnimatedTimeline({
                           initial={{ scale: 0 }}
                           whileInView={{ scale: 1 }}
                           transition={{
-                            type: "spring",
+                            type: 'spring',
                             stiffness: 200,
                             delay: index * 0.1,
                           }}
@@ -130,9 +131,9 @@ export function AnimatedTimeline({
                   <h3 className="text-xl font-semibold mb-3 text-foreground">
                     {item.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <div className="text-muted-foreground leading-relaxed">
                     {item.description}
-                  </p>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -140,5 +141,5 @@ export function AnimatedTimeline({
         </div>
       </div>
     </section>
-  );
+  )
 }

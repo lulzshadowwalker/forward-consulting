@@ -1,30 +1,30 @@
-"use client";
+'use client'
 
-import logo from "@/assets/images/logo.png";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import { Link } from "@/i18n/navigation";
-import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
+import logo from '@/assets/images/logo.png'
+import { Button } from '@/components/ui/button'
+import { Separator } from '@/components/ui/separator'
+import { Link } from '@/i18n/navigation'
+import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
+import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 
 const quickLinks = [
-  { name: "home", href: "/" },
-  { name: "about", href: "/about" },
-  { name: "services", href: "/services" },
-  { name: "contact", href: "/contact" },
-] as const;
+  { name: 'home', href: '/' },
+  { name: 'about', href: '/about' },
+  { name: 'services', href: '/services' },
+  { name: 'contact', href: '/contact' },
+] as const
 
 const serviceLinks = [
-  { name: "organizationDesign", href: "/services#organization-design" },
-  { name: "talentManagement", href: "/services#talent-leadership-management" },
-  { name: "talentAssessment", href: "/services#talent-assessment" },
-  { name: "pmoServices", href: "/services#pmo-services" },
-  { name: "governmentExcellence", href: "/services#government-excellence" },
-] as const;
+  { name: 'organizationDesign', href: '/services#organization-design' },
+  { name: 'talentManagement', href: '/services#talent-leadership-management' },
+  { name: 'talentAssessment', href: '/services#talent-assessment' },
+  { name: 'pmoServices', href: '/services#pmo-services' },
+  { name: 'governmentExcellence', href: '/services#government-excellence' },
+] as const
 
 export function Footer() {
-  const t = useTranslations("Footer");
+  const t = useTranslations('Footer')
 
   return (
     <footer className="bg-card text-card-foreground">
@@ -35,17 +35,17 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Image
               src={logo}
-              alt={t("brand.name")}
+              alt={t('brand.name')}
               className="-translate-x-3 rtl:translate-x-3 w-32 md:w-45 md:-translate-x-5 rtl:md:translate-x-5"
             />
             <p className="text-muted-foreground text-sm leading-relaxed mb-6 max-w-sm">
-              {t("brand.tagline")}
+              {t('brand.tagline')}
             </p>
 
             {/* Social Media Links */}
             <div>
               <h4 className="font-semibold mb-3 text-foreground">
-                {t("social.title")}
+                {t('social.title')}
               </h4>
               <div className="flex space-x-3 pointer-events-none opacity-50">
                 <Button
@@ -58,7 +58,7 @@ export function Footer() {
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={t("social.linkedin")}
+                    aria-label={t('social.linkedin')}
                   >
                     <Linkedin className="w-5 h-5" />
                   </Link>
@@ -73,7 +73,7 @@ export function Footer() {
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={t("social.twitter")}
+                    aria-label={t('social.twitter')}
                   >
                     <Twitter className="w-5 h-5" />
                   </Link>
@@ -88,7 +88,7 @@ export function Footer() {
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={t("social.facebook")}
+                    aria-label={t('social.facebook')}
                   >
                     <Facebook className="w-5 h-5" />
                   </Link>
@@ -100,7 +100,7 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="font-semibold mb-4 text-foreground">
-              {t("quickLinks.title")}
+              {t('quickLinks.title')}
             </h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
@@ -119,7 +119,7 @@ export function Footer() {
           {/* Services */}
           <div>
             <h3 className="font-semibold mb-4 text-foreground">
-              {t("services.title")}
+              {t('services.title')}
             </h3>
             <ul className="space-y-3">
               {serviceLinks.map((service) => (
@@ -138,25 +138,37 @@ export function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="font-semibold mb-4 text-foreground">
-              {t("contact.title")}
+              {t('contact.title')}
             </h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <Mail className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                 <Link
-                  href={`mailto:${t("contact.email")}`}
+                  href={`mailto:${t('contact.email')}`}
                   className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
-                  {t("contact.email")}
+                  {t('contact.email')}
                 </Link>
               </div>
               <div className="flex items-start space-x-3">
                 <Phone className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                <span
-                  className="text-muted-foreground text-sm whitespace-pre-line"
-                  dir="ltr"
-                >
-                  {t("contact.phone")}
+                <span className="text-muted-foreground text-sm">
+                  <span className="block">{t('contact.saudi-arabia')}</span>
+                  <Link
+                    className="block"
+                    dir="ltr"
+                    href={`tel:${t('contact.saudi-arabia-phone')}`}
+                  >
+                    {t('contact.saudi-arabia-phone')}
+                  </Link>
+                  <span className="block mt-2">{t('contact.jordan')}</span>
+                  <Link
+                    className="block"
+                    dir="ltr"
+                    href={`tel:${t('contact.jordan-phone')}`}
+                  >
+                    {t('contact.jordan-phone')}
+                  </Link>
                 </span>
               </div>
             </div>
@@ -170,7 +182,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-muted-foreground text-sm">
-            {t("legal.copyright")}
+            {t('legal.copyright')}
           </p>
           <div className="flex items-center space-x-1">
             {/* <span className="text-muted-foreground text-sm">
@@ -188,5 +200,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

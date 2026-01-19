@@ -1,30 +1,30 @@
-"use client";
+'use client'
 
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { motion } from "motion/react";
+} from '@/components/ui/accordion'
+import { motion } from 'motion/react'
 
 interface FAQItem {
-  question: string;
-  answer: string;
+  question: string
+  answer: string
 }
 
 interface AnimatedFAQProps {
-  title: string;
-  subtitle: string;
-  faqs: FAQItem[];
-  className?: string;
+  title: string
+  subtitle: string
+  faqs: FAQItem[]
+  className?: string
 }
 
 export function AnimatedFAQ({
   title,
   subtitle,
   faqs,
-  className = "",
+  className = '',
 }: AnimatedFAQProps) {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -35,7 +35,7 @@ export function AnimatedFAQ({
         staggerChildren: 0.1,
       },
     },
-  };
+  }
 
   const titleVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -44,7 +44,7 @@ export function AnimatedFAQ({
       y: 0,
       transition: { duration: 0.8 },
     },
-  };
+  }
 
   const faqVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -53,7 +53,7 @@ export function AnimatedFAQ({
       y: 0,
       transition: { duration: 0.5 },
     },
-  };
+  }
 
   return (
     <section className={`py-20 bg-slate-50 dark:bg-slate-800 ${className}`}>
@@ -97,7 +97,7 @@ export function AnimatedFAQ({
                     <motion.span
                       className="font-semibold text-slate-900 dark:text-white"
                       whileHover={{ x: 5 }}
-                      transition={{ type: "spring", stiffness: 400 }}
+                      transition={{ type: 'spring', stiffness: 400 }}
                     >
                       {item.question}
                     </motion.span>
@@ -119,5 +119,5 @@ export function AnimatedFAQ({
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

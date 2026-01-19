@@ -1,23 +1,23 @@
-"use client";
+'use client'
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Link } from "@/i18n/navigation";
-import { ArrowRight } from "lucide-react";
-import { motion } from "motion/react";
-import Image from "next/image";
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Link } from '@/i18n/navigation'
+import { ArrowRight } from 'lucide-react'
+import { motion } from 'motion/react'
+import Image from 'next/image'
 
 interface AnimatedHeroProps {
-  heroImage: any;
-  badge: string;
-  title: string;
-  subtitle: string;
-  ctaText?: string;
-  contactText?: string;
-  ctaHref?: string;
-  contactHref?: string;
-  className?: string;
-  minHeight?: string;
+  heroImage: any
+  badge: string
+  title: string
+  subtitle: string
+  ctaText?: string
+  contactText?: string
+  ctaHref?: string
+  contactHref?: string
+  className?: string
+  minHeight?: string
 }
 
 export function AnimatedHero({
@@ -27,10 +27,10 @@ export function AnimatedHero({
   subtitle,
   ctaText,
   contactText,
-  ctaHref = "/services",
-  contactHref = "/contact",
-  className = "",
-  minHeight = "min-h-[70vh] lg:min-h-[75vh]",
+  ctaHref = '/services',
+  contactHref = '/contact',
+  className = '',
+  minHeight = 'min-h-[70vh] lg:min-h-[75vh]',
 }: AnimatedHeroProps) {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -41,7 +41,7 @@ export function AnimatedHero({
         staggerChildren: 0.2,
       },
     },
-  };
+  }
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -49,7 +49,7 @@ export function AnimatedHero({
       opacity: 1,
       y: 0,
     },
-  };
+  }
 
   const buttonVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -57,7 +57,7 @@ export function AnimatedHero({
       opacity: 1,
       y: 0,
     },
-  };
+  }
 
   return (
     <section
@@ -156,5 +156,5 @@ export function AnimatedHero({
         />
       </div>
     </section>
-  );
+  )
 }

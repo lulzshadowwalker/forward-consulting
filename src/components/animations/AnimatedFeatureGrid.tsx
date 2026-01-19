@@ -1,27 +1,27 @@
-"use client";
+'use client'
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { motion } from "motion/react";
-import { ReactNode } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { motion } from 'motion/react'
+import { ReactNode } from 'react'
 
 interface FeatureItem {
-  icon: ReactNode;
-  title: string;
-  description: string;
+  icon: ReactNode
+  title: string
+  description: string
 }
 
 interface AnimatedFeatureGridProps {
-  title: string;
-  subtitle: string;
-  features: FeatureItem[];
-  className?: string;
+  title: string
+  subtitle: string
+  features: FeatureItem[]
+  className?: string
 }
 
 export function AnimatedFeatureGrid({
   title,
   subtitle,
   features,
-  className = "",
+  className = '',
 }: AnimatedFeatureGridProps) {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -32,7 +32,7 @@ export function AnimatedFeatureGrid({
         staggerChildren: 0.1,
       },
     },
-  };
+  }
 
   const titleVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -40,7 +40,7 @@ export function AnimatedFeatureGrid({
       opacity: 1,
       y: 0,
     },
-  };
+  }
 
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.9 },
@@ -48,7 +48,7 @@ export function AnimatedFeatureGrid({
       opacity: 1,
       scale: 1,
     },
-  };
+  }
 
   return (
     <section className={`py-20 bg-slate-50 dark:bg-slate-800/50 ${className}`}>
@@ -92,7 +92,7 @@ export function AnimatedFeatureGrid({
                       rotate: 360,
                     }}
                     transition={{
-                      type: "spring",
+                      type: 'spring',
                       stiffness: 200,
                       duration: 0.8,
                     }}
@@ -114,5 +114,5 @@ export function AnimatedFeatureGrid({
         </motion.div>
       </div>
     </section>
-  );
+  )
 }
