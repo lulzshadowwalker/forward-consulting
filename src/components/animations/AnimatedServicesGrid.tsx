@@ -75,14 +75,18 @@ export function AnimatedServicesGrid({
         </motion.div>
 
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="flex flex-wrap justify-center gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
           {services.map((service, index) => (
-            <motion.div key={index} variants={cardVariants}>
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              className="w-full sm:w-[calc(50%-2rem)] lg:w-[calc(33.33%-2rem)] max-w-sm"
+            >
               <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
                 <CardHeader className="text-center">
                   <motion.div

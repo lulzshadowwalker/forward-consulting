@@ -75,14 +75,18 @@ export function AnimatedFeatureGrid({
         </motion.div>
 
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="flex flex-wrap justify-center gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
         >
           {features.map((feature, index) => (
-            <motion.div key={index} variants={cardVariants}>
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              className="w-full sm:w-[calc(50%-2rem)] lg:w-[calc(33.33%-2rem)] max-w-sm"
+            >
               <Card className="text-center border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow h-full">
                 <CardHeader className="pb-4">
                   <motion.div
