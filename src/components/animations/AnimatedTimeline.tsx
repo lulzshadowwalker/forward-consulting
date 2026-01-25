@@ -87,17 +87,17 @@ export function AnimatedTimeline({
             {items.map((item, index) => (
               <motion.div
                 key={index}
-                className="flex flex-col md:flex-row items-center gap-8"
+                className="flex flex-col md:flex-row items-center gap-8 md:gap-12"
                 variants={timelineVariants}
               >
-                <div className="w-full md:w-1/3">
+                <div className="w-full md:w-[22%] flex-shrink-0">
                   <motion.div
-                    className="rounded-lg overflow-hidden"
+                    className="rounded-xl overflow-hidden shadow-sm"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: 'spring', stiffness: 300 }}
                   >
                     {item.image ? (
-                      <div className="relative w-full aspect-[2.35/1]">
+                      <div className="relative w-full aspect-[4/3]">
                         <Image
                           src={item.image}
                           alt={item.year}
@@ -127,7 +127,7 @@ export function AnimatedTimeline({
                     )}
                   </motion.div>
                 </div>
-                <div className="w-full md:w-2/3">
+                <div className="w-full md:flex-1">
                   <h3 className="text-xl font-semibold mb-3 text-foreground">
                     {item.title}
                   </h3>
