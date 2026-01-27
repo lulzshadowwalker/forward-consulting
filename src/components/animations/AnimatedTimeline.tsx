@@ -97,7 +97,7 @@ export function AnimatedTimeline({
                     transition={{ type: 'spring', stiffness: 300 }}
                   >
                     {item.image ? (
-                      <div className="relative w-full aspect-[4/3]">
+                      <div className="relative w-full aspect-square">
                         <Image
                           src={item.image}
                           alt={item.year}
